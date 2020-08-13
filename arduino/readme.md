@@ -1,4 +1,4 @@
-# ARLOK Source Code for Arduino IDE
+# Arlok Source Code for Arduino IDE
   
 This folder contains Arduino sketches to be used with [Arduino IDE](https://www.arduino.cc/en/main/software).  
 
