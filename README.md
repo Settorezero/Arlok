@@ -7,3 +7,6 @@ Arlok is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) m
 ## Buy a PCB  
 Making the PCB on PCBWay will support my work, but you need to subscribe to PCBWay first: you can do it using [my invite link](https://www.pcbway.com/setinvite.aspx?inviteid=355653&from=settorezero2020).  
 The you can let you make the [PCB on PCBWay](https://www.pcbway.com/project/shareproject/ARLOK_arduino_robot.html)
+
+## Code examples
+See in the [Arduino folder](./arduino) for code examples
