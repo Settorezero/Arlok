@@ -14,3 +14,7 @@ You need to install the following base libraries:
 ## Arduino IDE Setup
   
 Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Arduino UNO_ from the board manager. Then select the correct COM port.
+
+## Code examples
+
+- [Run Simple](./run_simple) : Arlok moves around avoiding obstacles
