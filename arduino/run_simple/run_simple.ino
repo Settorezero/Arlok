@@ -74,13 +74,14 @@
 // Library for Arduino internal eeprom memory
 #include <EEPROM.h>
 
-// Arduino used pins
-#define MotorRPin 9       // signal for right servomotor
-#define MotorLPin 10      // signal for left servomotor
-#define P1 2              // pushbutton P1
-#define P2 5              // pushbutton P2
-#define trigPin 4         // HC-SR04 - trigger
-#define echoPin 3         // HC-SR04 - echo
+// MakerUNO used pins
+#define MotorRPin 	9	// signal for right servomotor
+#define MotorLPin 	10	// signal for left servomotor
+#define P1 			2	// pushbutton P1 on ARLOK PCB, 'button' on MakerUNO board
+#define P2 			5	// pushbutton P2
+#define trigPin 	4	// HC-SR04 - trigger
+#define echoPin 	3	// HC-SR04 - echo
+#define buzzer		8	// buzzer on MakerUNO (you can de-activate it using the switch)		
 
 // stuff used by servomotors
 ServoTimer2 MotorL;       // left servomotor object
@@ -131,6 +132,9 @@ void setup()
   // pushbuttons setup
   pinMode(P1,INPUT_PULLUP);
   pinMode(P2,INPUT_PULLUP);
+  // buzzer setup
+  pinMode(buzzer, OUTPUT);
+  digitalWrite(buzzer,LOW);
 
   // interrupts
   Timer1.initialize(TIMER_US); // Initialise timer 1
@@ -210,15 +214,16 @@ void loop()
     }
   else
     {
+	  sound();	
     uint8_t randomNum=random(0,1);
     Serial.println("stop");
     // deceleration
     dritto(SPEED-50);
-    delay(100);
+    delay(80);
     dritto(SPEED-100);
-    delay(100);
+    delay(80);
     dritto(SPEED-150);
-    delay(100);
+    delay(80);
     // stop
     fermo(100);
     indietro(1000);
@@ -366,6 +371,17 @@ void config_menu(void)
     }
   }
 
+void sound(void)
+	{
+	uint8_t i=30;
+	while (i--)
+		{
+		digitalWrite(buzzer,HIGH); // turn on the buzzer
+		delayMicroseconds(2000);
+		digitalWrite(buzzer,LOW); // turn off the buzzer
+		delayMicroseconds(2000);
+		}
+	}
   
 // moves forward at 'vel' speed
 void dritto(uint16_t vel)
@@ -472,4 +488,16 @@ void sonarEcho_ISR()
       break;
     }
   }
-  
+/******************************************************************************************************************
+* END Of the file
+* 
+* if you reached this part, you're a smart person and I want you as follower of my social networks:
+* 
+* Facebook: https://www.facebook.com/settorezero (Italian language)
+* Twitter: https://www.twitter.com/settorezero (English language)
+* Instagram - my private profile: https://www.instagram.com/cyb3rn0id (english language)
+* Instagram - profile of my blog: https://www.instagram.com/settorezero (italian language)
+* Youtube: https://www.youtube.com/settorezero (mainly italian language, but sometimes also English language)
+* 
+* PLEASE SUBSCRIBE
+******************************************************************************************************************/
