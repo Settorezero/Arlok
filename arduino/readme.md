@@ -18,3 +18,4 @@ Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Ard
 ## Code examples
 
 - [Run Simple](./run_simple) : Arlok moves around avoiding obstacles
+- [Bluetooth Remote](./remote_bt) : You move Arlok using an Android phone and Bluetooth
