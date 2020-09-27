@@ -52,13 +52,14 @@ After you've paired the Bluetooth module with the phone, you can go further:
 - Click the button 'Load from Web Link'
 - Delete the default text and write: https://www.settorezero.com/abt.kwl
 
-![HC-06 Write Pin](../../media/bt/kewlsoft_01.png)
+![Bluetooth Electronics - Load Arlok Panel](../../media/bt/kewlsoft_01.png)
 
 - Press Load
 - A prompt "This will overwrite all panels!" will show: don't care, press OK
+- An error will be showed: don't care
 - The panel for this Arlok demo is showed in the first slot and all other slots are empty
 
-![HC-06 Write Pin](../../media/bt/kewlsoft_03.png)
+![Bluetooth Electronics - Arlok Panel Loaded](../../media/bt/kewlsoft_03.png)
 
 Note: for reset the previous panel click on the gears button and select 'Reset Default'. Previous panels will be reset and Arlok panel will be deleted
 
@@ -72,4 +73,4 @@ Note: for reset the previous panel click on the gears button and select 'Reset D
 - Select the Arlok panel and pres the 'Run' button
 - Move Arlok using the 4-way pad, sound the buzzer pressing the yellow button. The 'Distance' textbox shows the distance, expressed as cm, read by the sonar
 
-![HC-06 Write Pin](../../media/bt/kewlsoft_01.png)
+![Bluetooth Electronics - Arlok Panel Working](../../media/bt/kewlsoft_01.png)
