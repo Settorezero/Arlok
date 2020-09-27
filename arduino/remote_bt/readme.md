@@ -31,12 +31,12 @@ Note: The HC-06 module need to be powered at 5V but TX/RX levels are at 3.3V
 - Take a cellular phone and turn on the bluetooth
 - Search for new bluetooth devices: 'Arlok' must appear in the list
 
-![HC-06 Set Name](../../media/bt/hc06_bt_search.jpg)
+![HC-06 Bluetooth Search](../../media/bt/hc06_bt_search.jpg)
 
 - Select Arlok and associate it
 - the default pin is 1234 (if does not work, try 0000)
 
-![HC-06 Set Name](../../media/bt/hc06_bt_pin.jpg)
+![HC-06 Write Pin](../../media/bt/hc06_bt_pin.jpg)
 
 First step is complete!
 
@@ -45,3 +45,31 @@ First step is complete!
 After you've paired the Bluetooth module with the phone, you can go further:  
 
 - install [Bluetooth Electronics by kewlsoft](https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth)
+- Open Bluetooth Electronics
+- Some example panels are showed. When you select one, a Panel number with description is showed in the lower part of the screen.
+- Select the first panel 
+- Click on the save icon
+- Click the button 'Load from Web Link'
+- Delete the default text and write: https://www.settorezero.com/abt.kwl
+
+![HC-06 Write Pin](../../media/bt/kewlsoft_01.png)
+
+- Press Load
+- A prompt "This will overwrite all panels!" will show: don't care, press OK
+- The panel for this Arlok demo is showed in the first slot and all other slots are empty
+
+![HC-06 Write Pin](../../media/bt/kewlsoft_03.png)
+
+Note: for reset the previous panel click on the gears button and select 'Reset Default'. Previous panels will be reset and Arlok panel will be deleted
+
+### Run The App
+
+- In the Bluetooth Electronics panel clic the 'Connect' button
+- Leave 'Bluetooth Classic' selected and press the 'Next' button
+- In the paired device list, 'Arlok' must be present: Select it and press 'Connect'
+- In the top screen 'Connected to: Arlok (followed my MAC address)' must be showed
+- Press the 'Done' button
+- Select the Arlok panel and pres the 'Run' button
+- Move Arlok using the 4-way pad, sound the buzzer pressing the yellow button. The 'Distance' textbox shows the distance, expressed as cm, read by the sonar
+
+![HC-06 Write Pin](../../media/bt/kewlsoft_01.png)
