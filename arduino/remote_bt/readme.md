@@ -1,7 +1,10 @@
 ## Bluetooth Remote
 
-Arlok is moved using an app on an android device.  
-Follow those steps (assuming you're using an HC-06 Bluetooth Module):
+Arlok is moved using an app on an android device. Following steps assumes you're using an HC-06 Bluetooth Module. The only thing in which HC-05 differs is that
+- for going in AT command mode, you must press the button on the module during the powering
+- the AT command mode baud rate of the HC-05 is 38400
+
+![Arlok Bluetooth Remote](../../media/bt/arlok_bluetooth_remote.jpg)
 
 ### Change the Bluetooth module name
 
@@ -44,7 +47,7 @@ First step is complete!
 
 After you've paired the Bluetooth module with the phone, you can go further:  
 
-- install [Bluetooth Electronics by kewlsoft](https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth)
+- Install [Bluetooth Electronics by kewlsoft](https://play.google.com/store/apps/details?id=com.keuwl.arduinobluetooth)
 - Open Bluetooth Electronics
 - Some example panels are showed. When you select one, a Panel number with description is showed in the lower part of the screen.
 - Select the first panel 
