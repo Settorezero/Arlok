@@ -20,7 +20,7 @@ Note: The HC-06 module need to be powered at 5V but TX/RX levels are at 3.3V
 - Start a Serial Terminal program
 - Choose the right COM port and set the baudrate at 9600
 - Open che connection to the COM port
-- Send the string: AT+NAMEArlok
+- Send the string: AT+NAMEArlok (the terminal software must append CR and LF chars)
 - The module will respond: OKsetname
 
 ![HC-06 Set Name](../../media/bt/hc06_setname.png)
