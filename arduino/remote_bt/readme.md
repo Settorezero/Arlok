@@ -76,4 +76,4 @@ Note: for reset the previous panel click on the gears button and select 'Reset D
 - Select the Arlok panel and pres the 'Run' button
 - Move Arlok using the 4-way pad, sound the buzzer pressing the yellow button. The 'Distance' textbox shows the distance, expressed as cm, read by the sonar
 
-![Bluetooth Electronics - Arlok Panel Working](../../media/bt/kewlsoft_01.png)
+![Bluetooth Electronics - Arlok Panel Working](../../media/bt/kewlsoft_02.png)
