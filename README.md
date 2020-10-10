@@ -24,7 +24,7 @@ See in the [Arduino folder](./arduino) for code examples
 | A3          |                       |                                           |                         |
 | A4          | Don't use if OLED!    | Not available                             | Shared with SDA         |
 | A5          | Don't use if OLED!    | Not available                             | Shared with SCL         |
-| D0          | UART RX > COMM RX     | UART TX > COMM RX                         |                         |
+| D0          | UART RX > COMM RX     | UART RX > COMM RX                         |                         |
 | D1          | UART TX > COMM TX     | UART TX > COMM TX                         | Through voltage divider |
 | D2          | Sonar - Echo          | Pushbutton 1 ('button' on MakerUNO board) |                         |
 | D3          |                       | Sonar - Echo                              |                         |
