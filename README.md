@@ -16,28 +16,28 @@ See in the [Arduino folder](./arduino) for code examples
 
 ## Connections
 
-| Arduino PIN | AR.L.O. (Arduino UNO) | ARLOK (MakerUNO)                          | Notes           |
-|-------------|-----------------------|-------------------------------------------|-----------------|
-| A0          | Trimmer VR1           | Trimmer VR1                               |                 |
-| A1          |                       |                                           |                 |
-| A2          |                       |                                           |                 |
-| A3          |                       |                                           |                 |
-| A4          |                       | Not available                             | Shared with SDA |
-| A5          |                       | Not available                             | Shared with SCL |
-| D0          | UART RX > COMM TX     | UART TX > COMM TX                         |                 |
-| D1          | UART TX > COMM RX     | UART TX > COMM RX                         |                 |
-| D2          | Sonar - Echo          | Pushbutton 1 ('button' on MakerUNO board) |                 |
-| D3          |                       | Sonar - Echo                              |                 |
-| D4          |                       | Sonar - Trigger                           |                 |
-| D5          |                       | Pushbutton 2                              |                 |
-| D6          | Pushbutton 1          |                                           |                 |
-| D7          | Pushbutton 2          |                                           |                 |
-| D8          | Sonar - Trigger       | Buzzer on MakerUNO board                  |                 |
-| D9          | ServoMotor - Right    | ServoMotor - Right                        |                 |
-| D10         | ServoMotor - Left     | ServoMotor - Left                         |                 |
-| D11         |                       |                                           |                 |
-| D12         |                       |                                           |                 |
-| D13         |                       |                                           |                 |
-| D14         |                       |                                           |                 |
-| SDA         | OLED SDA              | OLED SDA + Grove                          | Shared with A4  |
-| SCL         | OLED SCL              | OLED SCL + Grove                          | Shared with A5  |
+| Arduino PIN | AR.L.O. (Arduino UNO) | ARLOK (MakerUNO)                          | Notes                   |
+|-------------|-----------------------|-------------------------------------------|-------------------------|
+| A0          | Trimmer VR1           | Trimmer VR1                               |                         |
+| A1          |                       |                                           |                         |
+| A2          |                       |                                           |                         |
+| A3          |                       |                                           |                         |
+| A4          | Don't use if OLED!    | Not available                             | Shared with SDA         |
+| A5          | Don't use if OLED!    | Not available                             | Shared with SCL         |
+| D0          | UART RX > COMM RX     | UART TX > COMM RX                         |                         |
+| D1          | UART TX > COMM TX     | UART TX > COMM TX                         | Through voltage divider |
+| D2          | Sonar - Echo          | Pushbutton 1 ('button' on MakerUNO board) |                         |
+| D3          |                       | Sonar - Echo                              |                         |
+| D4          |                       | Sonar - Trigger                           |                         |
+| D5          |                       | Pushbutton 2                              |                         |
+| D6          | Pushbutton 1          |                                           |                         |
+| D7          | Pushbutton 2          |                                           |                         |
+| D8          | Sonar - Trigger       | Buzzer on MakerUNO board                  |                         |
+| D9          | ServoMotor - Right    | ServoMotor - Right                        |                         |
+| D10         | ServoMotor - Left     | ServoMotor - Left                         |                         |
+| D11         |                       |                                           |                         |
+| D12         |                       |                                           |                         |
+| D13         |                       |                                           |                         |
+| D14         |                       |                                           |                         |
+| SDA         | OLED SDA              | OLED SDA + Grove                          | Shared with A4          |
+| SCL         | OLED SCL              | OLED SCL + Grove                          | Shared with A5          |
