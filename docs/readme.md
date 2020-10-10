@@ -3,4 +3,5 @@ In this folder are contained useful documents for working with Arlok Arduino Rob
 
 - [Maker UNO schematic](schematic_maker_uno.pdf)
 - [Maker Line datasheet](makerline.pdf)
-- [Arduino UNO schematic (only for reference)](schematic_arduino_uno.pdf) 
+- [Arduino UNO schematic (only for reference)](schematic_arduino_uno.pdf)
+- [ARLOK shield schematic](arlok_schematic.png)
