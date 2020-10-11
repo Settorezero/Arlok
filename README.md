@@ -58,7 +58,7 @@ The interrupt column shows the interrupt number associated with the pin, but is 
 
 ### Connections considerations
   
-On ARLOK shield some pin are not reported on the PCB (such as the IOref and the unused pin near it, A4 and A5), so you can use a shorter male header.
-On both AR.L.O. and ARLOK, A3 is used on some sketches as seed for random number generator initialization so, if you want to use it, change the code.  
-On ARLOK all free digital pins are reported on EXT header along with 5V and ground, and the 3 free analog inputs are reported on 3 separate headers having power supply each.
-On AR.L.O. free digital pins are reported on 2 headers: EXT2 (D11, D12, D13) and EXT1 (D3, D4, D5) and the analog inputs are reported to simple pads.
+- On ARLOK shield some pin are not reported on the PCB (such as the IOref and the unused pin near it, A4 and A5), so you can use a shorter male header.
+- On both ARLOK and AR.L.O., A3 is used in some sketches as seed for random number generator initialization; so, if you want to use it, change the code.  
+- On ARLOK all free digital pins are reported on EXT header along with 5V and ground, and the 3 free analog inputs are reported on 3 separate headers having power supply each.
+- On AR.L.O. free digital pins are reported on 2 headers: EXT2 (D11, D12, D13) and EXT1 (D3, D4, D5) and the analog inputs are reported to simple pads.
