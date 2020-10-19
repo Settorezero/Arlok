@@ -62,3 +62,6 @@ The interrupt column shows the interrupt number associated with the pin, but is 
 - On both ARLOK and AR.L.O., A3 is used in some sketches as seed for random number generator initialization; so, if you want to use it, change the code.  
 - On ARLOK all free digital pins are reported on EXT header along with 5V and ground, and the 3 free analog inputs are reported on 3 separate headers having power supply each.
 - On AR.L.O. free digital pins are reported on 2 headers: EXT2 (D11, D12, D13) and EXT1 (D3, D4, D5) and the analog inputs are reported to simple pads.
+
+### Links
+- [ARLOK pictures](https://tinyurl.com/arlokpictures)
