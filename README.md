@@ -65,3 +65,4 @@ The interrupt column shows the interrupt number associated with the pin, but is 
 
 ### Links
 - [ARLOK pictures](https://tinyurl.com/arlokpictures)
+- [AR.L.O. video](https://www.youtube.com/watch?v=O_3CUWvaW3k)
