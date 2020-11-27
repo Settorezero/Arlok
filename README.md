@@ -16,7 +16,7 @@ See in the [Arduino folder](./arduino) for code examples
 
 ## Connections
 
-In the following table are showed Arduino UNO to ARLOK shield.  
+In the following table are showed Arduino UNO to ARLOK shield connections.  
 Pinout is reported also the parallel version [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.).  
 If a cell is empty, means that pin is free to use and reported on a dedicate header.  
 The interrupt column shows the interrupt number associated with the pin, but is reccomended to use *digitalPinToInterrupt(Pin)*
