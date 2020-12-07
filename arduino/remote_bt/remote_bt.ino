@@ -125,6 +125,16 @@ enum config_pages
   config_end=2  
   };
 
+// enum used for commands from bluetooth
+enum movement
+  {
+  forward=0,
+  alt=1,
+  backward=2,
+  right=3,
+  left=4  
+  };
+
 void setup() 
   {
   // sonar setup
