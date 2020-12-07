@@ -1,6 +1,9 @@
 ## Bluetooth Remote
 
-Arlok is moved using an app on an android device. Following steps assumes you're using an HC-06 Bluetooth Module. The only thing in which HC-05 differs is that
+Arlok is moved using an app on an android device. Following steps assumes you're using an HC-06 Bluetooth Module.  
+Here is a video showing this example: https://youtu.be/ISU3L3CCWP8
+
+The only things in which HC-05 differs are:
 - for going in AT command mode, you must press the button on the module during the powering
 - the AT command mode baud rate of the HC-05 is 38400
 
@@ -33,8 +36,6 @@ Note: The HC-06 module need to be powered at 5V but TX/RX levels are at 3.3V
 - Give the power to the HC-06 Module
 - Take a cellular phone and turn on the bluetooth
 - Search for new bluetooth devices: 'Arlok' must appear in the list
-
-Here is a video showing this example: https://youtu.be/ISU3L3CCWP8
 
 ![HC-06 Bluetooth Search](../../media/bt/hc06_bt_search.jpg)
 
