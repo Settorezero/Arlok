@@ -34,6 +34,8 @@ Note: The HC-06 module need to be powered at 5V but TX/RX levels are at 3.3V
 - Take a cellular phone and turn on the bluetooth
 - Search for new bluetooth devices: 'Arlok' must appear in the list
 
+Here is a video showing this example: https://youtu.be/ISU3L3CCWP8
+
 ![HC-06 Bluetooth Search](../../media/bt/hc06_bt_search.jpg)
 
 - Select Arlok and associate it
