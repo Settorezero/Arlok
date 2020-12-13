@@ -11,6 +11,10 @@ The you can let you make the [PCB on PCBWay](https://www.pcbway.com/project/shar
 ## Print it by yourself!
 In the [STL folder](./stl) are located all parts you can 3Dprint by yourself. An [exploded view](./media/arlok_3d_exploded.stl) shows how parts have to be placed.
 
+## What materials are needed?
+There is a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1E60JlRyjGpX6OEBXnhZLZwZUzDe8-Zud6jBREFa6QfA/edit?usp=sharing) with all materials needed for the robot. For Italian Users only are also listed pages of italian shops where they can buy parts.  
+In the [docs folder](./docs) there is the simple BOM (only parts used for the PCB).
+
 ## Code examples
 See in the [Arduino folder](./arduino) for code examples
 
