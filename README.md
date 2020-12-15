@@ -5,25 +5,21 @@
 Arlok is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) made to be compatible with the [MakerUNO](https://makeruno.com.my/) board.  
 
 ## Buy a PCB  
-Making the PCB on PCBWay will support my work, but you need to subscribe to PCBWay first: you can do it using [my invite link](https://www.pcbway.com/setinvite.aspx?inviteid=355653&from=settorezero2020).  
-The you can let you make the [PCB on PCBWay](https://www.pcbway.com/project/shareproject/ARLOK_arduino_robot.html)
-
-## Print it by yourself!
-In the [STL folder](./stl) are located all parts you can 3Dprint by yourself. An [exploded view](./media/arlok_3d_exploded.stl) shows how parts have to be placed.
+Making the PCB on PCBWay will support my work, but you need to subscribe to PCBWay first: you can do it using [my invite link](https://www.pcbway.com/setinvite.aspx?inviteid=355653&from=settorezero2020). Then you can let you make the [PCB on PCBWay](https://www.pcbway.com/project/shareproject/ARLOK_arduino_robot.html)
 
 ## What materials are needed?
 There is a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1E60JlRyjGpX6OEBXnhZLZwZUzDe8-Zud6jBREFa6QfA/edit?usp=sharing) with all materials needed for the robot. For Italian Users only are also listed pages of italian shops where they can buy parts.  
 In the [docs folder](./docs) there is the simple BOM (only parts used for the PCB).
 
+## Assembling instructions
+Assembling is very easy. You need only some 12mm M3 screws for attaching the parts.In the [STL folder](./stl) are located all parts you can 3Dprint by yourself. All parts does not need supports, so are very easy to print even with a cheap 3d-printer. An [exploded view](./media/arlok_3d_exploded.stl) shows how parts have to be placed. Other informations are reported for the wheel and the ball-caster in the [stl folder readme](./stl).
+
 ## Code examples
-See in the [Arduino folder](./arduino) for code examples
+See in the [Arduino folder](./arduino) for code examples or write your own using one of the provided example as base!
 
 ## Connections
-
-In the following table are showed Arduino UNO to ARLOK shield connections.  
-Pinout is reported also the parallel version [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.).  
-If a cell is empty, means that pin is free to use and reported on a dedicate header.  
-The interrupt column shows the interrupt number associated with the pin, but is reccomended to use *digitalPinToInterrupt(Pin)*
+In the following table are showed Arduino UNO to ARLOK shield connections. Pinout is reported also the parallel version [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.).  
+If a cell is empty, means that pin is free to use and reported on a dedicate header. The interrupt column shows the interrupt number associated with the pin, but is reccomended to use *digitalPinToInterrupt(Pin)*
 
 | Arduino PIN | AR.L.O. (Arduino UNO) | ARLOK (MakerUNO)                          | Notes                    | Interrupt |
 |:------------|:----------------------|:------------------------------------------|:-------------------------|:----------|
@@ -61,12 +57,11 @@ The interrupt column shows the interrupt number associated with the pin, but is 
 | SCL         | OLED SCL              | OLED SCL + Grove + I2C header             | Shared with A5           |           |
 
 ### Connections considerations
-  
-- On ARLOK shield some pin are not reported on the PCB (such as the IOref and the unused pin near it, A4 and A5), so you can use a shorter male header.
-- On both ARLOK and AR.L.O., A3 is used in some sketches as seed for random number generator initialization; so, if you want to use it, change the code.  
-- On ARLOK all free digital pins are reported on EXT header along with 5V and ground, and the 3 free analog inputs are reported on 3 separate headers having power supply each.
-- On AR.L.O. free digital pins are reported on 2 headers: EXT2 (D11, D12, D13) and EXT1 (D3, D4, D5) and the analog inputs are reported to simple pads.
+- On ARLOK shield some pin are not reported on the PCB (such as the IOref and the unused pin near it, A4 and A5), so you can use fewer male headers.
+- On both ARLOK and AR.L.O., A3 is used in some sketches as seed for random number generator initialization; so, if you want to use A3, change the code.  
+- On ARLOK all free digital pins are reported on EXT header along with 5V and ground, and the 3 free analog inputs are reported on 3 separate headers having power supply each while on on AR.L.O. free digital pins are reported on 2 headers: EXT2 (D11, D12, D13) and EXT1 (D3, D4, D5) and the analog inputs are reported to simple pads.
 
 ### Links
 - [ARLOK pictures](https://tinyurl.com/arlokpictures)
 - [AR.L.O. video](https://www.youtube.com/watch?v=O_3CUWvaW3k)
+- [ARLOK bluetooth remote example](https://www.youtube.com/watch?v=ISU3L3CCWP8)
