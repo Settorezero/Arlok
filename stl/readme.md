@@ -16,3 +16,14 @@ You can see the [Exploded View](../images/arlok_3d_exploded.stl) for seeing how 
 - [8mm hole Pillar](arlok_pillar_hole_08.stl). Print this if you want to use a classic lever switch for main power.
 - [10mm hole Pillar](arlok_pillar_hole_10.stl). Print this if you want to use [10mm lock pushbuttons](https://amzn.to/31bjusa) for main power.
 - [12mm hole Pillar](arlok_pillar_hole_12.stl). Print this if you want to use [12mm lock pushbuttons](https://www.futurashop.it/mini-interruttore-pulsante-rosso-2846-ch32037?tracking=5f004a6ba8be7) for main power.
+
+## Wheel and Ball-Caster 
+An O-Ring will be applied to the wheel for giving grip. The wheels will be attached to the servo Horns.  
+The [Wheel](arlok_wheel.stl) is optimized to be used with the round horn that comes with the MG996 servo and for an o-ring having an internal diameter of 70-71mm and a section of about 2mm. Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) "Servo Wheel" on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/). In the script you can customize alla wheel parameters. I've generated provided wheels with following measures: external (finished) diameter:75mm, height:5mm, horn diameter:21mm. See the following image for understanding servo parameters in the openscad script:  
+
+![Servo Horn measures](../docs/servo_horn_measures.jpg)  
+
+A Tamiya 70144 ball-caster is used as third foothold. Ball caster will be mounted in the 27mm height version but without the M1 washers, so the total height of the ball caster will be 25mm.
+
+## About Models
+Arduino model, used for sizing and holes, is from [cmspooner on Thingiverse](https://www.openscad.org/)
