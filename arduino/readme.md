@@ -20,4 +20,4 @@ Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Ard
 - [Run Simple](./run_simple) : Arlok moves around avoiding obstacles
 - [Bluetooth Remote](./remote_bt) : You move Arlok using an Android phone and Bluetooth
 - [Line Follower](./linefollower) : Arlok moves following a line painted on the ground
-- Bobboteck is currently working to an [Artificial vision example](https://www.youtube.com/watch?v=Ag7VS_6hT9I), some code will be provided soon
+- Bobboteck is currently working to an [Artificial vision example](https://www.youtube.com/watch?v=Ag7VS_6hT9I), [code is still work in progress](https://github.com/bobboteck/ArloPixetto)
