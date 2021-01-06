@@ -16,10 +16,19 @@ You can see the [Exploded View](../images/arlok_3d_exploded.stl) for seeing how 
 - [8mm hole Pillar](arlok_pillar_hole_08.stl). Print this if you want to use a classic lever switch for main power.
 - [10mm hole Pillar](arlok_pillar_hole_10.stl). Print this if you want to use [10mm lock pushbuttons](https://amzn.to/31bjusa) for main power.
 - [12mm hole Pillar](arlok_pillar_hole_12.stl). Print this if you want to use [12mm lock pushbuttons](https://www.futurashop.it/mini-interruttore-pulsante-rosso-2846-ch32037?tracking=5f004a6ba8be7) for main power.
+- [Eyelashes](arlok_eyelashes.stl). Those are designed to give Arlok a female look (we call she _ARLOKKA_) by attaching them on the Ultrasonic sensor capsules.
+- [Via Pixetto Support](arlok_via_pixetto_support.stl). This support is used for attaching a [Via Pixetto Ai Camera](https://pixetto.ai/) on top/front of ARLOK. The support is a hinge made of 2 pieces: you must use a long M3 screw and a nut. In the STL there are also 4 small spacers used for distancing the camera from the base: you must use M2 screws and nuts
 
 ## Wheel and Ball-Caster 
 An O-Ring will be applied to the wheel for giving grip. The wheels will be attached to the servo Horns.  
-The [Wheel](arlok_wheel.stl) is optimized to be used with the round horn that comes with the MG996 servo and for an o-ring having an internal diameter of 70-71mm and a section of about 2mm. Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) "Servo Wheel" on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/). In the script you can customize alla wheel parameters. I've generated provided wheels with following measures: external (finished) diameter:75mm, height:5mm, horn diameter:21mm. See the following image for understanding servo parameters in the openscad script:  
+The [Wheel](arlok_wheel.stl) is optimized to be used with the round horn that comes with the MG996 servo and for an o-ring having an internal diameter of 70-71mm and a section of about 2mm. Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) of the Servo Wheel on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/). 
+
+In the script you can customize all wheel parameters. I've generated the provided wheels with following measures: 
+- external (finished) diameter: 75mm
+- height: 5mm
+- horn diameter: 21mm. 
+
+See the following image for understanding servo parameters in the openscad script:  
 
 ![Servo Horn measures](../docs/servo_horn_measures.jpg)  
 

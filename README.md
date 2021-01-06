@@ -57,9 +57,9 @@ If a cell is empty, means that pin is free to use and reported on a dedicate hea
 | SCL         | OLED SCL              | OLED SCL + Grove + I2C header             | Shared with A5           |           |
 
 ### Connections considerations
-- On ARLOK shield some pin are not reported on the PCB (such as the IOref and the unused pin near it, A4 and A5), so you can use fewer male headers.
-- On both ARLOK and AR.L.O., A3 is used in some sketches as seed for random number generator initialization; so, if you want to use A3, change the code.  
-- On ARLOK all free digital pins are reported on EXT header along with 5V and ground, and the 3 free analog inputs are reported on 3 separate headers having power supply each while on on AR.L.O. free digital pins are reported on 2 headers: EXT2 (D11, D12, D13) and EXT1 (D3, D4, D5) and the analog inputs are reported to simple pads.
+- On ARLOK shield some pin are not reported on the PCB (such as the `IOref` and the unused pin near it, `A4` and `A5`), so you can use fewer male headers.
+- On both ARLOK and AR.L.O., `A3` is used in some sketches as seed for random number generator initialization; so, if you want to use `A3`, change the code.  
+- On ARLOK all free digital pins are reported on `EXT` header along with 5V and ground, and the 3 free analog inputs are reported on 3 separate headers having power supply each while on on AR.L.O. free digital pins are reported on 2 headers: `EXT2` (`D11`, `D12`, `D13`) and `EXT1` (`D3`, `D4`, `D5`) and the analog inputs are reported to simple pads.
 
 ### Links
 - [ARLOK pictures](https://tinyurl.com/arlokpictures)
