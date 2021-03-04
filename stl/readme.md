@@ -13,7 +13,7 @@ You can see the [Exploded View](../images/arlok_3d_exploded.stl) for seeing how 
 - [Plate Top](arlok_plate_top.stl). Top plate where [Maker UNO](https://www.futurashop.it/makeruno-1686-MAKERUNO?tracking=5f004a6ba8be7) has to be mounted. Front part has the ARLOK writing on top (and so the SETTOREZERO.COM writing is on the right)
 - [Servo Braket](arlok_servo_bracket.stl). Print 2 of these. Are used to fix in place the 2 servomotors.
 - [Sonar Pillar](arlok_pillar_sonar.stl). Used for HC-SR04 ultrasonic sonar. By printing using a 0.1 Layer I obtain a perfect sonar mounting without using screws or glue.
-- [8mm hole Pillar](arlok_pillar_hole_08.stl). Print this if you want to use a classic lever switch for main power.
+- [6mm hole Pillar](arlok_pillar_hole_06.stl). Print this if you want to use a classic lever switch for main power.
 - [10mm hole Pillar](arlok_pillar_hole_10.stl). Print this if you want to use [10mm lock pushbuttons](https://amzn.to/31bjusa) for main power.
 - [12mm hole Pillar](arlok_pillar_hole_12.stl). Print this if you want to use [12mm lock pushbuttons](https://www.futurashop.it/mini-interruttore-pulsante-rosso-2846-ch32037?tracking=5f004a6ba8be7) for main power.
 - [Eyelashes](arlok_eyelashes.stl). Those are designed to give Arlok a female look (we call she _ARLOKKA_) by attaching them on the Ultrasonic sensor capsules.
