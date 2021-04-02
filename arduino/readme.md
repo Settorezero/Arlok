@@ -18,6 +18,7 @@ Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Ard
 ## Code examples
 
 - [Run Simple](./run_simple) : Arlok moves around avoiding obstacles
-- [Bluetooth Remote](./remote_bt) : You move Arlok using an Android phone and Bluetooth
+- [Bluetooth Remote](./remote_bt) : You move Arlok using Bluetooth Classic with an Android phone and app "Bluetooth Remote" or your custom one
+- [Bluetooth Remote XY](./remote_btxy) : You move Arlok using Bluetooth Classic with the app "Remote XY"
 - [Line Follower](./linefollower) : Arlok moves following a line painted on the ground
 - Bobboteck is currently working to an [Artificial vision example](https://www.youtube.com/watch?v=Ag7VS_6hT9I), [code is still work in progress](https://github.com/bobboteck/ArloPixetto)
