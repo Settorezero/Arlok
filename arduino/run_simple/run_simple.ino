@@ -76,14 +76,26 @@
 // Library for Arduino internal eeprom memory
 #include <EEPROM.h>
 
+#define ARLOK // comment this if you're using the AR.L.O. pcb
+
 // MakerUNO used pins
-#define MotorRPin 	9	// signal for right servomotor
-#define MotorLPin 	10	// signal for left servomotor
-#define P1 			2	// pushbutton P1 on ARLOK PCB, 'button' on MakerUNO board
-#define P2 			5	// pushbutton P2
-#define trigPin 	4	// HC-SR04 - trigger
-#define echoPin 	3	// HC-SR04 - echo
-#define buzzer		8	// buzzer on MakerUNO (you can de-activate it using the switch)		
+#ifdef ARLOK
+  #define MotorRPin 	9	// signal for right servomotor
+  #define MotorLPin 	10	// signal for left servomotor
+  #define P1 			2	// pushbutton P1 on ARLOK PCB, 'button' on MakerUNO board
+  #define P2 			5	// pushbutton P2
+  #define trigPin 	4	// HC-SR04 - trigger
+  #define echoPin 	3	// HC-SR04 - echo
+  #define buzzer		8	// buzzer on MakerUNO (you can de-activate it using the switch)		
+#else
+  #define MotorRPin 	9	// signal for right servomotor
+  #define MotorLPin 	10	// signal for left servomotor
+  #define P1 			6	// pushbutton P1 on AR.L.O.
+  #define P2 			7	// pushbutton P2
+  #define trigPin 	8	// HC-SR04 - trigger
+  #define echoPin 	2	// HC-SR04 - echo
+  //#define buzzer      // no buzzer	
+#endif
 
 // stuff used by servomotors
 ServoTimer2 MotorL;       // left servomotor object
@@ -108,7 +120,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // Global variables
 volatile long distance=0; // distance measured by sonar, cm
-// enum used for ARLOK working mode
+// enum used for ARLOK/ARLO working mode
 enum arlok_mode
   {
   configuration,
@@ -135,9 +147,10 @@ void setup()
   pinMode(P1,INPUT_PULLUP);
   pinMode(P2,INPUT_PULLUP);
   // buzzer setup
+  #ifdef ARLOK
   pinMode(buzzer, OUTPUT);
   digitalWrite(buzzer,LOW);
-
+  #endif
   // interrupts
   Timer1.initialize(TIMER_US); // Initialise timer 1
   Timer1.attachInterrupt(timer1_ISR); // Attach interrupt to the timer service routine 
@@ -158,7 +171,7 @@ void setup()
   display.setTextSize(2);
   display.setTextColor(SSD1306_WHITE,SSD1306_BLACK);
 
-  Serial.println("ARLOK Startup");
+  Serial.println("ARLO(K) Startup");
   
   // center values used for servomotors, loaded from eeprom
   // if in the eeprom are saved values out of the range 500-2500, 1500 will be used
@@ -197,7 +210,11 @@ void loop()
     fermo(2000); // servomotors stopped while sonar goes stable
     juststarted=false;  
     }
+  #ifdef ARLOK
   display.println("ARLOK RUN");
+  #else
+  display.println("AR.L.O. RUN");
+  #endif
   if (distance>3000)
     {
     display.print("go ahead!");
@@ -250,7 +267,11 @@ void config_menu(void)
   if (splash)
     {
     display.setCursor(0,0);
+    #ifdef ARLOK
     display.println("ARLOK SET");
+    #else
+    display.println("AR.L.O. SET");
+    #endif
     display.display();  
     delay(2000);
     display.clearDisplay();
@@ -376,14 +397,16 @@ void config_menu(void)
 void sound(void)
 	{
 	uint8_t i=30;
-	while (i--)
+ 	while (i--)
 		{
-		digitalWrite(buzzer,HIGH); // turn on the buzzer
+		#ifdef buzzer
+    digitalWrite(buzzer,HIGH); // turn on the buzzer
 		delayMicroseconds(2000);
 		digitalWrite(buzzer,LOW); // turn off the buzzer
 		delayMicroseconds(2000);
+    #endif
 		}
-	}
+ 	}
   
 // moves forward at 'vel' speed
 void dritto(uint16_t vel)
