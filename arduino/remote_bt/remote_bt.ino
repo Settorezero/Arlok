@@ -76,14 +76,25 @@
 // Library for Arduino internal eeprom memory
 #include <EEPROM.h>
 
-// MakerUNO used pins
-#define MotorRPin 	9	// signal for right servomotor
-#define MotorLPin 	10	// signal for left servomotor
-#define P1 			2	// pushbutton P1 on ARLOK PCB, 'button' on MakerUNO board
-#define P2 			5	// pushbutton P2
-#define trigPin 	4	// HC-SR04 - trigger
-#define echoPin 	3	// HC-SR04 - echo
-#define buzzer		8	// buzzer on MakerUNO (you can de-activate it using the switch)		
+#define ARLOK // comment this if you're using the AR.L.O. pcb
+
+#ifdef ARLOK
+  #define MotorRPin   9 // signal for right servomotor
+  #define MotorLPin   10  // signal for left servomotor
+  #define P1      2 // pushbutton P1 on ARLOK PCB, 'button' on MakerUNO board
+  #define P2      5 // pushbutton P2
+  #define trigPin   4 // HC-SR04 - trigger
+  #define echoPin   3 // HC-SR04 - echo
+  #define buzzer    8 // buzzer on MakerUNO (you can de-activate it using the switch)   
+#else
+  #define MotorRPin   9 // signal for right servomotor
+  #define MotorLPin   10  // signal for left servomotor
+  #define P1      6 // pushbutton P1 on AR.L.O.
+  #define P2      7 // pushbutton P2
+  #define trigPin   8 // HC-SR04 - trigger
+  #define echoPin   2 // HC-SR04 - echo
+  //#define buzzer      // no buzzer  
+#endif
 
 // stuff used by servomotors
 ServoTimer2 MotorL;       // left servomotor object
@@ -147,8 +158,10 @@ void setup()
   pinMode(P1,INPUT_PULLUP);
   pinMode(P2,INPUT_PULLUP);
   // buzzer setup
+  #ifdef buzzer
   pinMode(buzzer, OUTPUT);
   digitalWrite(buzzer,LOW);
+  #endif
   // interrupts
   Timer1.initialize(TIMER_US); // Initialise timer 1
   Timer1.attachInterrupt(timer1_ISR); // Attach interrupt to the timer service routine 
@@ -169,7 +182,7 @@ void setup()
   display.setTextSize(2);
   display.setTextColor(SSD1306_WHITE,SSD1306_BLACK);
 
-  Serial.println("ARLOK Startup");
+  Serial.println("ARLO(K) Startup");
   
   // center values used for servomotors, loaded from eeprom
   // if in the eeprom are saved values out of the range 500-2500, 1500 will be used
@@ -411,10 +424,12 @@ void sound(void)
 	uint8_t i=30;
 	while (i--)
 		{
+    #ifdef buzzer
 		digitalWrite(buzzer,HIGH); // turn on the buzzer
 		delayMicroseconds(2000);
 		digitalWrite(buzzer,LOW); // turn off the buzzer
 		delayMicroseconds(2000);
+    #endif
 		}
 	}
   

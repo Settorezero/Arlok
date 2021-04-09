@@ -78,7 +78,6 @@
 
 #define ARLOK // comment this if you're using the AR.L.O. pcb
 
-// MakerUNO used pins
 #ifdef ARLOK
   #define MotorRPin 	9	// signal for right servomotor
   #define MotorLPin 	10	// signal for left servomotor
@@ -147,7 +146,7 @@ void setup()
   pinMode(P1,INPUT_PULLUP);
   pinMode(P2,INPUT_PULLUP);
   // buzzer setup
-  #ifdef ARLOK
+  #ifdef buzzer
   pinMode(buzzer, OUTPUT);
   digitalWrite(buzzer,LOW);
   #endif
