@@ -8,12 +8,12 @@ Arlok is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) m
 Making the PCB on PCBWay will support my work, but you need to subscribe to PCBWay first: you can do it using [my invite link](https://www.pcbway.com/setinvite.aspx?inviteid=355653&from=settorezero2020). Then you can let you make the [PCB on PCBWay](https://www.pcbway.com/project/shareproject/ARLOK_arduino_robot.html)
 
 ## What materials are needed?
-Please Look at [BOM](./docs/arlok_bom.txt) first.  
-For Italian users there is a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1MPQHllO7yKMDYPbDrZOl-8qmw7OP9y3tJf0Bnw-yMyg/edit?usp=sharing) with all materials needed for the robot.
+Please Look at [BOM](./docs/BOM.txt) first.  
+For Italian users there is a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1MPQHllO7yKMDYPbDrZOl-8qmw7OP9y3tJf0Bnw-yMyg/edit?usp=sharing) with all materials needed for the robot from Futura Elettronica.
 
 ## Assembling instructions
-Assembling is very easy. You need only some 12mm M3 screws for attaching the 3D-printed parts.  
-In the [STL folder](./stl) are located all parts you can 3Dprint by yourself.  
+Assembling is very easy. You need only some M3 screws for assembling the 3D-printed parts.  
+In the [STL folder](./stl) are located all parts you can 3D-print by yourself.  
 Parts does not need supports, so are very easy to print even with a cheap 3d-printer.  
 An [exploded view](./media/arlok_3d_exploded.stl) shows how parts have to be placed.  
 Other informations are reported for the wheel and the ball-caster in the [stl folder readme](./stl).
