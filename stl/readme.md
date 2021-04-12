@@ -30,7 +30,7 @@ Time and weight is reported for total parts if more than one is needed.
 | (1) | [6mm hole Rear Pillar](arlok_pillar_hole_06.stl)               |  40 |  6 | 
 |  1  | [10mm hole Rear Pillar](arlok_pillar_hole_10.stl)              |  40 |  5 | 
 | (1) | [12mm hole Rear Pillar](arlok_pillar_hole_12.stl)              |  40 |  5 | 
-|  2  | [Standard Wheel](arlok_wheel.stl))                             | 178 | 28 | 
+|  2  | [Standard Wheel](arlok_wheel.stl)                              | 178 | 28 | 
 | (1) | [Eyelashes](arlok_eyelashes.stl)                               |   7 |  1 | 
 | (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)           |  53 |  6 | 
 
