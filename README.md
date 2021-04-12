@@ -68,6 +68,7 @@ The interrupt column shows the interrupt number associated with the pin, but is 
 - On ARLOK all free digital pins are reported on `EXT` header along with 5V and ground, and the 3 free analog inputs are reported on 3 separate headers having power supply each while on on AR.L.O. free digital pins are reported on 2 headers: `EXT2` (`D11`, `D12`, `D13`) and `EXT1` (`D3`, `D4`, `D5`) and the analog inputs are reported to simple pads.
 
 ### Links
+- [Motors Setup video](https://www.youtube.com/watch?v=i7roltk-IzI)
 - [ARLOK pictures](https://tinyurl.com/arlokpictures)
 - [AR.L.O. video](https://www.youtube.com/watch?v=O_3CUWvaW3k)
 - [ARLOK bluetooth remote example](https://www.youtube.com/watch?v=ISU3L3CCWP8)
