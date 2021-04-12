@@ -39,12 +39,12 @@ H1            male pinheader 10pin                            Arduino header - s
 H2            male pinheader 8pin                             Arduino header - solder on top
 H3            male pinheader 5pin                             Arduino header - solder on top
 H4            male pinheader 4pin                             Arduino header - solder on top
-EXT1          male pinheader 7pin                             
-EXT2          male pinheader 3pin                             
-EXT3          male pinheader 3pin                             
-EXT4          male pinheader 3pin                             
+EXT (EXT1)    male pinheader 7pin                             
+EXT2 (A1)     male pinheader 3pin                             
+EXT3 (A2)     male pinheader 3pin                             
+EXT4 (A3)     male pinheader 3pin                             
 HC-SR04       male pinheader 4pin                             
-I2C           male pinheader 4pin                             
+I2C           male pinheader 4pin (optional)                  
 J1(COMM)      female pinheader 6pin                           
 JP1           male pinheader 3pin + jumper                    
 JSW(POWER)    male pinheader 2pin + jumper OR 2.54mm switch   
@@ -53,7 +53,7 @@ RIGHT_SERVO   male pinheader 3pin
 OLED          female pinheader 4pin                           
 X1            Screw Terminal 2pin                             Pitch 5mm
 X2            Screw Terminal 2pin                             Pitch 5mm
-GROVE         GROVE male header                               
+GROVE         GROVE male header (optional)                    
 
 -------------------------------------------------------------------------------------------------
 3) Electronics - External components
