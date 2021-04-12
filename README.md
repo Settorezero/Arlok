@@ -8,7 +8,7 @@ Arlok is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) m
 Making the PCB on PCBWay will support my work, but you need to subscribe to PCBWay first: you can do it using [my invite link](https://www.pcbway.com/setinvite.aspx?inviteid=355653&from=settorezero2020). Then you can let you make the [PCB on PCBWay](https://www.pcbway.com/project/shareproject/ARLOK_arduino_robot.html)
 
 ## What materials are needed?
-Please Look at [BOM](./docs/BOM.txt) first.  
+Please Look at [BOM](./docs/BOM.md) first.  
 For Italian users there is a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1MPQHllO7yKMDYPbDrZOl-8qmw7OP9y3tJf0Bnw-yMyg/edit?usp=sharing) with all materials needed for the robot from Futura Elettronica.
 
 ## Assembling instructions

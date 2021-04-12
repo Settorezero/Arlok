@@ -1,6 +1,6 @@
-### ARLOK Bill Of Materials
+## ARLOK Bill Of Materials
 
-#### Summary
+### Summary
 
 1) Electronics - PCB
 2) Electronics - Shield Components
@@ -8,7 +8,7 @@
 4) Mechanics   - 3D-printed parts
 5) Mechanics   - Components
 
-#### 1) Electronics - PCB
+### 1) Electronics - PCB
 
 Step 1: Subscribe to PCBWay using my invite link:
         https://www.tinyurl.com/pcbwaysz
@@ -16,7 +16,7 @@ Step 1: Subscribe to PCBWay using my invite link:
 Step 2: Order the ARLOK shield PCB from the following link:
         https://tinyurl.com/arlokshield
 
-#### 2) Electronics - Shield Components
+### 2) Electronics - Shield Components
 
 | Part         | Value                                          | Notes                            |
 |--------------|------------------------------------------------|----------------------------------|
@@ -55,8 +55,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | X2           | Screw Terminal 2pin                            | Pitch 5mm                        |
 | GROVE        | GROVE male header (optional)                   |                                  |
 
-
-#### 3) Electronics - External components
+### 3) Electronics - External components
 
 | Qt.          | Description                                      |
 |--------------|--------------------------------------------------|
@@ -70,7 +69,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | 1x           | Round pushbutton with retain or lever switch (*) |
 | 7x           | AA 1.5V Batteries (**)                           |
 
-(*)  Print the "arlok_pillar_hole_xx.stl" according the pushbutton diameter
+(*)  Print the "arlok_pillar_hole_xx.stl" according the pushbutton diameter  
 (**) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. 
      Eventually you can use only 4NiMH batteries in the 4AA battery holder and don't use the 
      3AA battery holder: then you can power all robot using the 4AA. In this case don't mount
@@ -79,11 +78,11 @@ Step 2: Order the ARLOK shield PCB from the following link:
      malfunction (such as resets on board or on the bluetooh module) can occur. This solution
      is NOT tested!
 
-#### 4) Mechanics - 3D-printed parts
+### 4) Mechanics - 3D-printed parts
 
 Please see in the [STL folder](../stl)
 
-#### 5) Mechanics - Components
+### 5) Mechanics - Components
 
 | Qt.          | Description                                                                  |
 |--------------|------------------------------------------------------------------------------|
