@@ -8,18 +8,24 @@ Arlok is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) m
 Making the PCB on PCBWay will support my work, but you need to subscribe to PCBWay first: you can do it using [my invite link](https://www.pcbway.com/setinvite.aspx?inviteid=355653&from=settorezero2020). Then you can let you make the [PCB on PCBWay](https://www.pcbway.com/project/shareproject/ARLOK_arduino_robot.html)
 
 ## What materials are needed?
-There is a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1E60JlRyjGpX6OEBXnhZLZwZUzDe8-Zud6jBREFa6QfA/edit?usp=sharing) with all materials needed for the robot. For Italian Users only are also listed pages of italian shops where they can buy parts.  
-In the [docs folder](./docs) there is the simple BOM (only parts used for the PCB).
+Please Look at [BOM](./docs/arlok_bom.txt) first.  
+For Italian users there is a [Google Spreadsheet](https://docs.google.com/spreadsheets/d/1MPQHllO7yKMDYPbDrZOl-8qmw7OP9y3tJf0Bnw-yMyg/edit?usp=sharing) with all materials needed for the robot.
 
 ## Assembling instructions
-Assembling is very easy. You need only some 12mm M3 screws for attaching the parts.In the [STL folder](./stl) are located all parts you can 3Dprint by yourself. All parts does not need supports, so are very easy to print even with a cheap 3d-printer. An [exploded view](./media/arlok_3d_exploded.stl) shows how parts have to be placed. Other informations are reported for the wheel and the ball-caster in the [stl folder readme](./stl).
+Assembling is very easy. You need only some 12mm M3 screws for attaching the 3D-printed parts.  
+In the [STL folder](./stl) are located all parts you can 3Dprint by yourself.  
+Parts does not need supports, so are very easy to print even with a cheap 3d-printer.  
+An [exploded view](./media/arlok_3d_exploded.stl) shows how parts have to be placed.  
+Other informations are reported for the wheel and the ball-caster in the [stl folder readme](./stl).
 
 ## Code examples
 See in the [Arduino folder](./arduino) for code examples or write your own using one of the provided example as base!
 
 ## Connections
-In the following table are showed Arduino UNO to ARLOK shield connections. Pinout is reported also the parallel version [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.).  
-If a cell is empty, means that pin is free to use and reported on a dedicate header. The interrupt column shows the interrupt number associated with the pin, but is reccomended to use *digitalPinToInterrupt(Pin)*
+In the following table are showed Arduino UNO to ARLOK shield connections.  
+Pinout is reported also the parallel version [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.).  
+If a cell is empty, means that pin is free to use and reported on a dedicate header.  
+The interrupt column shows the interrupt number associated with the pin, but is reccomended to use *digitalPinToInterrupt(Pin)*
 
 | Arduino PIN | AR.L.O. (Arduino UNO) | ARLOK (MakerUNO)                          | Notes                    | Interrupt |
 |:------------|:----------------------|:------------------------------------------|:-------------------------|:----------|

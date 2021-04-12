@@ -66,9 +66,17 @@ Qt.           Description
 1x            OLED display module I2C (4pin) 0.96"
 1x            Battery Holder for 4AA batteries
 1x            Battery Holder for 3AA batteries
-1x            Round pushbutton with retain or lever switch*
+1x            Round pushbutton with retain or lever switch (*)
+7x            AA 1.5V Batteries (**)
 
-* print the "arlok_pillar_hole_xx.stl" according the pushbutton diameter
+(*)  Print the "arlok_pillar_hole_xx.stl" according the pushbutton diameter
+(**) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. 
+     Eventually you can use only 4NiMH batteries in the 4AA battery holder and don't use the 
+     3AA battery holder: then you can power all robot using the 4AA. In this case don't mount
+     D1 (put a piece of wire and pay attention to power orientation), put the power jumper JP1
+     in VSERVO position and keep the fingers crossed: the servo will absorb more current and
+     malfunction (such as resets on board or on the bluetooh module) can occur. This solution
+     is NOT tested!
 
 -------------------------------------------------------------------------------------------------
 4) Mechanics - 3D-printed parts
@@ -86,3 +94,4 @@ Qt.           Description
 2x            M3 screw, Countersunk, 8mm (length of threaded part, 10mm total)
 4x            Hex Standoff 10mm
 1x            Tamiya BallCaster model 70144 
+2x            Rubber O-Ring, 70mm internal diameter, 2-3mm width
