@@ -7,6 +7,7 @@
 3) Electronics - External components
 4) Mechanics   - 3D-printed parts
 5) Mechanics   - Components
+6) All Parts - Links to products only for Italian Users
 
 ### 1) Electronics - PCB
 
@@ -30,6 +31,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | R1           | 22K ¼W                                         |                                  |
 | R2           | 15K ¼W                                         |                                  |
 | R3           | 330 ¼W                                         |                                  |
+| R servo      | 4x 22K ¼W                                      | for servo modification           |
 | P1           | tactile switch 6x6mm (long button)             |                                  |
 | P2           | tactile switch 6x6mm (long button)             |                                  |
 | RESET        | tactile switch 6x6mm                           |                                  |
@@ -62,7 +64,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | 1x           | MakerUNO board by Cytron                         |
 | 2x           | Servo MG996R modded for continuos rotation       |
 | 1x           | HC-SR04 Ultrasonic sensor                        |
-| 1x           | Bluetooth module HC-05 or HC-06                  |
+| 1x           | Bluetooth module HC-05 (or HC-06)                |
 | 1x           | OLED display module I2C (4pin) 0.96"             |
 | 1x           | Battery Holder for 4AA batteries                 |
 | 1x           | Battery Holder for 3AA batteries                 |
@@ -70,6 +72,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | 7x           | AA 1.5V Batteries (**)                           |
 
 (*)  Print the "arlok_pillar_hole_xx.stl" according the pushbutton diameter  
+  
 (**) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. 
      Eventually you can use only 4NiMH batteries in the 4AA battery holder and don't use the 
      3AA battery holder: then you can power all robot using the 4AA. In this case don't mount
@@ -87,10 +90,24 @@ Please see in the [STL folder](../stl)
 | Qt.          | Description                                                                  |
 |--------------|------------------------------------------------------------------------------|
 | 12x          | M3 screw, Allen bolt socket cap, 12mm (length of threaded part - 15mm total) |
-| 8x           | M3 screw, Allen bolt socket cap, 5mm (length of threaded part - 8mm total)   |
+| 8x           | M3 screw, Allen bolt socket cap, 6mm (length of threaded part - 8mm total)   |
 | 14x          | M3 washers (optional)                                                        |
 | 14x          | M3 nuts                                                                      |
 | 2x           | M3 screw, Countersunk, 8mm (length of threaded part, 10mm total)             |
-| 4x           | Hex Standoff 10mm                                                            |
+| 4x           | Hex spacer F/F 10mm                                                          |
 | 1x           | Tamiya BallCaster model 70144                                                |
 | 2x           | Rubber O-Ring, 70mm internal diameter, 2-3mm width                           |
+
+### 6) All Parts - Links to products only for Italian Users
+
+Solo per gli utenti italiani: ho preparato un Google Spreadsheet con l'elenco di tutte le parti e i link dove acquistarli. In questo spreadsheet c'è l'elenco completo tranne che per il PCB dello Shield, per il quale potete vedere al punto 1 di questo documento.
+
+I link verso FuturaShop e verso Amazon contengono un codice di affiliazione: per voi il prezzo rimane lo stesso sia con che senza codice (potete verificare facilmente), ma con l'affiliazione guadagno dei crediti (su Futura) o buoni regalo (su Amazon) che posso utilizzare per comprare altro materiale presso di loro. Ci tengo a precisare, quindi, che ho scelto che i codici non mi vengano convertiti in denaro proprio perchè utilizzo questi crediti per ottenere altri materiali con cui lavorare sui miei progetti, per cui acquistando da quei link contribuite a sostenere questo lavoro.  
+
+In linea di massima è più conveniente per voi acquistare i pezzi singoli su FuturaShop dal momento che per molte cose, su Amazon, è possibile acquistare solo bundle di più pezzi (ad esempio non è possibile acquistare un singolo portabatterie su Amazon ma solo un kit con più pezzi, e così anche per display, sensore ultrasuoni ecc), mentre su Futura è possibile acquistare il pezzo singolo risparmiando tanto.
+
+Il link allo spreadsheet è il seguente:  
+
+https://docs.google.com/spreadsheets/d/1E60JlRyjGpX6OEBXnhZLZwZUzDe8-Zud6jBREFa6QfA/  
+
+Per alcune piccole parti, come resistenze, condensatori, viti, dadi ecc, purtroppo non è possibile acquistare nè su Amazon, nè su FuturaShop, il singolo componente, per cui ho messo dei link che puntano a kit con più componenti che potete tenere come scorta. Oppure potete cercare quelle parti su altri siti di vendita online. Solo il Trimmer è da cercare su altri siti.

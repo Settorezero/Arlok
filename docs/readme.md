@@ -1,8 +1,9 @@
 # Arlok Documents  
 In this folder are contained useful documents for working with Arlok Arduino Robot.
 
-- [BOM](BOM.md)
+- [Bill of Materials](BOM.md)
 - [Maker UNO schematic](schematic_maker_uno.pdf)
 - [Maker Line datasheet](makerline.pdf)
 - [Arduino UNO schematic (only for reference)](schematic_arduino_uno.pdf)
 - [ARLOK shield schematic](arlok_schematic.png)
+- [HC-06 Bluetooth Module manual](HC-06_manual.pdf)
