@@ -2,14 +2,14 @@
 
 ### Summary
 
-1) Electronics - PCB
-2) Electronics - Shield Components
-3) Electronics - External components
-4) Mechanics   - 3D-printed parts
-5) Mechanics   - Components
-6) All Parts - Links to products only for Italian Users
+1) [Electronics - PCB](#pcb)
+2) [Electronics - Shield Components](#shield)
+3) [Electronics - External components](#ext)
+4) [Mechanics   - 3D-printed parts](#3d)
+5) [Mechanics   - Components](#mech)
+6) [🇮🇹 All Parts - Links to products only for Italian Users](#ita)
 
-### 1) Electronics - PCB
+### <a name="pcb"></a>1) Electronics - PCB
 
 Step 1: Subscribe to PCBWay using my invite link:
         https://www.tinyurl.com/pcbwaysz
@@ -17,7 +17,7 @@ Step 1: Subscribe to PCBWay using my invite link:
 Step 2: Order the ARLOK shield PCB from the following link:
         https://tinyurl.com/arlokshield
 
-### 2) Electronics - Shield Components
+### <a name="shield"></a>2) Electronics - Shield Components
 
 | Part         | Value                                          | Notes                            |
 |--------------|------------------------------------------------|----------------------------------|
@@ -31,11 +31,11 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | R1           | 22K ¼W                                         |                                  |
 | R2           | 15K ¼W                                         |                                  |
 | R3           | 330 ¼W                                         |                                  |
-| R servo      | 4x 22K ¼W                                      | for servo modification           |
+| R servo      | 4x 22K ¼W (1% adviced)                         | for servo modification           |
 | P1           | tactile switch 6x6mm (long button)             |                                  |
 | P2           | tactile switch 6x6mm (long button)             |                                  |
 | RESET        | tactile switch 6x6mm                           |                                  |
-| VR1          | Trimmer 10K                                    | Type PT10LV10                    |
+| VR1          | 10K trimpotvv                                  | Type PT10LV10 (good 5K÷20K)      |
 | L1           | led 3mm                                        |                                  |
 | H1           | male pinheader 10pin                           | Arduino header - solder on top   |
 | H2           | male pinheader 8pin                            | Arduino header - solder on top   |
@@ -49,7 +49,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | I2C          | male pinheader 4pin (optional)                 |                                  |
 | J1 (COMM)    | female pinheader 6pin                          |                                  |
 | JP1          | male pinheader 3pin + jumper                   |                                  |
-| JSW(POWER)   | male pinheader 2pin + jumper OR 2.54mm switch  |                                  |
+| JSW (POWER)  | male pinheader 2pin + jumper OR 2.54mm switch  |                                  |
 | LEFT_SERVO   | male pinheader 3pin                            |                                  |
 | RIGHT_SERVO  | male pinheader 3pin                            |                                  |
 | OLED         | female pinheader 4pin                          |                                  |
@@ -57,7 +57,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | X2           | Screw Terminal 2pin                            | Pitch 5mm                        |
 | GROVE        | GROVE male header (optional)                   |                                  |
 
-### 3) Electronics - External components
+### <a name="ext"></a>3) Electronics - External components
 
 | Qt.          | Description                                      |
 |--------------|--------------------------------------------------|
@@ -71,7 +71,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | 1x           | Round pushbutton with retain or lever switch (*) |
 | 7x           | AA 1.5V Batteries (**)                           |
 
-(*)  Print the "arlok_pillar_hole_xx.stl" according the pushbutton diameter  
+(*)  Print the `arlok_pillar_hole_xx.stl` according the pushbutton diameter  
   
 (**) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. 
      Eventually you can use only 4NiMH batteries in the 4AA battery holder and don't use the 
@@ -81,11 +81,11 @@ Step 2: Order the ARLOK shield PCB from the following link:
      malfunction (such as resets on board or on the bluetooh module) can occur. This solution
      is NOT tested!
 
-### 4) Mechanics - 3D-printed parts
+### <a name="3d"></a>4) Mechanics - 3D-printed parts
 
 Please see in the [STL folder](../stl)
 
-### 5) Mechanics - Components
+### <a name="mech"></a>5) Mechanics - Components
 
 | Qt.          | Description                                                                  |
 |--------------|------------------------------------------------------------------------------|
@@ -94,11 +94,14 @@ Please see in the [STL folder](../stl)
 | 14x          | M3 washers (optional)                                                        |
 | 14x          | M3 nuts                                                                      |
 | 2x           | M3 screw, Countersunk, 8mm (length of threaded part, 10mm total)             |
-| 4x           | Hex spacer F/F 10mm                                                          |
-| 1x           | Tamiya BallCaster model 70144                                                |
+| 4x           | Hex spacer Female/Female 10mm                                                |
+| 1x           | Tamiya BallCaster model 70144 (*)                                            |
 | 2x           | Rubber O-Ring, 70mm internal diameter, 2-3mm width                           |
 
-### 6) All Parts - Links to products only for Italian Users
+(*) when you buy the Tamiya 70144 ballcaster kit, there are parts for making 2 ballcasters.
+    Maybe you can share the extra ballcaster part with a friend so he can build an Arlok too.
+
+### <a name="ita"></a>6) All Parts - Links to products only for Italian Users
 
 Solo per gli utenti italiani: ho preparato un Google Spreadsheet con l'elenco di tutte le parti e i link dove acquistarli. In questo spreadsheet c'è l'elenco completo tranne che per il PCB dello Shield, per il quale potete vedere al punto 1 di questo documento.
 
