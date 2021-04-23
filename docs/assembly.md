@@ -7,7 +7,7 @@
 
 Take the base (`arlok_plate_bottom`): Front-top side is the one with the arrow and the 2 slotted holes. We'll start from this piece. 
 
-![Arlok plate bottom overview](..\media\instructions\plate_bottom_overview.png)
+![Arlok plate bottom overview](../media/instructions/plate_bottom_overview.png)
 
 You will use the big holes or the lateral "C" grooves for passing the cables.   
 Take also some little cable ties: will turn useful for making a clean job.  
