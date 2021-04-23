@@ -5,10 +5,14 @@
 - You've already modified the 2 servos for the continuous rotation
 - You've already assembled the Shield
 
-Take the base (`arlok_plate_bottom`). Frontal side is the one with the 2 slotted holes, top part of the base is the one with the 2 grooves for the servo. We'll start from this piece. Remember to use the big holes or the lateral "C" grooves for passing the cables.   
+Take the base (`arlok_plate_bottom`): Front-top side is the one with the arrow and the 2 slotted holes. We'll start from this piece. 
+
+![Arlok plate bottom overview](..\media\instructions\plate_bottom_overview.png)
+
+You will use the big holes or the lateral "C" grooves for passing the cables.   
 Take also some little cable ties: will turn useful for making a clean job.  
 
-Open this [exploded view](./media/arlok_3d_exploded.stl) in a new window: will turn useful for seeing how parts are placed.  
+There is an [exploded view](./media/arlok_3d_exploded.stl) of Arlok: this will turn useful for seeing how parts are placed.  
 
 When you see the screw measure in millimeters: this is the length of the threaded part.
 
@@ -18,22 +22,32 @@ Screws will go from bottom (head in the battery holder) to top so the nut will b
 This battery will only power the logic board.
 
 ### STEP 2
-Place the two servos in the grooves. The shaft will toward the front. Place the brackets on the servos (`arlok_servo_bracket`). Attach servo brackers them using 4x M3 12mm Allen screws from top (head in the bracket) to bottom. On the bottom use 4x M3 washers and 4x M3 nuts.
+Place the two servos in the grooves. The shaft will toward the front. 
+
+![Servo alignment](../media/instructions/servo_alignment.png)
+
+Place the brackets on the servos (`arlok_servo_bracket`). Attach servo brackers them using 4x M3 12mm Allen screws from top (head in the bracket) to bottom. On the bottom use 4x M3 washers and 4x M3 nuts.
+
+Using a small piece of papertape write on Servo connectors "Right" and "Left" for remembering later where connects servo cables on the PCB. 
 
 ### STEP 3
 Assemble the Tamiya 70144 ball-caster according instructions in the ball-caster box: You must assemble the ball-caster in the 27mm version WITHOUT the H1 washers so the ball-caster will have a total height of about 25mm.
 
-![Tamiya 70144 Ball-Caster](../media/ball_caster_27mm.png)
+![Tamiya 70144 Ball-Caster](../media/instructions/ball_caster_27mm.png)
 
 ### STEP 4
-Attach the ball-caster on the bottom of the base, rear part. Use 2x M3 12mm Allen screws from top to bottom in the 2 holes near the center leaving free the 2 holes near the base border. Nuts in the bottom part without washers.
+Attach the ball-caster on the bottom of the base, rear part. Use 2x M3 12mm Allen screws from top to bottom in the 2 holes near the center leaving free the 2 holes near the base border. 
+
+![First ball-caster screws](../media/instructions/ballcaster_first_screws.png)
+
+Nuts in the bottom part without washers.
 
 ### STEP 5
 Attach the rear pillar (`arlok_pillar_hole_##`): the one with the hole for the switch. The hole must go to the lower side. Use 2x of the longest M3 screws provided in the ball-caster kit: screws will pass from the  pillar through the base and ball-caster.
 Nuts goes in the lower part. Don't use washers, use 2x M3 nuts provided with the ball-caster kit.
 
 ### STEP 6
-Sold 2 small piesce of wire on the round pushbutton (or the lever switch). Put the button in the hole of the rear pillar and fix it using his bolt. This pushbutton will detach the power from the 4AA batteries used for the servos.
+Sold 2 small piesce of wire on the round pushbutton (or the lever switch). Put the button in the hole of the rear pillar and fix it using his bolt. This pushbutton will detach the power from the 4AA batteries used for the servos. Check with a multimeter the pushbutton: must be in OFF position (opened).
 
 ### STEP 7
 Attach the pillar for the ultrasonic sensor (`arlok_pillar_sonar`) to the base using 2x M3 12mm Allen screws from top to bottom. Nuts in the lower part. Use washers.
