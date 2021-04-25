@@ -105,6 +105,7 @@ uint8_t servoL_eeprom=0; // eeprom memory location for storing point zero of lef
 uint8_t servoR_eeprom=2; // eeprom memory location for storing point zero of right servomotor
 #define SPEED  200 // normal speed for forward moving (center point+speed microseconds)
 #define SPEED_SLOW 50 // speed used for maneuvers
+#define TURN_TIME 1000 // amount of time used for turning
 
 // stuff used by sonar
 #define TIMER_US 50 // Timer1 interrupt every 50uS
@@ -248,11 +249,11 @@ void loop()
     fermo(100);
     if (randomNum)
         {
-        destra(1000);
+        destra(TURN_TIME);
         }
     else
         {
-        sinistra(1000);
+        sinistra(TURN_TIME);
         }
     fermo(100);
     }
