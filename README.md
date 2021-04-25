@@ -18,6 +18,9 @@ I've prepared a detailed step-by-step guide: it's located in the [docs folder](.
 ## Code examples
 See in the [Arduino folder](./arduino) for code examples or write your own using one of the provided example as base!
 
+## Troubleshooting
+See [Troubleshooting guide](./docs/troubleshooting.md)  
+
 ### Other Links
 - [Motors Setup video](https://www.youtube.com/watch?v=i7roltk-IzI)
 - [ARLOK pictures](https://tinyurl.com/arlokpictures)
