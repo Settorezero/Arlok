@@ -13,8 +13,8 @@ ARLOK is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) m
 - BOM in the docs folder: [Bill-Of-Materials](./docs/BOM.md).  
 
 ## Assembling
-I've prepared a detailed step-by-step guide: it's located in the [docs folder](./docs/assembly.md)
-For italian users: there is an [italian guide too](./docs/assembly.md)
+I've prepared a detailed step-by-step guide: it's located in the [docs folder](./docs/assembly.md).  
+🇮🇹 For italian users: there is an [italian guide too](./docs/assembly_ita.md)  
 If you've already analog servo, I've prepared also a [guide about servo modification for continuos rotation](./docs/servo_mod.md)
 
 ## Code examples

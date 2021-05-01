@@ -2,7 +2,7 @@
 
 > Quick link to this page: [https://tinyurl.com/mountingarlok](https://tinyurl.com/mountingarlok)  
 
-For italian users: this guide is also available in italian language: [assembly - ITA](assembly_ita.md)  
+🇮🇹 For italian users: this guide is also available in italian language: [assembly - ITA](assembly_ita.md)  
 
 ### Preliminary Steps
 
