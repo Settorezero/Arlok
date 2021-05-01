@@ -14,6 +14,8 @@ ARLOK is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) m
 
 ## Assembling
 I've prepared a detailed step-by-step guide: it's located in the [docs folder](./docs/assembly.md)
+For italian users: there is an [italian guide too](./docs/assembly.md)
+If you've already analog servo, I've prepared also a [guide about servo modification for continuos rotation](./docs/servo_mod.md)
 
 ## Code examples
 See in the [Arduino folder](./arduino) for code examples or write your own using one of the provided example as base!
