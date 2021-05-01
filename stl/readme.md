@@ -1,6 +1,7 @@
 # Arlok 3D Files for 3d-Printing 
 This folder contains parts to be 3D-printed.  
 I like to use the [Sunlu PLA+](https://amzn.to/3aG5V7i) filament.  
+> Quick link to this page: [https://tinyurl.com/3dprintarlok](https://tinyurl.com/3dprintarlok)  
 
 ## Printer settings
 Values in the parts table are calculated using CURA slicer with following settings:

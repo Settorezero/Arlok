@@ -1,20 +1,24 @@
 ## ARLOK assembly Instructions
 
+> Quick link to this page: [https://tinyurl.com/mountingarlok](https://tinyurl.com/mountingarlok)  
+
+For italian users: this guide is also available in italian language: [assembly - ITA](assembly_ita.md)  
+
 ### Preliminary Steps
 
-- You've already modified the 2 servos for the continuous rotation
-- You've already assembled the Shield
+Note: When you see the screw measure in millimeters: this is the length of the threaded part.
 
-Take the base (`arlok_plate_bottom`): Front-top side is the one with the arrow and the 2 slotted holes. We'll start from this piece. 
+- You've 2 servo having 360° rotation OR you have already modified the 2 servos for the continuous rotation (see [Servo modification guide](servo_mod.md))
+- You've already assembled the Shield
+- Take also some little cable ties: will turn useful for making a clean job.  
+
+Open the [ARLOK exploded view](./media/arlok_3d_exploded.stl) in a new window: this will turn useful for seeing how parts must be placed/oriented.  
+
+Take the base (`arlok_plate_bottom`): Front-top side is the one with the arrow and the 2 slotted holes. We will start from this piece.
 
 ![Arlok plate bottom overview](../media/instructions/plate_bottom_overview.png)
 
 You will use the big holes or the lateral "C" grooves for passing the cables.   
-Take also some little cable ties: will turn useful for making a clean job.  
-
-There is an [exploded view](./media/arlok_3d_exploded.stl) of Arlok: this will turn useful for seeing how parts are placed.  
-
-When you see the screw measure in millimeters: this is the length of the threaded part.
 
 ### STEP 1
 Attach the 3AA-battery holder on the bottom of the plate using the 2x M3 8mm countersunk screws.  
@@ -26,7 +30,7 @@ Place the two servos in the grooves. The shaft will toward the front.
 
 ![Servo alignment](../media/instructions/servo_alignment.png)
 
-Place the brackets on the servos (`arlok_servo_bracket`). Attach servo brackers them using 4x M3 12mm Allen screws from top (head in the bracket) to bottom. On the bottom use 4x M3 washers and 4x M3 nuts.
+Place the brackets on the servos (`arlok_servo_bracket`). Attach servo brackets them using 4x M3 12mm Allen screws from top (head in the bracket) to bottom. On the bottom use 4x M3 washers and 4x M3 nuts.
 
 Using a small piece of papertape write on Servo connectors "Right" and "Left" for remembering later where connects servo cables on the PCB. 
 
@@ -56,7 +60,7 @@ Attach the pillar for the ultrasonic sensor (`arlok_pillar_sonar`) to the base u
 Put 4x M3 12mm Allen screws from bottom to top in the top holes of the  pillars.
 
 ### STEP 9
-Straight the male pinheader of the ultrasonic sensor and attach 4 female to female jumpers (wire must be long at least 12-15mm).
+Straight the male pinheader of the ultrasonic sensor and attach 4 female to female jumpers (wire must be long at least 12-15cm).
 Mind the colors you used for the ultrasonic sensor signals: red wire for the Vdd, black for GND and other 2 different colors for echo and trigger.
 
 ### STEP 10
@@ -66,7 +70,7 @@ Insert the ultrasonic sensor in the pillar with cables on the bottom. If you've 
 Take the top plate (`arlok_plate_top`). The front-top part is the one with the ARLOK writing on it. Put 4x M3 6mm screws in the central holes having the Arduino layout, from bottom to top. Screw the 4x M3 10mm female/female spacers on the screws.
 
 ### STEP 12
-Place the 4AA battery holder on the servo brackets. It's no needed to attach it since will be held from the lateral wings of the top plate. Sold one wire of the pushbutton to the negative wire of the 4AA battery holder.  
+Place the 4AA battery holder on the servo brackets. It's no needed to attach it since will be held from the lateral wings of the top plate. Sold one wire of the pushbutton to the negative wire of the 4AA battery holder.  Put 4 AA batteries in the battery holder.
 Be sure pushbutton is in the OFF position (eventually check with a multimeter) and then put in the batteries.
 
 ### STEP 13
@@ -81,11 +85,16 @@ Put the MakerUNO on the standoffs. Attach the board using the 4x M3 6mm screws.
 - Attach the wires from the ultrasonic sensor on the `HC-SR04` header respecting signals/colors.
 - Attach the 2 servo connectors on the Servo headers respecting the LEFT-RIGHT arrows and the wire colors (orange=`S`, red=`+`, brown=`-`)
 - Move the small `POWER` switch on the shield toward the OR logo (OFF position if you soldered it correctly without covering the RESET writing).
+- Put 3 AA batteries in the battery holder
 - Put the 2 wires from the 3xAA battery holder in the `VDD` screw terminal, red wire in the `+`. If you see the `L1` led turning on, move the `POWER` switch on the shield in the opposite position.
 - Put the 2 wires from the 4xAA battery holder in the `VSERVO` screw terminal, red wire in the `+`. If you see servo moving, push the button/turn the lever.
 
 ### STEP 16
-- Attach the round servo hub in the groove of the wheels using 2 self-tapping screws coming from the servo kit. Screw heads will go outside (part of the wheel without the grove). The notch of the hubs will go toward the servo shaft.
+- Attach the round servo hub in the groove of the wheels using 2 self-tapping screws coming from the servo kit. Screw heads will go outside (part of the wheel without the grove). The notch of the hubs will go toward the servo shaft. Follow the pictures:
+
+![servo hub orientation](../media/instructions/arlok_servo_hub_orientation.png)  
+![servo hub orientation](../media/instructions/arlok_servo_hub_orientation2.png)
+
 - Attach the wheels to the servos using screws from the servo kit through the horn.
 
 ### STEP 17

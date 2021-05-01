@@ -1,5 +1,7 @@
 ## ARLOK Bill Of Materials
 
+> Quick link to this page: [https://tinyurl.com/shieldarlok](https://tinyurl.com/shieldarlok)  
+
 ### Summary
 
 1) [Electronics - PCB](#pcb)
@@ -28,10 +30,10 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | C5           | 100nF multilayer                               | pitch 5mm                        |
 | C6           | 100nF multilayer                               | pitch 5mm                        |
 | D1           | 1N400x  (good 1N4001, 1N4007 ecc)              |                                  |
-| R1           | 22K ¼W                                         |                                  |
-| R2           | 15K ¼W                                         |                                  |
-| R3           | 330 ¼W                                         |                                  |
-| R servo      | 4x 22K ¼W (1% adviced)                         | for servo modification           |
+| R1           | 22KΩ ¼W                                        |                                  |
+| R2           | 15KΩ ¼W                                        |                                  |
+| R3           | 330Ω ¼W                                        |                                  |
+| R servo *    | 4x 22KΩ ¼W 1%                                  | ONLY for servo modification      |
 | P1           | tactile switch 6x6mm (long button)             |                                  |
 | P2           | tactile switch 6x6mm (long button)             |                                  |
 | RESET        | tactile switch 6x6mm                           |                                  |
@@ -57,19 +59,21 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | X2           | Screw Terminal 2pin                            | Pitch 5mm                        |
 | GROVE        | GROVE male header (optional)                   |                                  |
 
+(*) only needed if you have (bought) standard analog servos not capable of 360° turning
+
 ### <a name="ext"></a>3) Electronics - External components
 
-| Qt.          | Description                                      |
-|--------------|--------------------------------------------------|
-| 1x           | MakerUNO board by Cytron                         |
-| 2x           | Servo MG996R modded for continuos rotation       |
-| 1x           | HC-SR04 Ultrasonic sensor                        |
-| 1x           | Bluetooth module HC-05 (or HC-06)                |
-| 1x           | OLED display module I2C (4pin) 0.96"             |
-| 1x           | Battery Holder for 4AA batteries                 |
-| 1x           | Battery Holder for 3AA batteries                 |
-| 1x           | Round pushbutton with retain or lever switch (*) |
-| 7x           | AA 1.5V Batteries (**)                           |
+| Qt.          | Description                                                              |
+|--------------|--------------------------------------------------------------------------|
+| 1x           | MakerUNO board by Cytron                                                 |
+| 2x           | Servo MG996R modded for continuos rotation OR Servo having 360° rotation |
+| 1x           | HC-SR04 Ultrasonic sensor                                                |
+| 1x           | Bluetooth module HC-05 (or HC-06)                                        |
+| 1x           | OLED display module I2C (4pin) 0.96"                                     |
+| 1x           | Battery Holder for 4AA batteries                                         |
+| 1x           | Battery Holder for 3AA batteries                                         |
+| 1x           | Round pushbutton with retain or lever switch (*)                         |
+| 7x           | AA 1.5V Batteries (**)                                                   |
 
 (*)  Print the `arlok_pillar_hole_xx.stl` according the pushbutton diameter  
   
@@ -109,8 +113,8 @@ I link verso FuturaShop e verso Amazon contengono un codice di affiliazione: per
 
 In linea di massima è più conveniente per voi acquistare i pezzi singoli su FuturaShop dal momento che per molte cose, su Amazon, è possibile acquistare solo bundle di più pezzi (ad esempio non è possibile acquistare un singolo portabatterie su Amazon ma solo un kit con più pezzi, e così anche per display, sensore ultrasuoni ecc), mentre su Futura è possibile acquistare il pezzo singolo risparmiando tanto.
 
-Il link allo spreadsheet è il seguente:  
+Il link allo spreadsheet è il seguente:  [https://docs.google.com/[...]](https://docs.google.com/spreadsheets/d/1E60JlRyjGpX6OEBXnhZLZwZUzDe8-Zud6jBREFa6QfA/)
 
-https://docs.google.com/spreadsheets/d/1E60JlRyjGpX6OEBXnhZLZwZUzDe8-Zud6jBREFa6QfA/  
+> Link abbreviato allo spreadsheet: [https://tinyurl.com/bomarlok](https://tinyurl.com/bomarlok)
 
 Per alcune piccole parti, come resistenze, condensatori, viti, dadi ecc, purtroppo non è possibile acquistare nè su Amazon, nè su FuturaShop, il singolo componente, per cui ho messo dei link che puntano a kit con più componenti che potete tenere come scorta. Oppure potete cercare quelle parti su altri siti di vendita online. Solo il Trimmer è da cercare su altri siti.
