@@ -46,26 +46,22 @@ In the top part of the servo there is the potentiometer hub: is the one where th
 
 Now you've the potentiomer and pcb out:
 
-![servo mod](../media/instructions/servo_mod/servo_mod_0010.jpg)
+![servo mod](../media/instructions/servo_mod/servo_mod_010.jpg)
 
 Desolder the cables from the potentiomer:
 
-![servo mod](../media/instructions/servo_mod/servo_mod_0011.jpg)
+![servo mod](../media/instructions/servo_mod/servo_mod_011.jpg)
 
 Arrange the 2 22KΩ resistor in this way:
 
-![servo mod](../media/instructions/servo_mod/servo_mod_0012.jpg)
+![servo mod](../media/instructions/servo_mod/servo_mod_012.jpg)
 
 Put the resistors in place of the potentiomer:
 
-![servo mod](../media/instructions/servo_mod/servo_mod_0013.jpg)
+![servo mod](../media/instructions/servo_mod/servo_mod_013.jpg)
 
-![servo mod](../media/instructions/servo_mod/servo_mod_0014.jpg)
+![servo mod](../media/instructions/servo_mod/servo_mod_014.jpg)
 
 Re-assemble the servo. Do the same to other servo.
 
-
-![servo mod](../media/instructions/servo_mod/servo_mod_0015.jpg)
-
-
-
+![servo mod](../media/instructions/servo_mod/servo_mod_015.jpg)
