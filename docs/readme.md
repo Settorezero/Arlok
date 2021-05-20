@@ -3,12 +3,13 @@
 In this folder are contained useful documents for working with ARLOK Arduino Robot.
 
 - [Bill of Materials](BOM.md)
-- [Assembly instructions](assembly.md)
+- [Assembly instructions - ENG](assembly.md)
+- [Assembly instructions - ITA](assembly_ita.md)
+- [How to hack Servo for continuous rotation](servo_mod.md)
 - [Connection table](connections.md)
-
-Other stuff:  
-
 - [ARLOK shield schematic](arlok_schematic.png)
+
+Datasheets and manuals from product manufacturers (folder datasheet)
 - [Maker UNO schematic](schematic_maker_uno.pdf)
 - [Maker Line datasheet](makerline.pdf)
 - [Arduino UNO schematic (only for reference)](schematic_arduino_uno.pdf)
