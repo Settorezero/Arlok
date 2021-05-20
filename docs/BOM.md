@@ -100,10 +100,13 @@ Please see in the [STL folder](../stl)
 | 2x           | M3 screw, Countersunk, 8mm (length of threaded part, 10mm total)             |
 | 4x           | Hex spacer Female/Female 10mm                                                |
 | 1x           | Tamiya BallCaster model 70144 (*)                                            |
-| 2x           | Rubber O-Ring, 70mm internal diameter, 2-3mm width                           |
+| 2x           | Rubber O-Ring, 70mm internal diameter, 2-3mm width (**)                      |
 
 (*) when you buy the Tamiya 70144 ballcaster kit, there are parts for making 2 ballcasters.
     Maybe you can share the extra ballcaster part with a friend so he can build an Arlok too.
+
+(**) user @rbonghi made O-Rings using TPU and 3D-Printer. If your 3D printer can handle TPU, try
+     first to print them yourself: see in [STL folder](../stl)
 
 ### <a name="ita"></a>6) All Parts - Links to products only for Italian Users
 

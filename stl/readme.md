@@ -24,19 +24,20 @@ You can see the [ARLOK Exploded View](../media/arlok_3d_exploded.stl) for seeing
 Part quantity in parenthesis indicates that this is an optional or an alternative part.  
 Time and weight is reported for total parts if more than one is needed.
 
-| Qt. | File                                                           | Print Time (minutes) | Weight (grams)| 
-|-----|----------------------------------------------------------------|----------------------|---------------|
-|  1  | [Plate Bottom](arlok_plate_bottom.stl)                         | 199 | 26 |
-|  1  | [Plate Top](arlok_plate_top.stl)                               | 216 | 30 |
-|  2  | [Servo Bracket](arlok_servo_bracket.stl)                       | 106 | 12 |
-|  1  | [Sonar Pillar](arlok_pillar_sonar.stl)                         |  48 |  6 |
-| (1) | [Sonar Pillar (round variant)](arlok_pillar_sonar_rounded.stl) |  48 |  6 |
-| (1) | [6mm hole Rear Pillar](arlok_pillar_hole_06.stl)               |  40 |  6 | 
-|  1  | [10mm hole Rear Pillar](arlok_pillar_hole_10.stl)              |  40 |  5 | 
-| (1) | [12mm hole Rear Pillar](arlok_pillar_hole_12.stl)              |  40 |  5 | 
-|  2  | [Standard Wheel](arlok_wheel.stl)                              | 178 | 28 | 
-| (1) | [Eyelashes](arlok_eyelashes.stl)                               |   7 |  1 | 
-| (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)           |  53 |  6 | 
+| Qt. | File                                                           | Print Time (minutes) | Weight (grams)| Notes |
+|-----|----------------------------------------------------------------|----------------------|---------------|-------|
+|  1  | [Plate Bottom](arlok_plate_bottom.stl)                         | 199 | 26 |  |
+|  1  | [Plate Top](arlok_plate_top.stl)                               | 216 | 30 |  |
+|  2  | [Servo Bracket](arlok_servo_bracket.stl)                       | 106 | 12 |  |
+|  1  | [Sonar Pillar](arlok_pillar_sonar.stl)                         |  48 |  6 |  |
+| (1) | [Sonar Pillar (round variant)](arlok_pillar_sonar_rounded.stl) |  48 |  6 |  |
+| (1) | [6mm hole Rear Pillar](arlok_pillar_hole_06.stl)               |  40 |  6 |  | 
+|  1  | [10mm hole Rear Pillar](arlok_pillar_hole_10.stl)              |  40 |  5 |  |
+| (1) | [12mm hole Rear Pillar](arlok_pillar_hole_12.stl)              |  40 |  5 |  |
+|  2  | [Standard Wheel](arlok_wheel.stl)                              | 178 | 28 |  |
+| (1) | [Eyelashes](arlok_eyelashes.stl)                               |   7 |  1 |  |
+| (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)           |  53 |  6 |  |
+| (2) | [Wheel O-Ring by Raffaello Bonghi](arlok_oring.stl)            |     |    | See descriptions |
 
 Estimated total printing time for standard parts: 13H 7'  
 Estimated total filament needed for standard parts: 107g (about 36meters)
@@ -49,11 +50,17 @@ Frontal side is the one with the 2 slotted holes on the bottom. Those slotted ho
 ### Plate Top
 You'll mount the Maker UNO board on top using 4 hex spacers. The two lateral wings will hold the 4AA battery holder in place.
 
+### Servo Bracket
+Bracket to hold in place the 2 servos: there is no need to attach servo to the bracket with screws.
+
 ### Sonar Pillar
 There are 2 variants: the standard, having squared edges, and the one with rounded edges, print only one of these.
 
-### Rear Pillar
+### "xxmm hole" Rear Pillar
 There are 3 variants that differs for the hole diameter used for the switch that detaches the 4AA batteries of the servo power. Print only 1 of these. 6mm variant will be used for the classic lever switch. 10mm variant is used for the 10mm lock pushbuttons. 12mm variant is used for the 12mm lock pushbuttons sold by FuturaShop (see [BOM in the docs folder](../docs/BOM.md)).
+
+### Standard Wheel
+The [Wheel](arlok_wheel.stl) is optimized to be used with the round horn that comes with the MG996 servo and for an o-ring having an internal diameter of 70mm and a section of about 2 or 3mm. A rubber O-Ring will be applied to the wheel groove for giving grip. Please don't use cyanoacrilate glue for attaching the O-Ring. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. Wheel is sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 27mm variant without H1 washers (so the total height of the ball caster will be 25mm).
 
 ### Eyelashes
 Those are designed to give Arlok a female look (we call she _ARLOKKA_) by attaching them on the Ultrasonic sensor capsules. Are also useful for mantaining the ultrasonic sensor in position if holes are too large.
@@ -61,8 +68,15 @@ Those are designed to give Arlok a female look (we call she _ARLOKKA_) by attach
 ### Via Pixetto support
 This support is used for attaching a [Via Pixetto Ai Camera](https://pixetto.ai/) on top-front of ARLOK. The support is a hinge made of 2 pieces: you must use a long M3 screw and a nut. In the STL there are also 4 small spacers used for distancing the camera from the base: you must use M2 screws and nuts. Sorry but Via Pixetto example is still not ready.
 
-### Wheel
-The [Wheel](arlok_wheel.stl) is optimized to be used with the round horn that comes with the MG996 servo and for an o-ring having an internal diameter of 70mm and a section of about 2 or 3mm. A rubber O-Ring will be applied to the wheel groove for giving grip. Please don't use cyanoacrilate glue for attaching the O-Ring. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. Wheel is sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 27mm variant without H1 washers (so the total height of the ball caster will be 25mm).
+### Wheel O-Ring by Raffaello Bonghi
+If your 3D-Printer can handle TPU (flexibile filament) you can print 2 copies of this stl instead buying an O-Ring. This part was contributed by @rbonghi. You can see some pictures of this O-Ring [here](../media/oring_rbonghi).  
+Raffaello advices those settings:
+- Filament: TPU SainSmart
+- Infill Density: 5%
+- Infill pattern: Honeycomb
+- Retraction: Disabled
+- Temperature Nozzle: 235 - 230
+- Temperature Bed: 45 - 40
 
 ## Notes about Wheel customization
 Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) of the Servo Wheel on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/). 
