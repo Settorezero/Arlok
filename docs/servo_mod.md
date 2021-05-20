@@ -28,15 +28,15 @@ Extract the gear with the hub and the ball-bearing on it:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_005.jpg)
 
-Look at this gear: it has a small notch under the ball-bearing. The MG996R servo has a little metallic cilinder instead.
+Look at this gear: it has a small notch under the ball-bearing. The MG996R servo has a little metallic cilinder instead:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_006.jpg)
 
-Gently cut-out this notch using a lancet or a small cutter. don't apply too much force. For the MG996R servo you can use a small wrench for extracting the metallic notch:
+Now you must remove this notch. For a servo having plastic gears you can gently use a lancet or a small cutter: don't apply too much force OR THE ENTIRE GEAR WILL BROKE! For the MG996R servo you can use a small wrench for extracting the metallic notch by simply pulling it upward:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_007.jpg)
 
-Extract the servo PCB:
+Now extract the servo PCB:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_008.jpg)
 
