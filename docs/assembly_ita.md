@@ -97,4 +97,4 @@ Posizionare la MakerUNO sui distanziali e bloccarla con 4 viti M3 6mm.
 Posizionare gli O-Ring sulle ruote. E' consigliato non usare collanti, soprattutto cianoacrilato che rilascia aloni biancastri. Colle come ad esempio il bostick possono sciogliere la gomma dell'O-Ring.
 
 ### STEP 18
-Eseguire la procedura di setup per i servo [seguendo questo video](https://www.youtube.com/watch?v=i7roltk-IzI). In realtà utilizzando servocomandi modificati non dovrebbe essere necessario eseguire questa procedura.
+Caricare per primo il programma [run_simple](../arduino/run_simple). Come da descrizione riportata nel readme eseguire prima la procedura di setup per i servo: [potete seguire questo video](https://youtu.be/qzJxrcuSvpU).

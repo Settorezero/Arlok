@@ -24,7 +24,7 @@ See in the [Arduino folder](./arduino) for code examples or write your own using
 See [Troubleshooting guide](./docs/troubleshooting.md)  
 
 ### Other Links
-- [Motors Setup video](https://www.youtube.com/watch?v=i7roltk-IzI)
+- [Motors Setup video](https://youtu.be/qzJxrcuSvpU)
 - [Video by Greta Galli](https://www.youtube.com/watch?v=CbPGWd9I_mA)
 - [ARLOK pictures](https://tinyurl.com/arlokpictures)
 - [AR.L.O. video](https://www.youtube.com/watch?v=O_3CUWvaW3k)
