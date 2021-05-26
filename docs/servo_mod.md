@@ -1,12 +1,14 @@
-## Servo modification
+## Servo hack
 
-This is a simple guide for modification of a standard analog servo for having the continuous rotation. Not needed if you have 360° servo.
+This is a simple guide for hacking a standard analog servo for achieving continuous rotation. This procuder is **not needed** if you have 360° servo.
 
 Tools needed:
 
 - 4 22K ¼W 1% resistors
-- a lancet
+- a lancet (for plastic gears servo) or a small wrench (for metallic gears servo)
 - a small phillips screwdriver
+- soldering iron
+- solder sucker
 
 Locate the 4 screw in the lower part of the servo:  
 
@@ -52,7 +54,7 @@ Desolder the cables from the potentiomer:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_011.jpg)
 
-Arrange the 2 22KΩ resistor in this way:
+Arrange the 2 22KΩ 1% resistor in this way:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_012.jpg)
 
@@ -60,8 +62,4 @@ Put the resistors in place of the potentiomer:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_013.jpg)
 
-![servo mod](../media/instructions/servo_mod/servo_mod_014.jpg)
-
 Re-assemble the servo. Do the same to other servo.
-
-![servo mod](../media/instructions/servo_mod/servo_mod_015.jpg)
