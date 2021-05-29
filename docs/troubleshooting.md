@@ -6,6 +6,7 @@ How to resolve common problems with ARLOK
 
 1) [ARLOK doesn't turn or doesn't move](#movement)
 2) [ARLOK make too little or too big movement while turning](#turning)
+3) [ARLOK goes backward too far or too little](#backward)
 
 ### <a name="movement"></a> ARLOK doesn't turn or doesn't move
 
@@ -16,15 +17,14 @@ ARLOK movement is based on a central position (default 1500mS, the setup procedu
 `SPEED` and `SPEED_SLOW` are defined in the source code, by default:
 
 ```
-#define SPEED  200 // normal speed for forward moving (center point+speed microseconds)
-#define SPEED_SLOW 50 // speed used for maneuvers
+#define SPEED  600 // normal speed for forward moving (center point+speed microseconds)
+#define SPEED_SLOW 125 // speed used for maneuvers
 ```
 
-If ARLOK cannot move forward or backwars then raise the value assigned to 
-`SPEED`, example:
+If ARLOK cannot move forward or backwards then raise the value assigned to `SPEED`, example:
 
 ```
-#define SPEED  500
+#define SPEED  700
 ```
 
 If ARLOK cannot turn left or right raise the value assigned to `SPEED_SLOW`, example:
@@ -35,20 +35,40 @@ If ARLOK cannot turn left or right raise the value assigned to `SPEED_SLOW`, exa
 
 ### <a name="turning"></a> ARLOK make too little or too big movement while turning
 
-The amount of movement during a turn is defined by the `TURN_TIME` value. This value is expressed in milliseconds. By default this value is 1000 (1 second = ARLOK will make the movement to left of right for 1 second):
+The amount of movement during a turn is defined by the `TURN_TIME` value. This value is expressed in milliseconds. By default this value is 600 (ARLOK will make the movement to left of right for 0.6 second):
 
 ```
-#define TURN_TIME 1000 // amount of time used for turning
+#define TURN_TIME 600 // amount of time used for turning, change this if turning angle is not 90 degrees
 ```
 
 If movement of a turn is less than 90 degree, raise this value. Example:
 
 ```
-#define TURN_TIME 1200 
+#define TURN_TIME 1000 
 ```
 
 If movement of a turn is greater than 90 degree, lower this value. Example:
 
 ```
-#define TURN_TIME 800 
+#define TURN_TIME 500 
+```
+
+### <a name="backward"></a> ARLOK goes backward too far or too little
+
+The amount of movement moving backward by the `BACK_TIME` value. This value is expressed in milliseconds. By default this value is 500 (ARLOK will go backward for 0.5 second):
+
+```
+#define BACK_TIME 500 // amount of time used for going backward after robot found an obstacle
+```
+
+If movement backward is too large, lower this value. Example:
+
+```
+#define BACK_TIME 400 
+```
+
+If movement backward is too small, raise this value. Example:
+
+```
+#define BACK_TIME 700 
 ```

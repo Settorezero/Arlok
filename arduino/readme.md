@@ -1,6 +1,7 @@
 # Arlok Source Code for Arduino IDE
   
 This folder contains Arduino sketches to be used with [Arduino IDE](https://www.arduino.cc/en/main/software).  
+Note: The setup procedure is only implemented in the `explorer` sketch.
 
 ## Libraries
   
@@ -17,7 +18,9 @@ Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Ard
 
 ## Code examples
 
-- [Run Simple](./run_simple) : Arlok moves around avoiding obstacles
-- [Bluetooth Remote](./remote_bt) : You move Arlok using Bluetooth Classic with an Android phone and app "Bluetooth Remote" or your custom one
+- [Explorer](./explorer) : Arlok moves around avoiding obstacles
+- [Bluetooth Remote](./bluetooth) : You move Arlok using Bluetooth Classic with an Android phone
 - [Line Follower](./linefollower) : Arlok moves following a line painted on the ground
-- Bobboteck is currently working to an [Artificial vision example](https://www.youtube.com/watch?v=Ag7VS_6hT9I), [code is still work in progress](https://github.com/bobboteck/ArloPixetto)
+
+## Work in progress
+- Artificial vision example[see video](https://www.youtube.com/watch?v=Ag7VS_6hT9I), [code on Bobboteck repo](https://github.com/bobboteck/ArloPixetto)
