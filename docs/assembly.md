@@ -101,4 +101,4 @@ Put the MakerUNO on the standoffs. Attach the board using the 4x M3 6mm screws.
 Place the O-Ring on the wheels. Don't use cyanoacrilate glues.
 
 ### STEP 18
-Load first the [run_simple program](../arduino/run_simple). Read the readme document in the folder for doing the setup procedure
+Load first the [explorer example](../arduino/explorer). Read the readme document in the folder for doing the setup procedure
