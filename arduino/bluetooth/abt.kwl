@@ -1,0 +1,12 @@
+Keuwlsoft Bluetooth Electronics Panel File
+2020-09-28 00:18:19
+2
+
+*.kwl
+set_grid_size(12,7)
+add_text(6,1,xlarge,C,ARLOK BLUETOOTH REMOTE,245,240,245,)
+add_text_box(7,4,3,L,9,245,240,245,d)
+add_text(7,3,xlarge,L,distance,245,240,245,)
+add_button(5,4,15,Y,y)
+add_4way_pad(1,3,1,2,3,4,0,0,,)
+set_panel_notes(Arlok Bluetooth Demo,Move Arlok using the phone,https://www.settorezero.com,)
