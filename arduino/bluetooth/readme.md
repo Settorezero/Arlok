@@ -1,10 +1,8 @@
 ## Bluetooth Remote
 
-Arlok is moved using an app on an android device that sends serial commands over Bluetooth. You can use an **HC-05** or an **HC-06** Bluetooth module.
+Arlok is moved using an app on an Android device that sends serial commands over Bluetooth. You can use an **HC-05** or an **HC-06** Bluetooth module. Android app + source code provided here.
 
-
-![Arlok Bluetooth Remote](../../media/bt/arlok_bluetooth_remote.jpg)
-
+![Arlok Bluetooth Remote App](../../media/bt/arlok_bluetooth_app.jpg)
 
 ## Summary
 
@@ -16,7 +14,6 @@ Arlok is moved using an app on an android device that sends serial commands over
 4) [Upload the code](#code)
 5) [Use the ARLOK App](#app)
 6) [Use Bluetooth Electronics](#kwl)
-
 
 ### <a name="hc05vs06"></a> Differencies between HC-05 and HC-06 
 
@@ -36,6 +33,12 @@ First Connect the bluetooth module (HC-0x where x=5 or 6) to an USB adapter capa
 - Set the USB module for working at 3.3V
 
 > The HC-06 module need to be powered at 5V but TX/RX levels are at 3.3V. This is why you're connecting module VCC to 5V but you're setting your USB adapter for working at 3.3V
+
+This image shows how an HC-05 module is connected to the [UART-I2C-SMBUS 2 USB adapter](https://www.settorezero.com/wordpress/bridge-da-uart-e-i2c-ad-usb/): 
+
+![Module connected to USB adapter](../../media/bt/hc_to_usb.jpg)
+
+If you use this module: put the power selection jumper in `3V3` position and use the remaining pin of this jumper for taking the 5V from USB for powering the bluetooth module (So, don't use the Vcc on the header).
 
 #### <a name="#hc05name"></a> Instructions for HC-05
 
@@ -150,3 +153,5 @@ Note: for reset the previous panel click on the gears button and select 'Reset D
 - Move Arlok using the 4-way pad, sound the buzzer pressing the yellow button. The 'Distance' textbox shows the distance, expressed as cm, read by the sonar
 
 ![Bluetooth Electronics - Arlok Panel Working](../../media/bt/kewlsoft_02.png)
+
+![Arlok Bluetooth Remote](../../media/bt/arlok_bluetooth_remote.jpg)
