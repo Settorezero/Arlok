@@ -19,7 +19,7 @@ Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Ard
 ## Code examples
 
 - [Explorer](./explorer) : Arlok moves around avoiding obstacles
-- [Bluetooth Remote](./bluetooth) : You move Arlok using Bluetooth Classic with an Android phone
+- [Bluetooth Remote](./bluetooth) : You move Arlok using Bluetooth Classic with an Android phone. Source code for Android app provided too
 - [Line Follower](./linefollower) : Arlok moves following a line painted on the ground
 
 ## Work in progress

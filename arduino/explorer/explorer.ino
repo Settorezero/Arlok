@@ -111,7 +111,7 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED 600                 // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
+#define SPEED 500                 // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
 #define SPEED_SLOW 125            // speed used for maneuvers, raise this if your robot cannot turn
 #define TURN_TIME 600             // amount of time used for turning, change this if turning angle is not 90 degrees
 #define BACK_TIME 500             // amount of time used for going backward after robot found an obstacle

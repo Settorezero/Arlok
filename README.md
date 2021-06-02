@@ -4,7 +4,7 @@
 
 ARLOK is a simple educational (STEM) Robot based on Arduino UNO with parts printed in 3D and all easy-available components.   
   
-ARLOK is cheap, cute and easy to assemble and program. There are some programming examples that will make this robot moving around avoiding obstacles, following a line on the floor or let you control it using your cellphone.  
+ARLOK is cheap, cute and easy to assemble and program. There are some programming examples that will make this robot moving around avoiding obstacles, following a line on the floor or let you control it using your cellphone with Android app source code provided too.  
   
 ARLOK is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) made to be compatible with the [MakerUNO](https://makeruno.com.my/) board. So it's better use a MakerUNO but you can use also an Arduino UNO (in this case you'll need some longer headers for the shield connections).  
 
