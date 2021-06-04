@@ -65,10 +65,11 @@ Step 2: Order the ARLOK shield PCB from the following link:
 
 | Qt.          | Description                                                              |
 |--------------|--------------------------------------------------------------------------|
-| 1x           | MakerUNO board by Cytron                                                 |
+| 1x           | Cytron MakerUNO board                                                    |
 | 2x           | Servo MG996R modded for continuos rotation OR Servo having 360° rotation |
 | 1x           | HC-SR04 Ultrasonic sensor                                                |
-| 1x           | Bluetooth module HC-05 (or HC-06)                                        |
+| 1x           | Bluetooth module HC-05 (or HC-06) - Needed for Bluetooth remote example  |
+| 1x           | Cytron MakerLine board - Needed for Line Follower example                |
 | 1x           | OLED display module I2C (4pin) 0.96"                                     |
 | 1x           | Battery Holder for 4AA batteries                                         |
 | 1x           | Battery Holder for 3AA batteries                                         |
@@ -119,5 +120,7 @@ In linea di massima è più conveniente per voi acquistare i pezzi singoli su Fu
 Il link allo spreadsheet è il seguente:  [https://docs.google.com/[...]](https://docs.google.com/spreadsheets/d/1E60JlRyjGpX6OEBXnhZLZwZUzDe8-Zud6jBREFa6QfA/)
 
 > Link abbreviato allo spreadsheet: [https://tinyurl.com/bomarlok](https://tinyurl.com/bomarlok)
+
+Se volete risparmiare: Il modulo Bluetooth è un optional, è necessario però se volete realizzare l'esempio del robot controllato da remoto col cellulare. Il Modulo MakerLine è un optional, è necessario se volete realizzare l'esempio del line-follower. Il display OLED è un optional ma è consigliato perchè torna utile anche come sistema di debug e durante la taratura dei servocomandi. Considero il modulo ultrasuoni come sensore di base per realizzare almeno l'esempio explorer.
 
 Per alcune piccole parti, come resistenze, condensatori, viti, dadi ecc, purtroppo non è possibile acquistare nè su Amazon, nè su FuturaShop, il singolo componente, per cui ho messo dei link che puntano a kit con più componenti che potete tenere come scorta. Oppure potete cercare quelle parti su altri siti di vendita online. Solo il Trimmer è da cercare su altri siti.
