@@ -7,6 +7,7 @@ How to resolve common problems with ARLOK
 1) [ARLOK doesn't turn or doesn't move](#movement)
 2) [ARLOK make too little or too big movement while turning](#turning)
 3) [ARLOK goes backward too far or too little](#backward)
+4) [Can't upload code (stk500_getsync() error)](#getsync)
 
 ### <a name="movement"></a> ARLOK doesn't turn or doesn't move
 
@@ -72,3 +73,7 @@ If movement backward is too small, raise this value. Example:
 ```
 #define BACK_TIME 700 
 ```
+
+### <a name="getsync"></a> Can't upload code (stk500_getsync() error)
+
+Probably you've the bluetooth module attached

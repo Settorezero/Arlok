@@ -4,6 +4,14 @@ Arlok is moved using an app on an Android device that sends serial commands over
 
 ![Arlok Bluetooth Remote App](../../media/bt/arlok_bluetooth_app.jpg)
 
+## Bluetooth module attachment
+
+Please pay attention to Bluetooth module attachment! Align `RX` of the module with `TX` on the silkscreen and so on. Usually module must go with chips and antenna toward the left side of the robot:
+
+![Bluetooth module alignment](../../media/bt/bluetooth_module_alignment)
+
+Remember to detach the module while loading sketch on Arduino! Bluetooth module and Arduino Serial port share the same data line!
+
 ## Summary
 
 1) [Differencies between Bluetooth Modules](#hc05vs06)
