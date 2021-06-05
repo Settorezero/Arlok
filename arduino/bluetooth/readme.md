@@ -43,7 +43,7 @@ First Connect the bluetooth module (HC-0x where x=5 or 6) to an USB adapter capa
 - Connect HC-0x GND to USB adapter GND
 - Set the USB module for working at 3.3V
 
-> The HC-06 module need to be powered at 5V but TX/RX levels are at 3.3V. This is why you're connecting module VCC to 5V but you're setting your USB adapter for working at 3.3V
+> The HC-0x module need to be powered at 5V but TX/RX levels are at 3.3V. This is why you're connecting module VCC to 5V but you're setting your USB adapter for working at 3.3V
 
 This image shows how an HC-05 module is connected to the [UART-I2C-SMBUS 2 USB adapter](https://www.settorezero.com/wordpress/bridge-da-uart-e-i2c-ad-usb/): 
 
