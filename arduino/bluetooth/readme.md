@@ -17,9 +17,12 @@ Arlok is moved using an app on an Android device that sends serial commands over
 
 ### <a name="hc05vs06"></a> Differencies between HC-05 and HC-06 
 
-The only things in which those module differs are:
-- On HC-05 for going in `AT` command mode, you must press the button on the module during the powering. HC-06 works always in `AT` mode. `AT` mode is a module mode used for giving configuration parameters
-- The `AT` command mode baud rate of the HC-05 is **38400** while the normal mode works at **9600**. The HC-06 works only at **9600**
+Things in which those module differs:
+- On HC-05 for going in `AT` command mode, you must press the button on the module during the powering. HC-06 works always in `AT` mode. `AT` mode is used for giving configuration parameters
+- The `AT` command mode baud rate of the HC-05 is **38400** while the normal mode works at **9600**. The HC-06 works always at **9600**
+- HC-05 responds `OK` after sending `AT` string in AT mode for indicating the module is in AT mode, HC-06 does not respond to the simple `AT` string but requires full commands
+- On HC-05, for setting the module name you must use `AT+NAME=[name]` while HC-06 don't want the `=` symbol: `AT+NAME[name]`
+- HC-05 module has a button on the board, HC-06 don't have a button.
 
 
 ### <a name="changename"></a> Changing the Bluetooth module name

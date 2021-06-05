@@ -97,19 +97,27 @@
 #endif
 
 // stuff used by servomotors
-ServoTimer2 MotorL;       // left servomotor object
-ServoTimer2 MotorR;       // right servomotor object
-uint16_t servoL_center=1500; // default value for left servomotor center point
-uint16_t servoR_center=1500; // default value for right servomotor center point
-uint8_t servoL_eeprom=0; // eeprom memory location for storing point zero of left servomotor
-uint8_t servoR_eeprom=2; // eeprom memory location for storing point zero of right servomotor
-#define SPEED  200 // normal speed for forward moving (center point+speed microseconds)
-#define SPEED_SLOW 50 // speed used for maneuvers
+ServoTimer2 MotorL;               // left servomotor object
+ServoTimer2 MotorR;               // right servomotor object
+uint16_t servoL_center = 1500;    // default value for left servomotor center point
+uint16_t servoR_center = 1500;    // default value for right servomotor center point
+uint16_t servoL_balanced;         // left servomotor balanced center point
+uint16_t servoR_balanced;         // right servomotor balanced center point
+int16_t servo_balance = 0;        // default value for servomotors balancing of the center point
+uint8_t servoL_eeprom = 0;        // eeprom memory location for storing point zero of left servomotor
+uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point zero of right servomotor
+uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
+
+// CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
+#define SPEED 500                 // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
+#define SPEED_SLOW 125            // speed used for maneuvers, raise this if your robot cannot turn
+#define TURN_TIME 600             // amount of time used for turning, change this if turning angle is not 90 degrees
+#define BACK_TIME 500             // amount of time used for going backward after robot found an obstacle
 
 // stuff used by sonar
-#define TIMER_US 50 // Timer1 interrupt every 50uS
-#define TICK_COUNTS 4500 // 4500*50uS = 225mS, time space between two consecutive trigger pulses
-#define OBSTACLE 16 // ARLOK will stop if an obstacle is nearer than 16cm
+#define TIMER_US 50               // Timer1 interrupt every 50uS
+#define TICK_COUNTS 4500          // 4500*50uS = 225mS, time space between two consecutive trigger pulses
+#define OBSTACLE 16               // ARLOK will stop if an obstacle is nearer than 16cm
 
 // stuff used by oled display
 #define SCREEN_WIDTH 128
@@ -129,12 +137,13 @@ enum arlok_mode
 arlok_mode mode=normal;// actual mode
 
 // enum used for config menu pages on display
-enum config_pages
-  {
-  left_motor=0,
-  right_motor=1,
-  config_end=2  
-  };
+enum config_pages 
+ {
+ left_motor = 0,
+ right_motor = 1,
+ balance = 2,
+ config_end = 3
+ };
 
 // enum used for commands from bluetooth
 enum movement
@@ -143,7 +152,8 @@ enum movement
   alt=1,
   backward=2,
   right=3,
-  left=4  
+  left=4,
+  none=-1  
   };
 
 void setup() 
@@ -181,55 +191,58 @@ void setup()
   display.clearDisplay();
   display.setTextSize(2);
   display.setTextColor(SSD1306_WHITE,SSD1306_BLACK);
-
-  Serial.println("ARLO(K) Startup");
   
-  // center values used for servomotors, loaded from eeprom
-  // if in the eeprom are saved values out of the range 500-2500, 1500 will be used
-  // (this happens when eeprom memory was never used since contains 0xFFFF value)
-  uint16_t LV=EEPROM.read(servoL_eeprom)<<8;
-  LV|=EEPROM.read(servoL_eeprom+1);
-  uint16_t RV=EEPROM.read(servoR_eeprom)<<8;
-  RV|=EEPROM.read(servoR_eeprom+1);
-  if (LV<2501 && LV>499) servoL_center=LV;
-  if (RV<2501 && RV>499) servoR_center=RV;
+ // center values used for servomotors, loaded from eeprom
+ // if in the eeprom are saved values out of the range 500-2500, 1500 will be used
+ // (this happens when eeprom memory was never used since contains 0xFFFF value)
+ uint16_t LV = EEPROM.read(servoL_eeprom) << 8;
+ LV |= EEPROM.read(servoL_eeprom + 1);
+ uint16_t RV = EEPROM.read(servoR_eeprom) << 8;
+ RV |= EEPROM.read(servoR_eeprom + 1);
+ if (LV < 2501 && LV > 499) servoL_center = LV;
+ if (RV < 2501 && RV > 499) servoR_center = RV;
+ // balance value used for fine tuning of differences in speed of the servomotors
+ // the range is based on the value set in the SPEED constant
+ int16_t BL = EEPROM.read(servo_balance_eeprom) << 8;
+ BL |= EEPROM.read(servo_balance_eeprom + 1);
+ if (BL > -SPEED && BL < SPEED) servo_balance = BL;
+ balance_servos();
+ move_stop(100);
 
-  fermo(100);
-  
-  // if P1 is pressed during the setup function, I'll start the setup mode
-  if (digitalRead(P1)==0) 
-    {
-      mode=configuration;
-      while(digitalRead(P1)==0) {continue;}
-      Serial.println("Setup mode");
-    }
-  }
+ // if P1 is pressed during the setup function, I'll start the setup mode
+  if (digitalRead(P1) == 0) 
+   {
+   mode = configuration;
+   while (digitalRead(P1) == 0) {continue;}
+   }
+ } // \setup
 
 void loop()
   {
   static boolean juststarted=true;
   static movement m=alt;
+  static long lastdistance=0;
   while (mode==configuration) config_menu();
 
-  display.setTextSize(2);
-  
   if (juststarted)
     {
-    fermo(100);
+    move_stop(100);
+    display.setTextSize(2);
     display.setCursor(0,0);
     display.println("WAIT");
     display.display(); 
-    fermo(2000); // servomotors stopped while sonar goes stable
+    delay(1000); // stopped while sonar goes stable
     juststarted=false;  
     display.clearDisplay();
+    display.setCursor(0,0);
+    display.print("Bluetooth");
+    display.display();
     }
-    
-  display.setCursor(0,0);
-  display.print("Bluetooth");
   
   if (Serial.available()) 
     {
     char rec=Serial.read();
+    Serial.flush();
     switch (rec)
       {
       case '1': // forward
@@ -255,65 +268,109 @@ void loop()
       case 'Y': // yellow button
         sound();
       break;
-      }
-    display.setCursor(0,16);
-    display.print("RX: ");
-    display.print(rec);
-    }
-  display.display();
 
+      case 'C': // connected
+        onConnection();
+        m=alt;
+      break;
+
+      case 'c': // disconnected
+       onDisconnection();
+       m=alt;
+      break;
+      
+      default:
+        m=alt;
+      break;
+      }
+      
+    // print received command if isn't 'c' (disconnection)
+    if (rec!='c')
+      {
+      display.setCursor(0,16);
+      display.print("RX: ");
+      display.print(rec);
+      display.display();
+      }
+      rec=0; // reset received char
+    }
+   
   switch (m)
     {
     case forward:
-      dritto(SPEED);
+    // go forward only if there are no obstacles
+      if (distance>OBSTACLE)
+        {
+        move_forward(SPEED);
+        }
+      else
+        {
+        move_stop(500);
+        sound();  
+        }
     break;
 
     case alt:
-      fermo(500);
+      move_stop(500);
     break;
 
     case right:
-      destra(100);
+      move_right(100);
     break;
 
     case left:
-      sinistra(100);
+      move_left(100);
     break;
 
     case backward:
-      indietro(100);
+      move_backward(100);
     break;
     }
-  Serial.print("*d");
-  Serial.print(distance);
-  }
+    
 
-void config_menu(void)
-  {
-  static config_pages actual_page=0;
-  static bool splash=true;
-
-  if (splash)
+  m=none; // reset movement
+  
+  // send *d[distance] over bluetooth
+  // only if changed
+  if (distance!=lastdistance)
     {
-    display.setCursor(0,0);
-    display.println("ARLOK SET");
-    display.display();  
+    Serial.print("*d");
+    Serial.print(distance);
+    Serial.print("cm");
+    lastdistance=distance;
+    }
+  } // \loop
+
+void config_menu(void) 
+ {
+ static config_pages actual_page=left_motor;
+ static bool splash = true;
+
+ if (splash) 
+    {
+    display.setCursor(0, 0);
+    display.println("SETUP");
+    display.display();
     delay(2000);
     display.clearDisplay();
-    display.setCursor(0,0);
-    display.display(); 
-    splash=false;
+    display.setCursor(0, 0);
+    display.display();
+    splash = false;
     delay(1000);
     }
-  
-  uint16_t val=analogRead(0);
-  // mapping 0-1023 a 500-2500
-  uint16_t pos=map(val, 0, 1023, 500, 2500);
-  
-  switch(actual_page)
+
+ uint16_t val = analogRead(0);
+ // mapping 0-1023 to 500-2500
+ uint16_t pos = map(val, 0, 1023, 500, 2500);
+ // mapping 0-1023 to SPEED, -SPEED
+ int16_t balance_pos = map(val, 0, 1023, SPEED, -SPEED);
+ String pre_balance_txt = balance_pos > 0 ? "   " : "L< ";
+ String post_balance_txt = balance_pos < 0 ? "   " : " >R";
+
+ switch (actual_page) 
     {
-    case left_motor: // left servomotor setup
-      display.setCursor(0,0);
+    case left_motor:  // left servomotor setup
+      display.setCursor(0, 0);
       display.setTextSize(1);
       display.print("LEFT MOTOR (");
       display.print(servoL_center);
@@ -324,12 +381,12 @@ void config_menu(void)
       display.println();
       display.setTextSize(1);
       display.print("P1: save P2: next");
-      display.display();  
+      display.display();
       MotorL.write(pos);
-    break;
+      break;
 
-    case right_motor: // right servomotor setup
-      display.setCursor(0,0);
+    case right_motor:  // right servomotor setup
+      display.setCursor(0, 0);
       display.setTextSize(1);
       display.print("RIGHT MOTOR (");
       display.print(servoR_center);
@@ -340,84 +397,105 @@ void config_menu(void)
       display.println();
       display.setTextSize(1);
       display.print("P1: save P2: next");
-      display.display();  
+      display.display();
       MotorR.write(pos);
-    break;
+      break;
+
+    case balance:  // balancing setup
+      display.clearDisplay();
+      display.setCursor(0, 0);
+      display.setTextSize(1);
+      display.print("SERVOS BALANCE (");
+      display.print(servo_balance);
+      display.println(")");
+      display.setTextSize(2);
+      display.print(pre_balance_txt);
+      display.print(balance_pos);
+      display.println(post_balance_txt);
+      display.setTextSize(1);
+      display.print("P1: save P2: next");
+      display.display();
+      MotorL.write(servoL_center);
+      MotorR.write(servoR_center);
+      break;
 
     case config_end:
       display.setTextSize(2);
-      display.setCursor(0,0);
+      display.setCursor(0, 0);
       display.println("P1: Exit");
       display.println("P2: Return to Setup");
       display.display();
       break;
-    } // switch
+    }  // switch
 
-  // P1 pressed: confirm value or exit from menu
-  if (digitalRead(P1)==0)
+ // P1 pressed: confirm value or exit from menu
+ if (digitalRead(P1) == 0) 
     {
     delay(50);
-    if(digitalRead(P1)==0)
-      {
-      while(digitalRead(P1)==0) {continue;}
-      switch(actual_page)
+    if (digitalRead(P1)==0) 
         {
-          case 0:
-            servoL_center=pos;
-            // I must split the 16bit value in two bytes
-            // and save values in 2 different EEPROM locations
-            EEPROM.update(servoL_eeprom, (uint8_t)(pos>>8));
-            delay(4); // an eeprom.write takes 3.3mS
-            EEPROM.update(servoL_eeprom+1, (uint8_t)(pos&0x00FF));
-            delay(4);
-            Serial.print("Left zero: ");
-            Serial.println(pos);
-            break;
+        while (digitalRead(P1) == 0) {continue;}
+        switch (actual_page)
+            {
+            case left_motor:
+              servoL_center = pos;
+              // I must split the 16bit value in two bytes
+              // and save values in 2 different EEPROM locations
+              EEPROM.update(servoL_eeprom, (uint8_t)(pos >> 8));
+              delay(4);  // an eeprom.write takes 3.3mS
+              EEPROM.update(servoL_eeprom + 1, (uint8_t)(pos & 0x00FF));
+              delay(4);
+              break;
 
-          case 1:
-            servoR_center=pos;
-            // I must split the 16bit value in two bytes
-            // and save values in 2 different EEPROM locations
-            EEPROM.update(servoR_eeprom, (uint8_t)(pos>>8));
-            delay(4); // an eeprom.write takes 3.3mS
-            EEPROM.update(servoR_eeprom+1, (uint8_t)(pos&0x00FF));
-            delay(4);
-            Serial.print("Right zero: ");
-            Serial.println(pos);
-            break;
+            case right_motor:
+              servoR_center = pos;
+              // I must split the 16bit value in two bytes
+              // and save values in 2 different EEPROM locations
+              EEPROM.update(servoR_eeprom, (uint8_t)(pos >> 8));
+              delay(4);  // an eeprom.write takes 3.3mS
+              EEPROM.update(servoR_eeprom + 1, (uint8_t)(pos & 0x00FF));
+              delay(4);
+              break;
 
-          case 2:
-            // exit from menu
-            mode=normal;
-            display.clearDisplay();
-            display.display();
-            Serial.println("Config exit");
-            return;
-            break;
-        }
-      }
-    }
+            case balance:
+              servo_balance = balance_pos;
+              EEPROM.update(servo_balance_eeprom, (balance_pos >> 8));
+              delay(4);  // an eeprom.write takes 3.3mS
+              EEPROM.update(servo_balance_eeprom + 1, (balance_pos & 0x00FF));
+              delay(4);  // an eeprom.write takes 3.3mS
+              balance_servos();
+              break;
 
-  // P2 pressed: change the page
-  if (digitalRead(P2)==0)
+            case config_end:
+              // exit from menu
+              mode = normal;
+              display.clearDisplay();
+              display.display();
+              return;
+            break;
+            } // \switch actual_page
+        } // \P1 pressed for sure
+    } // \P1 pressed
+
+ // P2 pressed: change the page
+ if (digitalRead(P2) == 0) 
     {
     delay(50);
-    if(digitalRead(P2)==0)
+    if (digitalRead(P2) == 0) 
       {
-      while(digitalRead(P2)==0) {continue;}
-      // the C++ deals with enums as an independent type
-      // so we must convert it in an integer if we want to use the ++ operator
-      uint8_t tmp=(uint8_t)actual_page;
-      tmp++;
-      if (tmp>(uint8_t)config_end) tmp=0;
-      actual_page=(config_pages)tmp;
-      
-      display.clearDisplay();
-      display.display();
-      delay(10);
-      }
-    }
-  }
+        while (digitalRead(P2) == 0) {continue;}
+        // the C++ deals with enums as an independent type
+        // so we must convert it in an integer if we want to use the ++ operator
+        uint8_t tmp = (uint8_t)actual_page;
+        tmp++;
+        if (tmp > (uint8_t)config_end) tmp = 0;
+        actual_page = (config_pages)tmp;
+        display.clearDisplay();
+        display.display();
+        delay(10);
+        } // \P2 pressed for sure
+    } // \P2 pressed
+ } // \config_menu()
 
 void sound(void)
 	{
@@ -432,58 +510,123 @@ void sound(void)
     #endif
 		}
 	}
-  
-// moves forward at 'vel' speed
-void dritto(uint16_t vel)
+
+void onConnection(void)
   {
-  if (vel>SPEED) vel=SPEED;
-  MotorL.write(servoL_center+vel);
-  MotorR.write(servoR_center-vel);
+    
+  display.clearDisplay();
+  display.setCursor(0,0);
+  display.println("Connected");
+  display.display(); 
+  
+  uint8_t i=20;
+  while (i--)
+    {
+    #ifdef buzzer
+    digitalWrite(buzzer,HIGH); // turn on the buzzer
+    delayMicroseconds(1000);
+    digitalWrite(buzzer,LOW); // turn off the buzzer
+    delayMicroseconds(1000);
+    #endif
+    }
   }
+
+void onDisconnection(void)
+  {
+  display.clearDisplay();
+  display.setCursor(0,0);
+  display.println("NOT");
+  display.print("Connected");
+  display.display(); 
+  
+  uint8_t i=20;
+  while (i--)
+    {
+    #ifdef buzzer
+    digitalWrite(buzzer,HIGH); // turn on the buzzer
+    delayMicroseconds(1500);
+    digitalWrite(buzzer,LOW); // turn off the buzzer
+    delayMicroseconds(1500);
+    #endif
+    }
+  }
+
+void balance_servos(void) 
+ {
+ if (servo_balance < 0) 
+    {
+    servoL_balanced = servoL_center;
+    servoR_balanced = servoR_center + abs(servo_balance);
+    } 
+ else if (servo_balance > 0) 
+    {
+    servoL_balanced = servoL_center - servo_balance;
+    servoR_balanced = servoR_center;
+    } 
+ else 
+   {
+   servoL_balanced = servoL_center;
+   servoR_balanced = servoR_center;
+   }
+ } // \balance_servos()
+ 
+// moves forward at 'sp' speed
+void move_forward(uint16_t sp) 
+ {
+ if (sp > SPEED) sp = SPEED;
+ MotorL.write(servoL_balanced + sp);
+ MotorR.write(servoR_balanced - sp);
+ return;
+ } // \move_forward()
 
 // moves backward at slow speed for ms milliseconds
-void indietro(long ms)
-  {
-  long timenow=millis();
-  while((millis()-timenow)<ms)
+void move_backward(long ms) 
+ {
+ long timenow = millis();
+ while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center-SPEED_SLOW);
-    MotorR.write(servoR_center+SPEED_SLOW);
+    MotorL.write(servoL_center - SPEED_SLOW);
+    MotorR.write(servoL_center + SPEED_SLOW);
     }
-  }
+ return;
+ } // \move_backward()
 
 // turns right at slow speed for ms milliseconds
-void destra(long ms)
-  {
-  long timenow=millis();
-  while((millis()-timenow)<ms)
+void move_right(long ms) 
+ {
+ long timenow = millis();
+ while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center+SPEED_SLOW);
-    MotorR.write(servoR_center+SPEED_SLOW);
+    MotorL.write(servoL_center + SPEED_SLOW);
+    MotorR.write(servoL_center + SPEED_SLOW);
     }
-  }
+ return;
+ } // \move_right()
 
 // turns left at slow speed for ms milliseconds
-void sinistra(long ms)
-  {
-  long timenow=millis();
-  while((millis()-timenow)<ms)
+void move_left(long ms) 
+ {
+ long timenow = millis();
+ while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center-SPEED_SLOW);
-    MotorR.write(servoR_center-SPEED_SLOW);
+    MotorL.write(servoL_center - SPEED_SLOW);
+    MotorR.write(servoL_center - SPEED_SLOW);
     }
-  }
+ return;
+ } // \move_left()
 
 // Servomotors stopped
-void fermo(long ms)
-  {
-  long timenow=millis();
-  while((millis()-timenow)<ms)
-    {
-    MotorL.write(servoL_center);
-    MotorR.write(servoR_center);
-    }
-  }
+void move_stop(long ms) 
+ {
+ long timenow = millis();
+ while ((millis() - timenow) < ms) 
+   {
+   MotorL.write(servoL_center);
+   MotorR.write(servoR_center);
+   }
+ return;
+ } // \move_stop()
+
   
 // Timer1 every 50uS : sends the pulse signal
 void timer1_ISR()
