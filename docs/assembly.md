@@ -44,10 +44,10 @@ Attach the ball-caster on the bottom of the base, rear part. Use 2x M3 12mm Alle
 
 ![First ball-caster screws](../media/instructions/ballcaster_first_screws.png)
 
-Nuts in the bottom part without washers.
+Nuts in the bottom part without washers. Use 2x M3 nuts provided with the ball-caster kit.
 
 ### STEP 5
-Attach the rear pillar (`arlok_pillar_hole_##`): the one with the hole for the switch. The hole must go to the lower side. Use 2x of the longest M3 screws provided in the ball-caster kit: screws will pass from the  pillar through the base and ball-caster.
+Attach the rear pillar (`arlok_pillar_hole_##`): the one with the hole for the switch. The hole must go to the lower side. Use 2x of the longest M3 screws provided in the ball-caster kit (those screws have the lenght of threaded part of about 14.5mm): screws will pass from the  pillar through the base and ball-caster.
 Nuts goes in the lower part. Don't use washers, use 2x M3 nuts provided with the ball-caster kit.
 
 ### STEP 6

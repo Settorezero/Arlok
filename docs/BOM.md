@@ -97,7 +97,7 @@ Please see in the [STL folder](../stl)
 | 12x          | M3 screw, Allen bolt socket cap, 12mm (length of threaded part - 15mm total) |
 | 8x           | M3 screw, Allen bolt socket cap, 6mm (length of threaded part - 8mm total)   |
 | 14x          | M3 washers (optional)                                                        |
-| 14x          | M3 nuts                                                                      |
+| 12x          | M3 nuts                                                                      |
 | 2x           | M3 screw, Countersunk, 8mm (length of threaded part, 10mm total)             |
 | 4x           | Hex spacer Female/Female 8 or 10mm length                                    |
 | 1x           | Tamiya BallCaster model 70144 (*)                                            |

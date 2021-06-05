@@ -36,14 +36,14 @@ Montare il Ball-Caster Tamiya 70144 ball-caster seguendo le istruzioni presenti 
 ![Tamiya 70144 Ball-Caster](../media/instructions/ball_caster_27mm.png)
 
 ### STEP 4
-Collegare il ball-caster alla base. Il ball caster va nella parte posteriore-inferiore. Utilizzare 2 viti M3 12mm nei due buchi più vicini al centro lasciando liberi i 2 buchi posteriori: in questi buchi andrà difatti montato anche il pilastrino posteriore, per cui per ora vanno lasciati liberi.
+Collegare il ball-caster alla base. Il ball caster va nella parte posteriore-inferiore. Utilizzare 2 viti M3 12mm nei due buchi più vicini al centro lasciando liberi i 2 buchi posteriori: in questi buchi andrà difatti montato anche il pilastrino posteriore, per cui per ora vanno lasciati liberi. Utilizzare 2 dei dadi forniti col ball-caster.
 
 ![Viti ball-caster](../media/instructions/ballcaster_first_screws.png)
 
 Le viti vanno messe dall'alto verso il basso: avvitare in basso utilizzando 2 rondelle e 2 dadi M3.
 
 ### STEP 5
-Montare il pilastrino posteriore (`arlok_pillar_hole_##`): è quello con il foro all'interno del quale va messo l'interruttore. Il foro va rivolto verso il basso. Per fissare il pilastrino dovete utilizzare 2 delle viti più lunghe fornite insieme al ball caster: le viti vanno infilate da pilastrino verso il basso e devono attraversare base e ball-caster ed essere quindi avvitate con 2 dadi dal lato del ball-caster. Qui non vanno utilizzate rondelle. Utilizzate 2 dadi forniti col ball-caster.
+Montare il pilastrino posteriore (`arlok_pillar_hole_##`): è quello con il foro all'interno del quale va messo l'interruttore. Il foro va rivolto verso il basso. Per fissare il pilastrino dovete utilizzare 2 delle viti più lunghe fornite insieme al ball caster (queste viti hanno la parte filettata lunga circa 14.5mm): le viti vanno infilate da pilastrino verso il basso e devono attraversare base e ball-caster ed essere quindi avvitate con 2 dadi dal lato del ball-caster. Qui non vanno utilizzate rondelle. Utilizzate 2 dadi forniti col ball-caster.
 
 ### STEP 6
 Saldare 2 piccoli spezzoni di cavo ai terminali dell'interruttore che avete scelto. Infilare l'interruttore nel foro del pilastrino posteriore e fissarlo col dado fornito insieme all'interruttore stesso. Assicuratevi che l'interruttore sia in posizione OFF, magari utilizzando un tester in modalità "continuità": poggiando i puntali ai terminali dell'interruttore non deve suonare (OFF), se il tester suona vuol dire che il pulsante è ON.
