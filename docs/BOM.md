@@ -103,6 +103,8 @@ Please see in the [STL folder](../stl)
 | 1x           | Tamiya BallCaster model 70144 (*)                                            |
 | 2x           | Rubber O-Ring, 70mm internal diameter, 2-3mm width (**)                      |
 
+[Here is a picture showing screws](../media/arlok_screws.jpg). Same picture is available [in italian too](../media/arlok_screws_ita.jpg).
+
 (*) when you buy the Tamiya 70144 ballcaster kit, there are parts for making 2 ballcasters.
     Maybe you can share the extra ballcaster part with a friend so he can build an Arlok too.
 
@@ -121,6 +123,8 @@ Il link allo spreadsheet è il seguente:  [https://docs.google.com/[...]](https:
 
 > Link abbreviato allo spreadsheet: [https://tinyurl.com/bomarlok](https://tinyurl.com/bomarlok)
 
-Se volete risparmiare: Il modulo Bluetooth è un optional, è necessario però se volete realizzare l'esempio del robot controllato da remoto col cellulare. Il Modulo MakerLine è un optional, è necessario se volete realizzare l'esempio del line-follower. Il display OLED è un optional ma è consigliato perchè torna utile anche come sistema di debug e durante la taratura dei servocomandi. Considero il modulo ultrasuoni come sensore di base per realizzare almeno l'esempio explorer.
+Se volete risparmiare: Il modulo Bluetooth è un optional, è necessario però se volete realizzare l'esempio del robot controllato da remoto col cellulare, in alternativa potete prendere l'HC-06 che costa leggermente di meno. Il Modulo MakerLine è un optional, è necessario se volete realizzare l'esempio del line-follower. Il display OLED è un optional ma è consigliato perchè torna utile anche come sistema di debug e durante la taratura dei servocomandi. Considero il modulo ultrasuoni come sensore di base per realizzare almeno l'esempio explorer.  
+
+Riguardo alle viti da utilizzare: le 12 viti con la parte filettata da 12mm dovrebbero essere preferibilmente del tipo TCEI per poterle stringere con una chiave a brugola a L dato che si trovano in posti in cui non è facile mettere un giravite dritto, ma potete usare il tipo che preferite purchè non a testa svasata. Le 8 viti da 6mm servono per fissare la Maker UNO al telaio usando i distanziali: potreste, in alternativa usare del biadesivo dato che la MakerUno sotto è liscia, oppure potete usare delle viti a piacere purchè non a testa svasata. Le due viti da 8mm a testa svasata devono essere necessariamente a testa svasata perchè questo consente alla testa di "scomparire" nel portabatterie senza essere toccate dalla batterie. [Qui è presente una foto delle viti consigliate](../media/arlok_screws_ita.jpg).
 
 Per alcune piccole parti, come resistenze, condensatori, viti, dadi ecc, purtroppo non è possibile acquistare nè su Amazon, nè su FuturaShop, il singolo componente, per cui ho messo dei link che puntano a kit con più componenti che potete tenere come scorta. Oppure potete cercare quelle parti su altri siti di vendita online. Solo il Trimmer è da cercare su altri siti.
