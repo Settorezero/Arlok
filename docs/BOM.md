@@ -74,11 +74,15 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | 1x           | Battery Holder for 4AA batteries                                         |
 | 1x           | Battery Holder for 3AA batteries                                         |
 | 1x           | Round pushbutton with retain or lever switch (*)                         |
-| 7x           | AA 1.5V Batteries (**)                                                   |
+| 1x           | 4pin Female/Female Dupont cable (~15cm) (**)                             |
+| 7x           | AA 1.5V Batteries (***)                                                  |
 
 (*)  Print the `arlok_pillar_hole_xx.stl` according the pushbutton diameter  
+
+(**) Used for connecting ultrasonic module to PCB, you can use also 4 separate F/F jumper
+     cables or make your own cable using connector you prefer.
   
-(**) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. 
+(***) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. 
      Eventually you can use only 4NiMH batteries in the 4AA battery holder and don't use the 
      3AA battery holder: then you can power all robot using the 4AA. In this case don't mount
      D1 (put a piece of wire and pay attention to power orientation), put the power jumper JP1
