@@ -2,11 +2,13 @@
 
 > Quick link to this page: [https://tinyurl.com/mountingarlok](https://tinyurl.com/mountingarlok)  
 
-🇮🇹 For italian users: this guide is also available in italian language: [assembly - ITA](assembly_ita.md)  
+> 🇮🇹 For italian users: this guide is also available in italian language: [assembly - ITA](assembly_ita.md)  
+
+> When you see the screw measure in millimeters: this is the length of the threaded part.
+
+![Arlok Parts](../media/arlok_parts.jpg)  
 
 ### Preliminary Steps
-
-Note: When you see the screw measure in millimeters: this is the length of the threaded part.
 
 - You've 2 servo having 360° rotation OR you have already modified the 2 servos for the continuous rotation (see [Servo modification guide](servo_mod.md))
 - You've already assembled the Shield

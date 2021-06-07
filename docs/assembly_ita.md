@@ -1,6 +1,10 @@
 ## Istruzioni montaggio ARLOK in italiano
 
-Nota: Le misure delle viti sono espresse in millimetri e si riferiscono alla lunghezza della sola parte filettata, quindi testa esclusa
+> Link rapido a questa pagina: [https://tinyurl.com/arlokmontaggio](https://tinyurl.com/arlokmontaggio)  
+
+> Le misure delle viti sono espresse in millimetri e si riferiscono alla lunghezza della sola parte filettata, quindi testa esclusa
+
+![Arlok Parts](../media/arlok_parts.jpg)  
 
 ### Fasi preliminari
 
@@ -55,9 +59,7 @@ Montare il pilastrino per il sensore ultrasuoni (`arlok_pillar_sonar`) nella par
 Inserire 4 viti M3 12mm a testa cava esagonale incassata nei 4 fori rimasti liberi nella parte superiore dei pilastrini: le viti vanno dal basso verso l'alto. Vi troverete quindi la parte filettata delle viti in alto, in posizione per accogliere la piastra superiore di ARLOK. Se le viti tendono a cadere potete utilizzare dei piccoli pezzettini di nastro carta per tenerle ferme temporaneamente.
 
 ### STEP 9
-Piegare l'header del sensore ultrasuoni in modo da farlo diventare dritto. Collegare 4 jumper femmina/femmina lunghi almeno 12-15cm. Ricordate i colori che avete utilizzato per i vari segnali come scritti sul PCB del sensore, ad esempio Rosso=VDD, Nero=GND, Giallo=echo, Verde=trigger. Sceglieteli voi ma ricordatevi ad ogni pin quale colore avete associato.
-
-Un altro sistema potrebbe essere quello di utilizzare un [cavetto da 4 terminali come questo](https://www.futurashop.it/cavi-connettori-adattatori/cavi/vari-con-connettore/cavetto-maschio-femmina-30cm-4PIN-1606-CAVOFM4P?tracking=5f004a6ba8be7): la parte femmina andrebbe collegata sul sensore ultrasuoni, la parte maschio andrebbe saldata direttamente sul PCB al posto dell'header per il sensore ultrasuoni. 
+Per l'assemblaggio del sensore ultrasuoni seguite questa video-guida: [https://youtu.be/iF_R0xU8K-4](https://youtu.be/iF_R0xU8K-4).
 
 ### STEP 10
 Innestare il sensore ultrasuoni nel pilastrino frontale con l'header rivolto in basso. Se avete stampato le ciglia, incastratele dal davanti: sono anche utili se i buchi sono troppo larghi e lasciano muovere il sensore. Il sensore va spinto fino in fondo, fino a far toccare il quarzo sul pilastrino. Assolutamente non devono andare a filo col pilastrino altrimenti restituiscono valori sbagliati e portano il robottino a rilevare ostacoli inestistenti.
