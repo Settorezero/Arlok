@@ -24,9 +24,6 @@ See in the [Arduino folder](./arduino) for code examples or write your own using
 See [Troubleshooting guide](./docs/troubleshooting.md)  
 
 ### Other Links
-- [Motors Setup video](https://youtu.be/qzJxrcuSvpU)
-- [Video by Greta Galli](https://www.youtube.com/watch?v=CbPGWd9I_mA)
+- [All ARLOK videos on Youtube](https://tinyurl.com/arlokplaylist)
 - [ARLOK pictures](https://tinyurl.com/arlokpictures)
-- [AR.L.O. video](https://www.youtube.com/watch?v=O_3CUWvaW3k)
-- [ARLOK bluetooth remote example](https://www.youtube.com/watch?v=ISU3L3CCWP8)
 - [ARLOK on no. 253 of Italian Magazine "Elettronica IN"](https://www.elettronicain.it/prodotto/n-253-aprile-2021/?tracking=5f004a6ba8be7)
