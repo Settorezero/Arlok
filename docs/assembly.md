@@ -37,9 +37,11 @@ Place the brackets on the servos (`arlok_servo_bracket`). Attach servo brackets 
 Using a small piece of papertape write on Servo connectors "Right" and "Left" for remembering later where connects servo cables on the PCB. 
 
 ### STEP 3
-Assemble the Tamiya 70144 ball-caster according instructions in the ball-caster box: You must assemble the ball-caster in the 27mm version WITHOUT the H1 washers so the ball-caster will have a total height of about 25mm.
+Assemble the Tamiya 70144 ball-caster according instructions in the ball-caster box: You must assemble the ball-caster in the 25mm version:
 
-![Tamiya 70144 Ball-Caster](../media/instructions/ball_caster_27mm.png)
+![Tamiya 70144 Ball-Caster](../media/instructions/ball_caster_25mm.png)
+
+[Here are the ball-caster full instructions](../media/instructions/ball_caster_instructions.png)
 
 ### STEP 4
 Attach the ball-caster on the bottom of the base, rear part. Use 2x M3 12mm Allen screws from top to bottom in the 2 holes near the center leaving free the 2 holes near the base border. 
@@ -59,29 +61,25 @@ Sold 2 small piesce of wire on the round pushbutton (or the lever switch). Put t
 Attach the pillar for the ultrasonic sensor (`arlok_pillar_sonar`) to the base using 2x M3 12mm Allen screws from top to bottom. Nuts in the lower part. Use washers.
 
 ### STEP 8
-Put 4x M3 12mm Allen screws from bottom to top in the top holes of the  pillars.
+Straight the male pinheader of the ultrasonic sensor and attach 4 female to female jumpers (wire must be long at least 12-15cm).
+Mind the colors you used for the ultrasonic sensor signals: red wire for the Vdd, black for GND and other 2 different colors for echo and trigger. I've prepared an italian guide for using certain male/female 4pin cable, maybe this can be an idea for you: [https://youtu.be/iF_R0xU8K-4](https://youtu.be/iF_R0xU8K-4)
 
 ### STEP 9
-Straight the male pinheader of the ultrasonic sensor and attach 4 female to female jumpers (wire must be long at least 12-15cm).
-Mind the colors you used for the ultrasonic sensor signals: red wire for the Vdd, black for GND and other 2 different colors for echo and trigger.
+Insert the ultrasonic sensor in the pillar with cables on the bottom.
 
 ### STEP 10
-Insert the ultrasonic sensor in the pillar with cables on the bottom. If you've printed the eyelashes, insert them on the ultrasonic capsules.
+Take the top plate (`arlok_plate_top`). The front-top part is the one with the ARLOK writing on it. Put 4x M3 6mm screws in the central holes having the Arduino layout, from bottom to top. Screw the 4x M3 8 or 10mm female/female spacers on the screws.
 
 ### STEP 11
-Take the top plate (`arlok_plate_top`). The front-top part is the one with the ARLOK writing on it. Put 4x M3 6mm screws in the central holes having the Arduino layout, from bottom to top. Screw the 4x M3 10mm female/female spacers on the screws.
+Place the 4AA battery holder on the servo brackets. It's no needed to attach it since will be held from the lateral wings of the top plate. Sold one wire of the pushbutton to the negative wire of the 4AA battery holder. Be sure pushbutton is in the OFF position (eventually check with a multimeter) and then put in 4 AA batteries.
 
 ### STEP 12
-Place the 4AA battery holder on the servo brackets. It's no needed to attach it since will be held from the lateral wings of the top plate. Sold one wire of the pushbutton to the negative wire of the 4AA battery holder.  Put 4 AA batteries in the battery holder.
-Be sure pushbutton is in the OFF position (eventually check with a multimeter) and then put in the batteries.
+Put the top plate on the bottom assembly, with the ARLOK writing in the same direction of the ultrasonic sensor. Fix the top plate using 4x M3 12mm screws from the bottom of pillars through the plate and 4x M3 bolts with washers.
 
 ### STEP 13
-Put the top plate on the bottom assembly, with the ARLOK writing in the same direction of the ultrasonic sensor. Fix the top plate using 4x M3 bolts with washers on the screws coming from the pillars. Use washers.
+Put the MakerUNO on the spacers. Attach the board using the 4x M3 6mm screws.
 
 ### STEP 14
-Put the MakerUNO on the standoffs. Attach the board using the 4x M3 6mm screws.
-
-### STEP 15
 - Attach the ARLOK shield on top of the MakerUNO
 - Put the `JP1` jumper in the `VDD` position (logic powered from the 3AA battery)
 - Attach the wires from the ultrasonic sensor on the `HC-SR04` header respecting signals/colors.
@@ -91,16 +89,16 @@ Put the MakerUNO on the standoffs. Attach the board using the 4x M3 6mm screws.
 - Put the 2 wires from the 3xAA battery holder in the `VDD` screw terminal, red wire in the `+`. If you see the `L1` led turning on, move the `POWER` switch on the shield in the opposite position.
 - Put the 2 wires from the 4xAA battery holder in the `VSERVO` screw terminal, red wire in the `+`. If you see servo moving, push the button/turn the lever.
 
-### STEP 16
+### STEP 15
 - Attach the round servo hub in the groove of the wheels using 2 self-tapping screws coming from the servo kit. Screw heads will go outside (part of the wheel without the grove). The notch of the hubs will go toward the servo shaft. Follow the pictures:
 
 ![servo hub orientation](../media/instructions/arlok_servo_hub_orientation.png)  
 ![servo hub orientation](../media/instructions/arlok_servo_hub_orientation2.png)
 
-- Attach the wheels to the servos using screws from the servo kit through the horn.
+- Attach the wheels to the servos using the small self-tapping screws from the servo kit through the horn.
+
+### STEP 16
+Place the O-Ring on the wheels.
 
 ### STEP 17
-Place the O-Ring on the wheels. Don't use cyanoacrilate glues.
-
-### STEP 18
-Load first the [explorer example](../arduino/explorer). Read the readme document in the folder for doing the setup procedure
+Load first the [explorer example](../arduino/explorer). Read the readme document in the folder for doing the setup procedure. [Here is an italian guide about the setup procedure](https://youtu.be/qzJxrcuSvpU).
