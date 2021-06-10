@@ -6,6 +6,8 @@
 
 > When you see the screw measure in millimeters: this is the length of the threaded part.
 
+There is a [video on youtube](https://youtu.be/yHwYimkA6Dw) showing the assemblying process. It's in italian language but video is very useful for understanding how certain parts must be placed correctly.
+
 ![Arlok Parts](../media/arlok_parts.jpg)  
 
 ### Preliminary Steps

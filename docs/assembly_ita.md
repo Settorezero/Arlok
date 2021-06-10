@@ -4,6 +4,8 @@
 
 > Le misure delle viti sono espresse in millimetri e si riferiscono alla lunghezza della sola parte filettata, quindi testa esclusa
 
+E' anche presente un [video su youtube](https://youtu.be/yHwYimkA6Dw) che illustra il montaggio passo-passo: si consiglia vivamente di vedere il video.
+
 ![Arlok Parts](../media/arlok_parts.jpg)  
 
 ### Fasi preliminari
