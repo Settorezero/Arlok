@@ -10,15 +10,15 @@ E' anche presente un [video su youtube](https://youtu.be/yHwYimkA6Dw) che illust
 
 ### Fasi preliminari
 
-- Avete acquistato due servocomandi che ruotano a 360° oppure avete già modificato due normali servocomandi analogici per avere la rotazione continua (vedi [modifica dei servocomandi](servo_mod.md))
-- Avete già assemblato lo shield di ARLOK
+- Avete acquistato due servocomandi che ruotano a 360° oppure avete già modificato due normali servocomandi analogici per avere la rotazione continua (vedi [modifica dei servocomandi](servo_mod.md) oppure [vedi questo video su youtube](https://www.youtube.com/watch?v=_Ubauj75d9E) )
+- Avete già assemblato lo shield di Arlok
 - Procuratevi alcune piccole fascette: torneranno utili per l'organizzazione dei cavi e per avere un risultato più pulito.
 
-Aprite la [Vista esplosa di ARLOK](./media/arlok_3d_exploded.stl) in una nuova finestra: vi tornerà molto utile per vedere come vanno posizionati ed orientati i pezzi.
+Aprite eventualmente la [Vista esplosa di ARLOK](./media/arlok_3d_exploded.stl) in una nuova finestra: vi tornerà molto utile per vedere come vanno posizionati ed orientati i pezzi.
 
 Prendete la base (`arlok_plate_bottom`): la parte frontale-superiore è quella con la freccia e i due slot laterali. La freccia indica dove è posizionata la "faccia" del robot, ovvero quella con le capsule ultrasuoni.
 
-![Base ARLOK](../media/instructions/plate_bottom_overview.png)
+![Base Arlok](../media/instructions/plate_bottom_overview.png)
 
 Gli incavi a forma di C o i fori più grandi possono essere utilizzati per far passare i vari cavi.
 
@@ -37,7 +37,7 @@ Posizionare le staffe di bloccagglio dei servo al di sopra dei servo. (`arlok_se
 Utilizzando un po' di nastro carta, annotare sui connettori dei servo qual'è il destro e qual'è il sinistro in modo da non commettere errori quando andremo a collegare i connettori dei servo sul PCB.
 
 ### STEP 3
-Montare il Ball-Caster Tamiya 70144 ball-caster seguendo le istruzioni presenti nella confezione del ball-caster. Bisogna montarlo nella versione da 25mm 
+Montare il Ball-Caster Tamiya 70144 seguendo le istruzioni presenti nella confezione dello stesso. Bisogna montarlo nella versione da 25mm 
 
 ![Tamiya 70144 Ball-Caster](../media/instructions/ball_caster_25mm.png)
 
@@ -60,7 +60,7 @@ Saldare 2 piccoli spezzoni di cavo ai terminali dell'interruttore che avete scel
 Montare il pilastrino per il sensore ultrasuoni (`arlok_pillar_sonar`) nella parte frontale: utilizzare 2 viti M3 12mm a testa esagonale incassata dal pilastrino verso il basso. Avvitare in basso con 2 dadi M3 e rondelle.
 
 ### STEP 8
-Assemblate un cavetto sul sensore ultrasuoni seguendo questa video-guida: [https://youtu.be/iF_R0xU8K-4](https://youtu.be/iF_R0xU8K-4).
+Assemblate un cavetto sul sensore ultrasuoni seguendo questa video-guida: [https://youtu.be/iF_R0xU8K-4](https://youtu.be/iF_R0xU8K-4). Oppure, se non volete fare modifiche al sensore ultrasuoni, collgatelo allo shield utilizzando 4 normali cavetti jumper femmina/femmina di circa 12cm.
 
 ### STEP 9
 Innestare il sensore ultrasuoni nel pilastrino frontale con l'header rivolto in basso.
@@ -72,7 +72,7 @@ Prendere la piastra superiore (`arlok_plate_top`). La parte superiore-frontale �
 Appoggiare il portabatterie per le 4 stilo al di sopra delle staffe dei servocomandi: non è necessario fissarlo/incollarlo perchè rimarrà in posizione grazie alle ali laterali della base superiore. Collegare uno dei due fili dell'interruttore al filo nero del portabatterie e isolare il punto di giunzione. Se non l'avete fatto prima: assicuratevi che l'interruttore sia in posizione OFF. Mettere quindi le 4 batterie.
 
 ### STEP 12
-Posizionare la piastra superiore con la scritta ARLOK va rivolta in avanti, ovvero in direzione delle capsule ultrasuoni. Far passare 4 viti M3 da 12mm dai fori in cima ai pilastrini attraverso la piastra, fissare le viti nella parte superiore con rondella e dado. Se le capsule ultrasuoni danno fastidio durante il passaggio delle viti nel pilastro anteriore, premerle verso dentro in modo da farle andare a filo e riportarle al di fuori una volta terminato il fissaggio.
+Posizionare la piastra superiore con la scritta `ARLOK` va rivolta in avanti, ovvero in direzione delle capsule ultrasuoni. Far passare 4 viti M3 da 12mm dai fori in cima ai pilastrini attraverso la piastra, fissare le viti nella parte superiore con rondella e dado. Se le capsule ultrasuoni danno fastidio durante il passaggio delle viti nel pilastro anteriore, premerle verso dentro in modo da farle andare a filo e riportarle al di fuori una volta terminato il fissaggio.
 
 ### STEP 13
 Posizionare la MakerUNO sui distanziali e bloccarla con 4 viti M3 6mm.

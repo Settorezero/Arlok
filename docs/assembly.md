@@ -12,7 +12,7 @@ There is a [video on youtube](https://youtu.be/yHwYimkA6Dw) showing the assembly
 
 ### Preliminary Steps
 
-- You've 2 servo having 360° rotation OR you have already modified the 2 servos for the continuous rotation (see [Servo modification guide](servo_mod.md))
+- You've 2 servo having 360° rotation OR you have already modified the 2 servos for the continuous rotation (see [Servo modification guide](servo_mod.md) or see [this video on youtube](https://www.youtube.com/watch?v=_Ubauj75d9E))
 - You've already assembled the Shield
 - Take also some little cable ties: will turn useful for making a clean job.  
 
@@ -57,14 +57,13 @@ Attach the rear pillar (`arlok_pillar_hole_##`): the one with the hole for the s
 Nuts goes in the lower part. Don't use washers, use 2x M3 nuts provided with the ball-caster kit.
 
 ### STEP 6
-Sold 2 small piesce of wire on the round pushbutton (or the lever switch). Put the button in the hole of the rear pillar and fix it using his bolt. This pushbutton will detach the power from the 4AA batteries used for the servos. Check with a multimeter the pushbutton: must be in OFF position (opened).
+Sold 2 small piece of wire on the round pushbutton (or the lever switch). Put the button in the hole of the rear pillar and fix it using his bolt. This pushbutton will detach the power from the 4AA batteries used for the servos. Check with a multimeter the pushbutton: must be in OFF position (opened).
 
 ### STEP 7
 Attach the pillar for the ultrasonic sensor (`arlok_pillar_sonar`) to the base using 2x M3 12mm Allen screws from top to bottom. Nuts in the lower part. Use washers.
 
 ### STEP 8
-Straight the male pinheader of the ultrasonic sensor and attach 4 female to female jumpers (wire must be long at least 12-15cm).
-Mind the colors you used for the ultrasonic sensor signals: red wire for the Vdd, black for GND and other 2 different colors for echo and trigger. I've prepared an italian guide for using certain male/female 4pin cable, maybe this can be an idea for you: [https://youtu.be/iF_R0xU8K-4](https://youtu.be/iF_R0xU8K-4)
+Straight the male pinheader of the ultrasonic sensor and attach 4 female to female jumpers (wire must be long at least 12-15cm). Mind the colors you've used for the ultrasonic sensor signals: red wire for the `Vdd`, black for `Gnd` and other 2 different colors for `echo` and `trigger`. I've prepared an italian video-guide for using certain male/female 4pin cable, maybe this can be another idea for you for attaching the sonar: [https://youtu.be/iF_R0xU8K-4](https://youtu.be/iF_R0xU8K-4)
 
 ### STEP 9
 Insert the ultrasonic sensor in the pillar with cables on the bottom.

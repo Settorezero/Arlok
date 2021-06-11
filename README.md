@@ -4,7 +4,7 @@
 
 ARLOK is a simple educational (STEM) Robot based on Arduino UNO with parts printed in 3D and all easy-available components.   
   
-ARLOK is cheap, cute and easy to assemble and program. There are some programming examples that will make this robot moving around avoiding obstacles, following a line on the floor or let you control it using your cellphone with Android app source code provided too.  
+ARLOK is cheap, cute and easy to assemble and program. There are some programming examples that will make this robot moving around avoiding obstacles, following a line on the floor or let you control it using your cellphone with Android app (source code provided too).  
   
 ARLOK is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) made to be compatible with the [MakerUNO](https://makeruno.com.my/) board. So it's better use a MakerUNO but you can use also an Arduino UNO (in this case you'll need some longer headers for the shield connections).  
 
@@ -13,9 +13,9 @@ ARLOK is the second version of [AR.L.O.](https://github.com/Cyb3rn0id/AR.L.O.) m
 - BOM in the docs folder: [Bill-Of-Materials](./docs/BOM.md).  
 
 ## Assembling
-I've prepared a detailed step-by-step guide: it's located in the [docs folder](./docs/assembly.md).  
-🇮🇹 For italian users: there is an [italian guide too](./docs/assembly_ita.md)  
-If you've already analog servo, I've prepared also a [guide about servo hacking for continuos rotation](./docs/servo_mod.md)
+I've prepared a detailed step-by-step guide and a video on youtube: all infos are located in the [docs folder](./docs/assembly.md).  
+  
+🇮🇹 C'è anche la [guida in italiano](./docs/assembly_ita.md). Nella guida è anche linkato un video che illustra il montaggio passo-passo
 
 ## Code examples
 See in the [Arduino folder](./arduino) for code examples or write your own using one of the provided example as base!
