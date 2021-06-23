@@ -14,6 +14,7 @@ This folder contains parts to be 3D-printed.  I like to use the [Sunlu PLA+](htt
    6. [Wheels](#wheels)
    7. [Tires](#tires)
    8. [Via Pixetto support](#viapixetto)
+   9. [18650 cell bracket](#18650)
    
 + [How customize the wheels](#customizewheels) 
 + [Arlok Moods](#moods)
@@ -52,6 +53,7 @@ Time and weight is reported for total parts if more than one is needed.
 |  2  | [Wheel](arlok_wheel.stl)                                                 | 178 | 28 |  |
 | (2) | [Tire](arlok_tire.stl)                                                   |     |    | See descriptions |
 | (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)                     |  53 |  6 |  |
+| (1) | [18650 LiPo Holder](arlok_18650_holder.stl)                              |     |    |  |
 
 Estimated total printing time for standard parts: 13H 7'  
 Estimated total filament needed for standard parts: 107g (about 36meters)
@@ -88,6 +90,28 @@ Raffaello advices those settings:
 
 ### <a name="viapixetto"></a> Via Pixetto support
 This support is used for attaching a [Via Pixetto Ai Camera](https://pixetto.ai/) on top-front of ARLOK. The support is a hinge made of 2 pieces: you must use a long M3 screw and a nut. In the STL there are also 4 small spacers used for distancing the camera from the base: you must use M2 screws and nuts. Sorry but Via Pixetto example is still not ready.
+
+### <a name="18650"></a> 18650 LiPo Holder
+This part is used for holding a 18650 cell battery on the bottom of the robot. The 18650 will be used alone, without the two AA battery holders. You can use a single 18650 attached to a DC/DC boost converter through the pushbutton switch mounted on the rear pillar.  
+
+>**!!! WARNING !!!**  
+**LiPo batteries can be very dangerous so don't mount this kind of battery if Arlok will be used by a child!**
+  
+I've successfully used a 2A DC/DC boost converter based on the [SX1308](https://amzn.to/3y07eIX). Set the converter for giving 6V at output, then feed the 6V in the `VSERVO` screw terminal and put the `JP1` jumper in `VSERVO` position and leave ON the `POWER` jumper/switch on the PCB: the main power will be disconnected through the pushbutton on the rear pillar.  
+
+The LiPo must not go under a certain voltage so you can feed the positive terminal of the LiPo battery directly in one free analog input (`A2` for example) for checking the battery voltage and stop the robot if voltage goes below 3.2V.  
+  
+With those modifications the logic will be powered at about 5.3V (the 6V from the boost converter will be scaled down of about 0.7V by the voltage drop caused by `D1` diode), so for checking analog voltages keep in mind that the value `1023` from the ADC will be equal to about 5.3V (measure the precise voltage on the 5V pads and make computations accordly).  
+  
+This picture shows how 18650 will be mounted on the bottom of Arlok (use 2x M3 12mm screws, 2x M3 nuts and 2x M3 washers):
+
+![18650 LiPo battery mounting](../media/arlok_18650.jpg)
+
+For recharing the battery you can also solder a cheap module for LiPo Charging having battery protection (mandatory!), such as [this kind of module](https://amzn.to/3qjoea8) based on the `TP4056`. Module with protection are slightly larger of the ones without protection and have an additional IC on top: so be sure to buy the type having protection! 
+  
+The TP4056 module and the SX1308 module will be placed inside the robot since there is a lot of space where the 4xAA battery holder would be.  
+   
+If you experience some problems like reset of the Arduino, you can increase the `C3` value. If you experience bluetooth module reset, increase the value of C5 or put an electrolytic capacitor (mind the polarity in this case!).
 
 ## <a name="customizewheels"></a>How customize the wheels
 Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) of the Servo Wheel on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/).   
