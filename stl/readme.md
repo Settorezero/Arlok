@@ -51,7 +51,10 @@ Time and weight is reported for total parts if more than one is needed.
 |  1  | [10mm hole Rear Pillar](arlok_pillar_hole_(variant_10mm).stl)            |  40 |  5 |  |
 | (1) | [12mm hole Rear Pillar](arlok_pillar_hole_(variant_12mm).stl)            |  40 |  5 |  |
 |  2  | [Wheel](arlok_wheel.stl)                                                 | 178 | 28 |  |
-| (2) | [Tire](arlok_tire.stl)                                                   |     |    | See descriptions |
+| (2) | [Wheel - slotted holes](arlok_wheel_slotted.stl)                         |     |    |  |
+| (2) | [Wheel - 5 star](arlok_wheel_star.stl)                                   |     |    |  |
+| (2) | [Tire - round surface](arlok_tire_round.stl)                             |     |    | See descriptions |
+| (2) | [Tire - flat surface](arlok_tire_flat.stl)                               |     |    |  |
 | (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)                     |  53 |  6 |  |
 | (1) | [18650 LiPo Holder](arlok_18650_holder.stl)                              |     |    |  |
 
@@ -76,11 +79,20 @@ There are 2 variants: the standard, having squared edges, and the one with round
 There are 3 variants that differs for the hole diameter used for the switch that detaches the 4AA batteries of the servo power. Print only 1 of these. 6mm variant will be used for the classic lever switch. 10mm variant is used for the 10mm lock pushbuttons. 12mm variant is used for the 12mm lock pushbuttons sold by FuturaShop (see [BOM in the docs folder](../docs/BOM.md)).
 
 ### <a name="wheels"></a>Wheels
-The [Wheel](arlok_wheel.stl) is optimized to be used with the round horn that comes with the MG996 servo and for an o-ring having an internal diameter of 70mm and a section of about 2 or 3mm. A rubber O-Ring will be applied to the wheel groove for giving grip. Please don't use cyanoacrilate glue for attaching the O-Ring. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. Wheel is sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 27mm variant without H1 washers (so the total height of the ball caster will be 25mm).
+There are 3 kinds of wheels optimized to be used with the round horn that comes with the MG996 servo and for an o-ring (or provided tires to be 3D-printed) having an internal diameter of 70mm and a section of about 2 or 3mm. Wheels are sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 25mm variant. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. A rubber O-Ring or a provded Tire 3D printed using a flexible material (like TPU) will be applied to the wheel groove for giving grip. 
 
-### <a name="tires">Printable Tires (by Raffaello Bonghi)
-If your 3D-Printer can handle TPU (flexibile filament) you can print 2 copies of this stl instead buying O-Rings. This part was contributed by @rbonghi. You can see some pictures of this tire [here](../media/tires_rbonghi/).  
-Raffaello advices those settings:
+The are:  
+- The first, original [Wheel](arlok_wheel.stl), see the [How customize the standard wheel](#customizewheels) for further informations
+- A [wheel having slotted holes](arlok_wheel_slotted.stl) designed by @gbr1
+- A [wheel having a 5-star pattern](arlok_wheel_star.stl) designed by @gbr1
+
+### <a name="tires">Tires
+You can use an o-ring having an internal diameter of 70mm and a section of about 2 or 3mm or, if your printer can handle flexible filaments (like TPU), you can print one of the 2 kinds of tires provided:
+- [Tire having a rounded surface](arlok_tire_round.stl) designed by @rbonghi
+- [Tire having a flat surface](arlok_tire_flat.stl) designed by @gbr1
+
+You can see some pictures of the rounded-surface tire [here](../media/tires_rbonghi/).  
+@rbonghi advices those settings:
 - Filament: TPU SainSmart
 - Infill Density: 5%
 - Infill pattern: Honeycomb
@@ -113,7 +125,7 @@ The TP4056 module and the SX1308 module will be placed inside the robot since th
    
 If you experience some problems like reset of the Arduino, you can increase the `C3` value. If you experience bluetooth module reset, increase the value of C5 or put an electrolytic capacitor (mind the polarity in this case!).
 
-## <a name="customizewheels"></a>How customize the wheels
+## <a name="customizewheels"></a>How customize the standard wheel
 Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) of the Servo Wheel on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/).   
 
 Customizing wheel is useful only if you plan to use a different ball-caster that gives the robot a different clearance from the floor.  
