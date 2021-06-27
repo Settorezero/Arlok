@@ -52,7 +52,8 @@ Time and weight is reported for total parts if more than one is needed.
 | (1) | [12mm hole Rear Pillar](arlok_pillar_hole_(variant_12mm).stl)            |  40 |  5 |  |
 |  2  | [Wheel](arlok_wheel.stl)                                                 | 178 | 28 |  |
 | (2) | [Wheel - slotted holes](arlok_wheel_slotted.stl)                         |     |    |  |
-| (2) | [Wheel - 5 star](arlok_wheel_star.stl)                                   |     |    |  |
+| (2) | [Wheel - 5-star](arlok_wheel_star5.stl)                                   |     |    |  |
+| (2) | [Wheel - 10-star](arlok_wheel_star10.stl)                                   |     |    |  |
 | (2) | [Tire - round profile](arlok_tire_round.stl)                             |     |    | See descriptions |
 | (2) | [Tire - flat profile](arlok_tire_flat.stl)                               |     |    |  |
 | (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)                     |  53 |  6 |  |
