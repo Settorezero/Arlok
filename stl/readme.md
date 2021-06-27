@@ -79,12 +79,13 @@ There are 2 variants: the standard, having squared edges, and the one with round
 There are 3 variants that differs for the hole diameter used for the switch that detaches the 4AA batteries of the servo power. Print only 1 of these. 6mm variant will be used for the classic lever switch. 10mm variant is used for the 10mm lock pushbuttons. 12mm variant is used for the 12mm lock pushbuttons sold by FuturaShop (see [BOM in the docs folder](../docs/BOM.md)).
 
 ### <a name="wheels"></a>Wheels
-There are 3 kinds of wheels optimized to be used with the round horn that comes with the MG996R servo and for an O-ring (or provided tires to be 3D-printed) having an internal diameter of 70mm and a section of about 2 or 3mm. Wheels are sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 25mm variant. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. A rubber O-Ring or a provided tire (3D printed using a flexible material like TPU) will be applied to the wheel groove for giving grip. 
+There are 4 kinds of wheels optimized to be used with the round horn that comes with the MG996R servo and for an O-ring (or provided tires to be 3D-printed) having an internal diameter of 70mm and a section of about 2 or 3mm. Wheels are sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 25mm variant. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. A rubber O-Ring or a provided tire (3D printed using a flexible material like TPU) will be applied to the wheel groove for giving grip. 
 
 The are:  
 - The first, original [Wheel](arlok_wheel.stl), see the [How customize the standard wheel](#customizewheels) for further informations
 - A [wheel having slotted holes](arlok_wheel_slotted.stl) designed by @gbr1 ([picture](../media/misc/wheel_slotted.jpg))
-- A [wheel having a 5-star pattern](arlok_wheel_star.stl) designed by @gbr1
+- A [wheel having a 5-star pattern](arlok_wheel_star5.stl) designed by @gbr1
+- A [wheel having a 10-star pattern](arlok_wheel_star10.stl) designed by @gbr1
 
 ### <a name="tires">Tires
 You can use an O-ring having an internal diameter of 70mm and a section of about 2 or 3mm or, if your printer can handle flexible filaments (like TPU), you can print one of the 2 kinds of tires provided: 
