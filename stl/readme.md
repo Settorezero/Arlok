@@ -53,8 +53,8 @@ Time and weight is reported for total parts if more than one is needed.
 |  2  | [Wheel](arlok_wheel.stl)                                                 | 178 | 28 |  |
 | (2) | [Wheel - slotted holes](arlok_wheel_slotted.stl)                         |     |    |  |
 | (2) | [Wheel - 5 star](arlok_wheel_star.stl)                                   |     |    |  |
-| (2) | [Tire - round surface](arlok_tire_round.stl)                             |     |    | See descriptions |
-| (2) | [Tire - flat surface](arlok_tire_flat.stl)                               |     |    |  |
+| (2) | [Tire - round profile](arlok_tire_round.stl)                             |     |    | See descriptions |
+| (2) | [Tire - flat profile](arlok_tire_flat.stl)                               |     |    |  |
 | (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)                     |  53 |  6 |  |
 | (1) | [18650 LiPo Holder](arlok_18650_holder.stl)                              |     |    |  |
 
@@ -79,32 +79,32 @@ There are 2 variants: the standard, having squared edges, and the one with round
 There are 3 variants that differs for the hole diameter used for the switch that detaches the 4AA batteries of the servo power. Print only 1 of these. 6mm variant will be used for the classic lever switch. 10mm variant is used for the 10mm lock pushbuttons. 12mm variant is used for the 12mm lock pushbuttons sold by FuturaShop (see [BOM in the docs folder](../docs/BOM.md)).
 
 ### <a name="wheels"></a>Wheels
-There are 3 kinds of wheels optimized to be used with the round horn that comes with the MG996 servo and for an o-ring (or provided tires to be 3D-printed) having an internal diameter of 70mm and a section of about 2 or 3mm. Wheels are sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 25mm variant. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. A rubber O-Ring or a provded Tire 3D printed using a flexible material (like TPU) will be applied to the wheel groove for giving grip. 
+There are 3 kinds of wheels optimized to be used with the round horn that comes with the MG996R servo and for an O-ring (or provided tires to be 3D-printed) having an internal diameter of 70mm and a section of about 2 or 3mm. Wheels are sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 25mm variant. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. A rubber O-Ring or a provided tire (3D printed using a flexible material like TPU) will be applied to the wheel groove for giving grip. 
 
 The are:  
 - The first, original [Wheel](arlok_wheel.stl), see the [How customize the standard wheel](#customizewheels) for further informations
-- A [wheel having slotted holes](arlok_wheel_slotted.stl) designed by @gbr1
+- A [wheel having slotted holes](arlok_wheel_slotted.stl) designed by @gbr1 ([picture](../media/misc/wheel_slotted.jpg))
 - A [wheel having a 5-star pattern](arlok_wheel_star.stl) designed by @gbr1
 
 ### <a name="tires">Tires
-You can use an o-ring having an internal diameter of 70mm and a section of about 2 or 3mm or, if your printer can handle flexible filaments (like TPU), you can print one of the 2 kinds of tires provided:
-- [Tire having a rounded surface](arlok_tire_round.stl) designed by @rbonghi
-- [Tire having a flat surface](arlok_tire_flat.stl) designed by @gbr1
+You can use an O-ring having an internal diameter of 70mm and a section of about 2 or 3mm or, if your printer can handle flexible filaments (like TPU), you can print one of the 2 kinds of tires provided: 
 
-You can see some pictures of the rounded-surface tire [here](../media/tires_rbonghi/).  
-@rbonghi advices those settings:
-- Filament: TPU SainSmart
-- Infill Density: 5%
-- Infill pattern: Honeycomb
-- Retraction: Disabled
-- Temperature Nozzle: 235 - 230
-- Temperature Bed: 45 - 40
+- [Tire - round profile](arlok_tire_round.stl) designed by @rbonghi (picture [[1]](../media/misc/tire_round_01.jpg) [[2]](../media/misc/tire_round_02.jpg))
+- [Tire - flat profile](arlok_tire_flat.stl) designed by @gbr1
+
+>@rbonghi advices those settings for the tire:
+>- Filament: TPU SainSmart
+>- Infill Density: 5%
+>- Infill pattern: Honeycomb
+>- Retraction: Disabled
+>- Temperature Nozzle: 235 - 230
+>- Temperature Bed: 45 - 40
 
 ### <a name="viapixetto"></a> Via Pixetto support
-This support is used for attaching a [Via Pixetto Ai Camera](https://pixetto.ai/) on top-front of ARLOK. The support is a hinge made of 2 pieces: you must use a long M3 screw and a nut. In the STL there are also 4 small spacers used for distancing the camera from the base: you must use M2 screws and nuts. Sorry but Via Pixetto example is still not ready.
+This support is used for attaching a [Via Pixetto Ai Camera](https://pixetto.ai/) on top-front of Arlok. The support is a hinge made of 2 pieces: you must use a long M3 screw and a nut. In the STL there are also 4 small spacers used for distancing the camera from the base: you must use M2 screws and nuts. Sorry but Via Pixetto example is still not ready.
 
 ### <a name="18650"></a> 18650 LiPo Holder
-This part is used for holding a 18650 cell battery on the bottom of the robot. The 18650 will be used alone, without the two AA battery holders. You can use a single 18650 attached to a DC/DC boost converter through the pushbutton switch mounted on the rear pillar.  
+This part is used for holding a 18650 cell battery on the bottom of the robot. The 18650 will be used alone, without the two AA battery holders. You can use a single 18650 attached to a DC/DC boost converter through the pushbutton switch mounted on the rear pillar. Use a 18650 having soldering tabs. 
 
 >**!!! WARNING !!!**  
 **LiPo batteries can be very dangerous so don't mount this kind of battery if Arlok will be used by a child!**
@@ -119,11 +119,13 @@ This picture shows how 18650 will be mounted on the bottom of Arlok (use 2x M3 1
 
 ![18650 LiPo battery mounting](../media/arlok_18650.jpg)
 
-For recharing the battery you can also solder a cheap module for LiPo Charging having battery protection (mandatory!), such as [this kind of module](https://amzn.to/3qjoea8) based on the `TP4056`. Module with protection are slightly larger of the ones without protection and have an additional IC on top: so be sure to buy the type having protection! 
+For recharing the battery you can use a cheap module for LiPo Charging having battery protection (mandatory!), such as [this kind of module](https://amzn.to/3qjoea8) based on the `TP4056`. Module with protection are slightly larger of the ones without protection and have an additional IC on top: so be sure to buy the type having protection! It's not adviced include the battery charged on the robot: better solder two wires with crocodile-clamps on charging module and attach it to battery tabs having care robot is turned off.
   
-The TP4056 module and the SX1308 module will be placed inside the robot since there is a lot of space where the 4xAA battery holder would be.  
+The SX1308 module will be placed inside the robot since there is a lot of space where the 4xAA battery holder would be.  
    
 If you experience some problems like reset of the Arduino, you can increase the `C3` value. If you experience bluetooth module reset, increase the value of C5 or put an electrolytic capacitor (mind the polarity in this case!).
+
+Anyway this setting is still experimental, was not tested under all conditions.
 
 ## <a name="customizewheels"></a>How customize the standard wheel
 Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) of the Servo Wheel on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/).   
