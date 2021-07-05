@@ -5,11 +5,12 @@
 ### Summary
 
 1) [Electronics - PCB](#pcb)
-2) [Electronics - Shield Components](#shield)
-3) [Electronics - External components](#ext)
-4) [Mechanics   - 3D-printed parts](#3d)
-5) [Mechanics   - Components](#mech)
-6) [🇮🇹 All Parts - Links to products only for Italian Users](#ita)
+2) [Electronics - Shield Components, detailed list](#shield)
+3) [Electronics - Shield Components, compact list](#shieldc)
+4) [Electronics - External components](#ext)
+5) [Mechanics   - 3D-printed parts](#3d)
+6) [Mechanics   - Components](#mech)
+7) [🇮🇹 All Parts - Links to products only for Italian Users](#ita)
 
 ### <a name="pcb"></a>1) Electronics - PCB
 
@@ -21,13 +22,13 @@ Step 2: Order the ARLOK shield PCB from the following link:
         
 > If you don't want to buy the Arlok PCB, you can use an Arduino Uno protoshield and make your own shield connecting external components (servo, ultrasonic sensor, display ecc) to the Arduino pins following the [schematic](arlok_schematic.png) and/or the [connection table](connections.md).
 
-### <a name="shield"></a>2) Electronics - Shield Components
+### <a name="shield"></a>2) Electronics - Shield Components (detailed)
 
 | Part         | Value                                          | Notes                            |
 |--------------|------------------------------------------------|----------------------------------|
 | C1           | 100nF multilayer                               | pitch 5mm                        |
 | C2           | 100nF multilayer                               | pitch 5mm                        |
-| C3           | 1000uF 16V electrolytic                        | pitch 3,5mm dia 8mm              |
+| C3           | 1000uF 16V electrolytic                        | pitch 3.5mm dia 8mm              |
 | C4           | 100nF multilayer                               | pitch 5mm                        |
 | C5           | 100nF multilayer                               | pitch 5mm                        |
 | C6           | 100nF multilayer                               | pitch 5mm                        |
@@ -39,7 +40,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | P1           | tactile switch 6x6mm (long button)             |                                  |
 | P2           | tactile switch 6x6mm (long button)             |                                  |
 | RESET        | tactile switch 6x6mm                           |                                  |
-| VR1          | 10K trimpotvv                                  | Type PT10LV10 (good 5K÷20K)      |
+| VR1          | 10KΩ trimmer                                   | Type PT10LV10 (good 5K÷20K)      |
 | L1           | led 3mm                                        |                                  |
 | H1           | male pinheader 10pin **                        | Arduino header - solder on top   |
 | H2           | male pinheader 8pin  **                        | Arduino header - solder on top   |
@@ -61,8 +62,29 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | X2           | Screw Terminal 2pin                            | Pitch 5mm                        |
 | GROVE        | GROVE male header (optional)                   |                                  |
 
- (*) only needed if you have (bought) standard analog servos not capable of 360° turning  
+(*) only needed if you have (bought) standard analog servos not capable of 360° turning  
 (**) standard headers are 11mm long: this are good if you use Cytron MakerUNO board. If you want to use a standard Arduino UNO, 11mm headers are not good, since the USB connector will touch under Arlok shield, so in this case 15mm headers are needed
+
+### <a name="shieldc"></a>2) Electronics - Shield Components (compact)
+
+| Qt. | Part                                                          |
+|-----|---------------------------------------------------------------|
+|  5  | 100nF multilayer capacitor,  pitch 5mm                        |
+|  1  | 1000uF 16V electrolytic capacitor, pitch 3.5mm dia 8mm        |
+|  1  | 1N400x diode                                                  |
+|  5  | 22KΩ ¼W 1% resistor                                           |
+|  1  | 15KΩ ¼W resistor                                              |
+|  1  | 330Ω ¼W resistor                                              |
+|  2  | tactile switch 6x6mm, long button                             |
+|  1  | tactile switch 6x6mm                                          |
+|  1  | 10KΩ trimmer, Type PT10LV10 (10x10mm)                         |
+|  1  | LED 3mm                                                       |
+|  2  | Screw terminal, pitch 5mm                                     | 
+|  2  | 40pin male headers (needed 60pin)                             |
+|  1  | female header (needed 6+4 pin)                                |
+|  1  | jumper block, pitch 2.54mm                                    |
+|  1  | PCB lever switch, pitch 2.54mm (or 2 pin male header+jumper)  |
+ 
 
 ### <a name="ext"></a>3) Electronics - External components
 
