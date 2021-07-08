@@ -15,9 +15,8 @@ This folder contains parts to be 3D-printed.  I like to use the [Sunlu PLA+](htt
    7. [Tires](#tires)
    8. [Via Pixetto support](#viapixetto)
    9. [18650 cell bracket](#18650)
-   
 + [How customize the wheels](#customizewheels) 
-+ [Arlok Moods](#moods)
++ [Moods](#moods)
 
 ## <a name="printersettings"></a>Printer settings
 Values in the parts table are calculated using CURA slicer with following settings:
@@ -59,6 +58,7 @@ Time and weight is reported for total parts if more than one is needed.
 | (2) | [Tire - flat profile](arlok_tire_flat.stl)                               |     |    |  |
 | (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)                     |  53 |  6 |  |
 | (1) | [18650 LiPo Holder](arlok_18650_holder.stl)                              |     |    |  |
+| ( ) | [Moods](./moods/)                                                        |     |    |  |
 
 Estimated total printing time for standard parts: 13H 7'  
 Estimated total filament needed for standard parts: 107g (about 36meters)
@@ -161,3 +161,6 @@ Those parts are very useful also for keeping ultrasonic sensor in place. You can
 | [Cartoon](./moods/mood_cartoon.stl)                        | Print them in white color: they will give Arlok eyes like a cartoon. Print them in red color for making Arlok looks mad. | White, Red, Yellow, Lime |
 | [Cartoon with eyebrows](./moods/mood_cartoon_eyebrows.stl) | As above but with a cut for giving bad/sad expression. |  White, Red, Yellow, Lime |
 | [None](./moods/mood_none.stl)                              | Simple round discs for no expression and keeping capsules in place. Try to print them in a different color than chassis | Any |
+| [Meme "Feel like a sir" - Hat](./moods/mood_sir_hat.stl) | Hat from "Feel like a sir" meme | Black |
+| [Meme "Feel like a sir" - Monocle](./moods/mood_sir_monocle.stl) | Monocle from "Feel like a sir" meme | Golden/Black |
+| [Meme "Feel like a sir" - Moustache](./moods/mood_sir_moustache.stl) | Moustache from "Feel like a sir" meme | Black |
