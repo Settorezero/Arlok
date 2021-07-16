@@ -50,12 +50,13 @@ Time and weight is reported for total parts if more than one is needed.
 |  1  | [10mm hole Rear Pillar](arlok_pillar_hole_(variant_10mm).stl)            |  40 |  5 |  |
 | (1) | [12mm hole Rear Pillar](arlok_pillar_hole_(variant_12mm).stl)            |  40 |  5 |  |
 |  2  | [Wheel](arlok_wheel.stl)                                                 | 178 | 28 |  |
-| (2) | [Wheel - slotted holes](arlok_wheel_slotted.stl)                         |     |    |  |
-| (2) | [Wheel - 5-star](arlok_wheel_star5.stl)                                  |     |    |  |
-| (2) | [Wheel - 10-star](arlok_wheel_star10.stl)                                |     |    |  |
-| (2) | [Wheel - honeycomb](arlok_wheel_honeycomb.stl)                           |     |    |  |
-| (2) | [Tire - round profile](arlok_tire_round.stl)                             |     |    | See descriptions |
-| (2) | [Tire - flat profile](arlok_tire_flat.stl)                               |     |    |  |
+| (2) | [Wheel - slotted holes](./wheels/arlok_wheel_slotted.stl)                         |     |    |  |
+| (2) | [Wheel - 5-star](./wheels/arlok_wheel_star5.stl)                                  |     |    |  |
+| (2) | [Wheel - 10-star](./wheels/arlok_wheel_star10.stl)                                |     |    |  |
+| (2) | [Wheel - honeycomb](./wheels/arlok_wheel_honeycomb.stl)                           |     |    |  |
+| (2) | [Tire - round profile](./tires/arlok_tire_round.stl)                             |     |    | See descriptions |
+| (2) | [Tire - flat profile](./tires/arlok_tire_flat.stl)                               |     |    |  |
+| (2) | [Tire - knurled](./tires/arlok_tire_knurled.stl)                                 |     |    |  |
 | (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)                     |  53 |  6 |  |
 | (1) | [18650 LiPo Holder](arlok_18650_holder.stl)                              |     |    |  |
 | ( ) | [Moods](./moods/)                                                        |     |    |  |
@@ -84,17 +85,18 @@ There are 3 variants that differs for the hole diameter used for the switch that
 There are various kind of wheels optimized to be used with the round horn that comes with the MG996R servo and for an O-ring (or provided tires to be 3D-printed) having an internal diameter of 70mm and a section of about 2 or 3mm. Wheels are sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 25mm variant. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. A rubber O-Ring or a provided tire (3D printed using a flexible material like TPU) will be applied to the wheel groove for giving grip. 
 
 The are:  
-- The first, original [Wheel](arlok_wheel.stl), see the [How customize the standard wheel](#customizewheels) for further informations
-- [Wheel - slotted holes](arlok_wheel_slotted.stl) designed by @gbr1 ([picture](../media/misc/wheel_slotted.jpg))
-- [wheel - 5-star pattern](arlok_wheel_star5.stl) designed by @gbr1
-- [wheel - 10-star pattern](arlok_wheel_star10.stl) designed by @gbr1
-- [Wheel - honeycomb pattern](arlok_wheel_honeycomb.stl) designed by @gbr1
+- The first, original [Wheel](./wheels/arlok_wheel.stl), see the [How customize the standard wheel](#customizewheels) for further informations
+- [Wheel - slotted holes](./wheels/arlok_wheel_slotted.stl) designed by @gbr1 ([picture](../media/misc/wheel_slotted.jpg))
+- [wheel - 5-star pattern](./wheels/arlok_wheel_star5.stl) designed by @gbr1
+- [wheel - 10-star pattern](./wheels/arlok_wheel_star10.stl) designed by @gbr1
+- [Wheel - honeycomb pattern](./wheels/arlok_wheel_honeycomb.stl) designed by @gbr1
 
 ### <a name="tires">Tires
-You can use an O-ring having an internal diameter of 70mm and a section of about 2 or 3mm or, if your printer can handle flexible filaments (like TPU), you can print one of the 2 kinds of tires provided: 
+You can use an O-ring having an internal diameter of 70mm and a section of about 2 or 3mm or, if your printer can handle flexible filaments (like TPU), you can print one of those provided tires: 
 
-- [Tire - round profile](arlok_tire_round.stl) designed by @rbonghi (picture [[1]](../media/misc/tire_round_01.jpg) [[2]](../media/misc/tire_round_02.jpg))
-- [Tire - flat profile](arlok_tire_flat.stl) designed by @gbr1
+- [Tire - round profile](./tires/arlok_tire_round.stl) designed by @rbonghi (picture [[1]](../media/misc/tire_round_01.jpg) [[2]](../media/misc/tire_round_02.jpg))
+- [Tire - flat profile](./tires/arlok_tire_flat.stl) designed by @gbr1
+- [Tire - knurled](./tires/arlok_tire_knurled-stl) designed by @Dario-Ciceri
 
 >@rbonghi advices those settings for the tire:
 >- Filament: TPU SainSmart
