@@ -54,6 +54,8 @@ Time and weight is reported for total parts if more than one is needed.
 | (2) | [Wheel - 5-star](./wheels/arlok_wheel_star5.stl)                                  |     |    |  |
 | (2) | [Wheel - 10-star](./wheels/arlok_wheel_star10.stl)                                |     |    |  |
 | (2) | [Wheel - honeycomb](./wheels/arlok_wheel_honeycomb.stl)                           |     |    |  |
+| (2) | [Wheel - circles](./wheels/arlok_wheel_circles.stl)                      |     |     |  |
+| (2) | [Wheel - snowflake](./wheels/arlok_wheel_snowflake.stl)                      |     |     |  |
 | (2) | [Tire - round profile](./tires/arlok_tire_round.stl)                             |     |    | See descriptions |
 | (2) | [Tire - flat profile](./tires/arlok_tire_flat.stl)                               |     |    |  |
 | (2) | [Tire - knurled](./tires/arlok_tire_knurled.stl)                                 |     |    |  |
@@ -90,6 +92,8 @@ The are:
 - [wheel - 5-star pattern](./wheels/arlok_wheel_star5.stl) designed by @gbr1
 - [wheel - 10-star pattern](./wheels/arlok_wheel_star10.stl) designed by @gbr1
 - [Wheel - honeycomb pattern](./wheels/arlok_wheel_honeycomb.stl) designed by @gbr1
+- [Wheel - circles](./wheels/arlok_wheel_circles.stl)
+- [Wheel - snowflake](./wheels/arlok_wheel_snowflake.stl)
 
 ### <a name="tires">Tires
 You can use an O-ring having an internal diameter of 70mm and a section of about 2 or 3mm or, if your printer can handle flexible filaments (like TPU), you can print one of those provided tires: 
