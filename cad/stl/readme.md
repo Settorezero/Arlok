@@ -1,6 +1,5 @@
-# Arlok 3D Files for 3d-Printing 
-This folder contains parts to be 3D-printed.  I like to use the [Sunlu PLA+](https://amzn.to/3aG5V7i) filament.  
-> Quick link to this page: [https://tinyurl.com/3dprintarlok](https://tinyurl.com/3dprintarlok)  
+# Arlok Files for 3D-Printing 
+This folder contains parts to be 3D-printed.
 
 ## Summary
 + [Printer settings](#printersettings)
@@ -49,7 +48,7 @@ Time and weight is reported for total parts if more than one is needed.
 | (1) | [6mm hole Rear Pillar](arlok_pillar_hole_(variant_06mm).stl)             |  40 |  6 |  | 
 |  1  | [10mm hole Rear Pillar](arlok_pillar_hole_(variant_10mm).stl)            |  40 |  5 |  |
 | (1) | [12mm hole Rear Pillar](arlok_pillar_hole_(variant_12mm).stl)            |  40 |  5 |  |
-|  2  | [Wheel](arlok_wheel.stl)                                                 | 178 | 28 |  |
+|  2  | [Wheel - solid](./wheels/arlok_wheel_solid.stl)                          | 178 | 28 |  |
 | (2) | [Wheel - slotted holes](./wheels/arlok_wheel_slotted.stl)                         |     |    |  |
 | (2) | [Wheel - 5-star](./wheels/arlok_wheel_star5.stl)                                  |     |    |  |
 | (2) | [Wheel - 10-star](./wheels/arlok_wheel_star10.stl)                                |     |    |  |
@@ -81,13 +80,13 @@ Bracket to hold in place the 2 servos: there is no need to attach servo to the b
 There are 2 variants: the standard, having squared edges, and the one with rounded edges, print only one of these.
 
 ### <a name="rearpillar"></a>Rear Pillar
-There are 3 variants that differs for the hole diameter used for the switch that detaches the 4AA batteries of the servo power. Print only 1 of these. 6mm variant will be used for the classic lever switch. 10mm variant is used for the 10mm lock pushbuttons. 12mm variant is used for the 12mm lock pushbuttons sold by FuturaShop (see [BOM in the docs folder](../docs/BOM.md)).
+There are 3 variants that differs for the hole diameter used for the switch that detaches the 4AA batteries of the servo power. Print only 1 of these. 6mm variant will be used for the classic lever switch. 10mm variant is used for the 10mm lock pushbuttons. 12mm variant is used for the 12mm lock pushbuttons sold by FuturaShop (see [BOM in the docs folder](../../docs/BOM.md)).
 
 ### <a name="wheels"></a>Wheels
 There are various kind of wheels optimized to be used with the round horn that comes with the MG996R servo and for an O-ring (or provided tires to be 3D-printed) having an internal diameter of 70mm and a section of about 2 or 3mm. Wheels are sized for giving the correct balance of the robot using the Tamiya 70144 ball caster mounted in the 25mm variant. The wheels will be attached to the servo Horns using 2 self-tapping screws given with the servos. A rubber O-Ring or a provided tire (3D printed using a flexible material like TPU) will be applied to the wheel groove for giving grip. 
 
 The are:  
-- The first, original [Wheel](./wheels/arlok_wheel.stl), see the [How customize the standard wheel](#customizewheels) for further informations
+- The first, [Solid Wheel](./wheels/arlok_wheel_solid.stl), see the [How customize the standard wheel](#customizewheels) for further informations
 - [Wheel - slotted holes](./wheels/arlok_wheel_slotted.stl) designed by @gbr1 ([picture](../media/misc/wheel_slotted.jpg))
 - [wheel - 5-star pattern](./wheels/arlok_wheel_star5.stl) designed by @gbr1
 - [wheel - 10-star pattern](./wheels/arlok_wheel_star10.stl) designed by @gbr1
@@ -98,7 +97,7 @@ The are:
 ### <a name="tires">Tires
 You can use an O-ring having an internal diameter of 70mm and a section of about 2 or 3mm or, if your printer can handle flexible filaments (like TPU), you can print one of those provided tires: 
 
-- [Tire - round profile](./tires/arlok_tire_round.stl) designed by @rbonghi (picture [[1]](../media/misc/tire_round_01.jpg) [[2]](../media/misc/tire_round_02.jpg))
+- [Tire - round profile](./tires/arlok_tire_round.stl) designed by @rbonghi (picture [[1]](../../media/misc/tire_round_01.jpg) [[2]](../../media/misc/tire_round_02.jpg))
 - [Tire - flat profile](./tires/arlok_tire_flat.stl) designed by @gbr1
 - [Tire - knurled](./tires/arlok_tire_knurled-stl) designed by @Dario-Ciceri
 
@@ -127,7 +126,7 @@ With those modifications the logic will be powered at about 5.3V (the 6V from th
   
 This picture shows how 18650 will be mounted on the bottom of Arlok (use 2x M3 12mm screws, 2x M3 nuts and 2x M3 washers):
 
-![18650 LiPo battery mounting](../media/arlok_18650.jpg)
+![18650 LiPo battery mounting](../../media/arlok_18650.jpg)
 
 For recharing the battery you can use a cheap module for LiPo Charging having battery protection (mandatory!), such as [this kind of module](https://amzn.to/3qjoea8) based on the `TP4056`. Module with protection are slightly larger of the ones without protection and have an additional IC on top: so be sure to buy the type having protection! It's not adviced include the battery charged on the robot: better solder two wires with crocodile-clamps on charging module and attach it to battery tabs having care robot is turned off.
   
@@ -149,11 +148,11 @@ In the Obijuan script you can customize all wheel parameters. I've generated the
 
 See the following image for understanding servo parameters in the openscad script:  
 
-![Servo Horn measures](../media/servo_horn_measures.jpg)
+![Servo Horn measures](../../media/servo_horn_measures.jpg)
 
 ## <a name="moods"></a>Arlok Moods
 
-![Arlok moods](../media/arlok_moods.jpg)
+![Arlok moods](../../media/arlok_moods.jpg)
 
 _Arlok Moods_ was introduced first time along the Arlok first release with the only eyelashes for _Arlokka_. Now we've included a lot of other moods: they are very small parts to be 3D printed and attached on ultrasonic capsules for giving your Arlok an unique expression.   
   
