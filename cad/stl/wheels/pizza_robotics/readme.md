@@ -34,4 +34,10 @@ You need to print two pieces for each wheel and these wheels comes awesome when 
 + black from 1.80 mm
 + white from 2.40mm
 
-![./images/prusaslicer_cover.png](./images/prusaslicer_cover.png)
+![./images/prusaslicer_lid.png](./images/prusaslicer_lid.png)
+
+### 4. Final
+
+It should be like the following!
+
+![./images/photo_pizzarobotics_whee.jpg](./images/photo_pizzarobotics_wheel.jpg)
