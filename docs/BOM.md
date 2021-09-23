@@ -117,7 +117,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 
 ### <a name="3d"></a>4) Mechanics - 3D-printed parts
 
-Please see in the [STL folder](../stl)
+Please see in the [STL folder](../cad/stl)
 
 ### <a name="mech"></a>5) Mechanics - Components
 
@@ -138,7 +138,7 @@ Please see in the [STL folder](../stl)
     Maybe you can share the extra ballcaster part with a friend so he can build an Arlok too.
 
 (**) There are 2 kinds of tires that can be 3D-Printed using TPU. If your 3D printer can handle TPU, try
-     first to print them yourself: see in [STL folder](../stl) for the Tires.
+     first to print them yourself: see in [STL folder](../cad/stl) for the Tires.
 
 ### <a name="ita"></a>6) All Parts - Links to products only for Italian Users
 
