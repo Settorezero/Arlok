@@ -1,7 +1,8 @@
 # Pizza Robotics limited edition wheel
 
 <img src="./images/logo_pizza_robotics_white_square.png" data-canonical-src="./images/logo_pizza_robotics_white_square.png" width="100" height="100" />
-About “Pizza robotics” is a newborn collective of robotics professionals and high-level enthusiasts. Learn more at [pizzarobotics.org](https://pizzarobotics.org)
+
+"Pizza robotics” is a newborn collective of robotics professionals and high-level enthusiasts. Learn more at [pizzarobotics.org](https://pizzarobotics.org)
 
 <br>
 
