@@ -1,10 +1,11 @@
 # Pizza Robotics limited edition wheel
 
-This wheel type was designed by G. Bruno ([github](https://github.com/gbr1), [instagram](https://instagram.com/johnnyrobomeka)) for Pizza Robotics mods of Arlok robot.
+<img src="./images/logo_pizza_robotics_white_square.png" data-canonical-src="./images/logo_pizza_robotics_white_square.png" width="100" height="100" />
+About “Pizza robotics” is a newborn collective of robotics professionals and high-level enthusiasts. Learn more at [pizzarobotics.org](https://pizzarobotics.org)
 
-![pizza robotics logo](./images/logo_pizza_robotics_white_square.png)
+<br>
 
-
+This wheel type was designed by G. Bruno ( [github](https://github.com/gbr1) , [instagram](https://instagram.com/johnnyrobomeka) ) for Pizza Robotics mods of Arlok robot.
 
 You need to print two pieces for each wheel and these wheels comes awesome when you print with different colors.
 
