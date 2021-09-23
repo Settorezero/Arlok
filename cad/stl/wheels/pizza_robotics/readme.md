@@ -40,4 +40,4 @@ You need to print two pieces for each wheel and these wheels comes awesome when 
 
 It should be like the following!
 
-![./images/photo_pizzarobotics_whee.jpg](./images/photo_pizzarobotics_wheel.jpg)
+![./images/photo_pizzarobotics_wheel.jpg](./images/photo_pizzarobotics_wheel.jpg)
