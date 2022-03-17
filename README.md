@@ -25,4 +25,4 @@ See [Troubleshooting guide](./docs/troubleshooting.md)
 
 ### Other Links
 - [All ARLOK videos on Youtube](https://tinyurl.com/arlokplaylist) - [Greta Galli review](https://www.youtube.com/watch?v=CbPGWd9I_mA)
-- ARLOK on no. 253 of Italian Magazine "Elettronica IN" [excerpt](https://www.elettronicain.it/wp-content/uploads/prog_copertina/arlook_il_robot_per_tutti.pdfRepo Github: https://github.com/Settorezero/Arlok) [magazine issue](https://www.elettronicain.it/prodotto/n-253-aprile-2021/?tracking=5f004a6ba8be7)
+- ARLOK on no. 253 of Italian Magazine "Elettronica IN": [excerpt](https://www.elettronicain.it/wp-content/uploads/prog_copertina/arlook_il_robot_per_tutti.pdf)  [magazine issue](https://www.elettronicain.it/prodotto/n-253-aprile-2021/?tracking=5f004a6ba8be7)
