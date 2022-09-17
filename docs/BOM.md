@@ -6,7 +6,7 @@
 
 1) [Electronics - PCB](#pcb)
 2) [Electronics - Shield Components, detailed list](#shield)
-3) [Electronics - Shield Components, compact list](#shieldc)
+3) [Electronics - Shield Components, shopping list](#shieldc)
 4) [Electronics - External components](#ext)
 5) [Mechanics   - 3D-printed parts](#3d)
 6) [Mechanics   - Components](#mech)
@@ -42,10 +42,10 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | RESET        | tactile switch 6x6mm                           |                                  |
 | VR1          | 10KΩ trimmer                                   | Type PT10LV10 (good 5K÷20K)      |
 | L1           | led 3mm                                        |                                  |
-| H1           | male pinheader 10pin **                        | Arduino header - solder on top   |
-| H2           | male pinheader 8pin  **                        | Arduino header - solder on top   |
-| H3           | male pinheader 5pin  **                        | Arduino header - solder on top   |
-| H4           | male pinheader 4pin  **                        | Arduino header - solder on top   |
+| H1 **        | male pinheader 10pin                           | Arduino header - solder on top   |
+| H2 **        | male pinheader 8pin                            | Arduino header - solder on top   |
+| H3 **        | male pinheader 5pin                            | Arduino header - solder on top   |
+| H4 **        | male pinheader 4pin                            | Arduino header - solder on top   |
 | EXT (EXT1)   | male pinheader 7pin                            |                                  |
 | EXT2 (A1)    | male pinheader 3pin                            |                                  |
 | EXT3 (A2)    | male pinheader 3pin                            |                                  |
@@ -65,7 +65,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 (*) only needed if you have (bought) standard analog servos not capable of 360° turning  
 (**) standard headers are 11mm long: this are good if you use Cytron MakerUNO board. If you want to use a standard Arduino UNO, 11mm headers are not good, since the USB connector will touch under Arlok shield, so in this case 15mm headers are needed
 
-### <a name="shieldc"></a>2) Electronics - Shield Components (compact)
+### <a name="shieldc"></a>2) Electronics - Shield Components (shopping list)
 
 | Qt. | Part                                                          |
 |-----|---------------------------------------------------------------|

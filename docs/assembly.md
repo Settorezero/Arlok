@@ -4,7 +4,7 @@
 
 > 🇮🇹 For italian users: this guide is also available in italian language: [assembly - ITA](assembly_ita.md)  
 
-> When you see the screw measure in millimeters: this is the length of the threaded part.
+> When you see the screw measure in millimeters: this is the length of the threaded part (without the head).
 
 There is a [video on youtube](https://youtu.be/yHwYimkA6Dw) showing the assemblying process. It's in italian language but video is very useful for understanding how certain parts must be placed correctly.
 

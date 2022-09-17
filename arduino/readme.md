@@ -21,6 +21,7 @@ Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Ard
 - [Explorer](./explorer) : Arlok moves around avoiding obstacles
 - [Bluetooth Remote](./bluetooth) : You move Arlok using Bluetooth Classic with an Android phone. Source code for Android app provided too
 - [Line Follower](./linefollower) : Arlok moves following a line painted on the ground
+- [Explorer with a LiPo](./explorer_lipo) : Same as Explorer with added battery voltage from the Lipo. See [lipo_mod](../docs/lipo_mod.md) for further info
 
 ## Work in progress
 - Artificial vision example[see video](https://www.youtube.com/watch?v=Ag7VS_6hT9I), [code on Bobboteck repo](https://github.com/bobboteck/ArloPixetto)
