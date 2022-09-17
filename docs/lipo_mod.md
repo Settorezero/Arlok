@@ -28,10 +28,11 @@ Warning: LiPo batteries can be very dangerous! Handle them with care and make th
 - Solder a black cable from the - tab of the battery to the - Input terminal of the SX1308 module 
 - Turn on the button/switch and check with a multimeter the SX1308 module: adjust it using the multi-turn trimmer on it for 5.6 / 5.7 volts (the Diode D1 will lower the voltage of about 0.6-0.7V)
 - Turn off the button 
+- Attach the SX1308 module on the top of a servo bracket using double-sided tape (or make and share your own design)
 - Solder a red cable from the SX1308 + output to the + of Vservo X1 screw terminal 
 - Solder a black cable from the SX1308 - output to the - of Vservo X1 screw terminal 
 - (optional) Solder a cable, having a female dupont terminal, on the + Input terminal of the SX1308 module along with red cable already soldered: this can be used for checking the battery voltage reading from an Analog Input. The female dupont terminal can be connected to one free analog input terminal (A2 - you can use/take inspiration from the [explorer lipo](../arduino/explorer_lipo/) programming example)
-- Attach the SX1308 module on the top of a servo bracket using double-sided tape (or make and share your own design)
+- Set the Jumper JP1 in the `VSERVO` position
 
 Now all the robot parts (logics and servos) will be powered from the same battery: Logics will be powered at about 5V and servo at about 5.6V.
 
