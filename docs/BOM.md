@@ -143,7 +143,7 @@ Please see in the [STL folder](../cad/stl)
 
 ### <a name="ita"></a>6) All Parts - Links to products only for Italian Users
 
-Solo per gli utenti italiani: ho preparato un Google Spreadsheet con l'elenco di tutte le parti e i link dove acquistarli. In questo spreadsheet c'è l'elenco completo tranne che per il PCB dello Shield, per il quale potete vedere al punto 1 di questo documento.
+Solo per gli utenti italiani: ho preparato un Google Spreadsheet con l'elenco di tutte le parti e i link dove acquistarli, il link è indicato più in basso. nello spreadsheet c'è l'elenco completo dei materiali standard, tranne che per il PCB dello Shield, per il quale potete vedere al [punto 1](#pcb) di questo documento.
 
 I link verso FuturaShop e verso Amazon contengono un codice di affiliazione: per voi il prezzo rimane lo stesso sia con che senza codice (potete verificare facilmente), ma con l'affiliazione guadagno dei crediti (su Futura) o buoni regalo (su Amazon) che posso utilizzare per comprare altro materiale presso di loro. Ci tengo a precisare, quindi, che ho scelto che i codici non mi vengano convertiti in denaro proprio perchè utilizzo questi crediti per ottenere altri materiali con cui lavorare sui miei progetti, per cui acquistando da quei link contribuite a sostenere questo lavoro.  
 
