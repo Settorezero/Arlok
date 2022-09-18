@@ -113,7 +113,8 @@ Step 2: Order the ARLOK shield PCB from the following link:
      D1 (put a piece of wire and pay attention to power orientation), put the power jumper JP1
      in VSERVO position and keep the fingers crossed: the servo will absorb more current and
      malfunction (such as resets on board or on the bluetooh module) can occur. This solution
-     is NOT tested!
+     is NOT tested! There is also a mod for using one LiPo Battery but it's at your own risk,
+     read more here: [LiPo Mod](lipo_mod.md)
 
 ### <a name="3d"></a>4) Mechanics - 3D-printed parts
 
@@ -137,7 +138,7 @@ Please see in the [STL folder](../cad/stl)
 (*) when you buy the Tamiya 70144 ballcaster kit, there are parts for making 2 ballcasters.
     Maybe you can share the extra ballcaster part with a friend so he can build an Arlok too.
 
-(**) There are 2 kinds of tires that can be 3D-Printed using TPU. If your 3D printer can handle TPU, try
+(**) There are some kinds of tires that can be 3D-Printed using TPU. If your 3D printer can handle TPU, try
      first to print them yourself: see in [STL folder](../cad/stl) for the Tires.
 
 ### <a name="ita"></a>6) All Parts - Links to products only for Italian Users
