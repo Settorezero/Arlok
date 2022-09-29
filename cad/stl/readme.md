@@ -138,7 +138,7 @@ If you experience some problems like reset of the Arduino, you can increase the 
 Anyway this setting is still experimental, was not tested under all conditions.
 
 ## <a name="ballcaster"></a>Alternative BallCaster
-User Antonio Carofiglio tried to print the [Ball Caster V2 on Thingiverse](https://www.thingiverse.com/thing:1408935) with success. You need to edit the .scad file using [OpenScad](https://openscad.org/) setting the `caster_height` at 30m.
+User Antonio Carofiglio tried to print the [Ball Caster V2 on Thingiverse](https://www.thingiverse.com/thing:1408935) with success. You need to edit the .scad file using [OpenScad](https://openscad.org/) setting the `caster_height` to 30
 
 ## <a name="customizewheels"></a>How customize the standard wheel
 Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) of the Servo Wheel on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/).   
