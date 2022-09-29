@@ -14,6 +14,7 @@ This folder contains parts to be 3D-printed.
    7. [Tires](#tires)
    8. [Via Pixetto support](#viapixetto)
    9. [18650 cell bracket](#18650)
+  10. [Alternative BallCaster](#ballcaster)
 + [How customize the wheels](#customizewheels) 
 + [Moods](#moods)
 
@@ -135,6 +136,9 @@ The SX1308 module will be placed inside the robot since there is a lot of space 
 If you experience some problems like reset of the Arduino, you can increase the `C3` value. If you experience bluetooth module reset, increase the value of C5 or put an electrolytic capacitor (mind the polarity in this case!).
 
 Anyway this setting is still experimental, was not tested under all conditions.
+
+## <a name="ballcaster"></a>Alternative BallCaster
+User Antonio Carofiglio tried to print the [Ball Caster V2 on Thingiverse](https://www.thingiverse.com/thing:1408935) with success. You need to edit the .scad file using [OpenScad](https://openscad.org/) setting the `caster_height` at 30m.
 
 ## <a name="customizewheels"></a>How customize the standard wheel
 Wheels are generated with [Openscad](https://www.openscad.org/) using [Obijuan script](https://www.thingiverse.com/thing:19940) of the Servo Wheel on Thingiverse. You can found the script also on his [Github Repo for Miniskybot](https://github.com/Obijuan/Miniskybot/).   
