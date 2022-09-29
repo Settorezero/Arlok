@@ -137,6 +137,7 @@ Please see in the [STL folder](../cad/stl)
 
 (*) when you buy the Tamiya 70144 ballcaster kit, there are parts for making 2 ballcasters.
     Maybe you can share the extra ballcaster part with a friend so he can build an Arlok too.
+    Alternatively you can 3D-print the [Ball Caster V2 on Thingiverse](https://www.thingiverse.com/thing:1408935) in the height of 30mm (you need [OpenScad]   +(https://openscad.org/) for editing the .scad file and change the height)
 
 (**) There are some kinds of tires that can be 3D-Printed using TPU. If your 3D printer can handle TPU, try
      first to print them yourself: see in [STL folder](../cad/stl) for the Tires.
