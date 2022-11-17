@@ -18,7 +18,7 @@ Step 1: Subscribe to PCBWay using my invite link:
         https://www.tinyurl.com/pcbwaysz
 
 Step 2: Order the ARLOK shield PCB from the following link:
-        https://tinyurl.com/arlokshield
+        [https://tinyurl.com/arlokshieldr1](https://tinyurl.com/arlokshieldr1)
         
 > If you don't want to buy the Arlok PCB, you can use an Arduino Uno protoshield and make your own shield connecting external components (servo, ultrasonic sensor, display ecc) to the Arduino pins following the [schematic](arlok_schematic.png) and/or the [connection table](connections.md).
 
