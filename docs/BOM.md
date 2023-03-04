@@ -10,19 +10,22 @@
 4) [Electronics - External components](#ext)
 5) [Mechanics   - 3D-printed parts](#3d)
 6) [Mechanics   - Components](#mech)
-7) [🇮🇹 All Parts - Links to products only for Italian Users](#ita)
+7) [Adviced Arduino UNO R3 compatible Boards](#boards)
+8) [Differencies between REV1 and first rev PCB](#diffrev1)
+9) [🇮🇹 All Parts - Links to products only for Italian Users](#ita)
+
 
 ### <a name="pcb"></a>1) Electronics - PCB
 
 Step 1: Subscribe to PCBWay using my invite link:
         https://www.tinyurl.com/pcbwaysz
 
-Step 2: Order the ARLOK shield PCB from the following link:
+Step 2: Order the ARLOK shield REV1 PCB from the following link:
         [https://tinyurl.com/arlokshieldr1](https://tinyurl.com/arlokshieldr1)
         
 > If you don't want to buy the Arlok PCB, you can use an Arduino Uno protoshield and make your own shield connecting external components (servo, ultrasonic sensor, display ecc) to the Arduino pins following the [schematic](arlok_schematic.png) and/or the [connection table](connections.md).
 
-### <a name="shield"></a>2) Electronics - Shield Components (detailed)
+### <a name="shield"></a>2) Electronics - Shield REV1 Components (detailed)
 
 | Part         | Value                                          | Notes                            |
 |--------------|------------------------------------------------|----------------------------------|
@@ -32,7 +35,8 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | C4           | 100nF multilayer                               | pitch 5mm                        |
 | C5           | 100nF multilayer                               | pitch 5mm                        |
 | C6           | 100nF multilayer                               | pitch 5mm                        |
-| D1           | 1N400x  (good 1N4001, 1N4007 ecc)              |                                  |
+| C7           | 220uF 16V electrolytic                         | pitch 5mm                        |
+| D1           | 1N400x  (good 1N4001, 1N4007 ecc)              | pitch 2.5mm dia 6mm                                  |
 | R1           | 22KΩ ¼W                                        |                                  |
 | R2           | 15KΩ ¼W                                        |                                  |
 | R3           | 330Ω ¼W                                        |                                  |
@@ -40,7 +44,7 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | P1           | tactile switch 6x6mm (long button)             |                                  |
 | P2           | tactile switch 6x6mm (long button)             |                                  |
 | RESET        | tactile switch 6x6mm                           |                                  |
-| VR1          | 10KΩ trimmer                                   | Type PT10LV10 (good 5K÷20K)      |
+| VR1          | 5kΩ ÷ 20kΩ trimmer                             | Type 6x6mm                       |
 | L1           | led 3mm                                        |                                  |
 | H1 **        | male pinheader 10pin                           | Arduino header - solder on top   |
 | H2 **        | male pinheader 8pin                            | Arduino header - solder on top   |
@@ -63,21 +67,22 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | GROVE        | GROVE male header (optional)                   |                                  |
 
 (*) only needed if you have (bought) standard analog servos not capable of 360° turning  
-(**) standard headers are 11mm long: this are good if you use Cytron MakerUNO board. If you want to use a standard Arduino UNO, 11mm headers are not good, since the USB connector will touch under Arlok shield, so in this case 15mm headers are needed
+(**) standard headers are 11mm long: those are good if you use one of the Adviced Boards (see below). If you want to use a standard Arduino UNO, 11mm headers are not good, since the USB connector will touch under Arlok shield, so in this case 15mm headers are needed
 
-### <a name="shieldc"></a>2) Electronics - Shield Components (shopping list)
+### <a name="shieldc"></a>3) Electronics - Shield REV1 Components (shopping list)
 
 | Qt. | Part                                                          |
 |-----|---------------------------------------------------------------|
 |  5  | 100nF multilayer capacitor,  pitch 5mm                        |
 |  1  | 1000uF 16V electrolytic capacitor, pitch 3.5mm dia 8mm        |
+|  1  | 220uF 16V electrolytic capacitor, pitch 2.5mm dia 6mm         |
 |  1  | 1N400x diode                                                  |
 |  5  | 22KΩ ¼W 1% resistor                                           |
 |  1  | 15KΩ ¼W resistor                                              |
 |  1  | 330Ω ¼W resistor                                              |
 |  2  | tactile switch 6x6mm, long button                             |
 |  1  | tactile switch 6x6mm                                          |
-|  1  | 10KΩ trimmer, Type PT10LV10 (10x10mm)                         |
+|  1  | 5kΩ ÷ 20kΩ trimmer (6x6mm)                                    |
 |  1  | LED 3mm                                                       |
 |  2  | Screw terminal, pitch 5mm                                     | 
 |  2  | 40pin male headers (needed 60pin)                             |
@@ -86,11 +91,11 @@ Step 2: Order the ARLOK shield PCB from the following link:
 |  1  | PCB lever switch, pitch 2.54mm (or 2 pin male header+jumper)  |
  
 
-### <a name="ext"></a>3) Electronics - External components
+### <a name="ext"></a>4) Electronics - External components
 
 | Qt.          | Description                                                              |
 |--------------|--------------------------------------------------------------------------|
-| 1x           | Cytron MakerUNO board                                                    |
+| 1x           | Cytron MakerUNO board (*)                                                |
 | 2x           | Servo MG996R modded for continuos rotation OR Servo having 360° rotation |
 | 1x           | HC-SR04 Ultrasonic sensor                                                |
 | 1x           | Bluetooth module HC-05 (or HC-06) - Needed for Bluetooth remote example  |
@@ -98,16 +103,19 @@ Step 2: Order the ARLOK shield PCB from the following link:
 | 1x           | OLED display module I2C (4pin) 0.96"                                     |
 | 1x           | Battery Holder for 4AA batteries                                         |
 | 1x           | Battery Holder for 3AA batteries                                         |
-| 1x           | Round pushbutton with retain or lever switch (*)                         |
-| 1x           | 4pin Female/Female Dupont cable (~15cm) (**)                             |
-| 7x           | AA 1.5V Batteries (***)                                                  |
+| 1x           | Round pushbutton with retain or lever switch (**)                        |
+| 1x           | 4pin Female/Female Dupont cable (~15cm) (***)                            |
+| 7x           | AA 1.5V Batteries (****)                                                 |
 
-(*)  Print the `arlok_pillar_hole_xx.stl` according the pushbutton diameter  
+(*) Alternatively you can use any Arduino Uno R3 compatible board don't using the USB B connector and removing 
+    the barrel-jack if you plan to use standard male headers. Adviced boards are listed below 
 
-(**) Used for connecting ultrasonic module to PCB, you can use also 4 separate F/F jumper
+(**)  Print the `arlok_pillar_hole_xx.stl` according the pushbutton diameter  
+
+(***) Used for connecting ultrasonic module to PCB, you can use also 4 separate F/F jumper
      cables or make your own cable using connector you prefer.
   
-(***) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. 
+(****) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. 
      Eventually you can use only 4NiMH batteries in the 4AA battery holder and don't use the 
      3AA battery holder: then you can power all robot using the 4AA. In this case don't mount
      D1 (put a piece of wire and pay attention to power orientation), put the power jumper JP1
@@ -116,11 +124,11 @@ Step 2: Order the ARLOK shield PCB from the following link:
      is NOT tested! There is also a mod for using one LiPo Battery but it's at your own risk,
      read more here: [LiPo Mod](lipo_mod.md)
 
-### <a name="3d"></a>4) Mechanics - 3D-printed parts
+### <a name="3d"></a>5) Mechanics - 3D-printed parts
 
 Please see in the [STL folder](../cad/stl)
 
-### <a name="mech"></a>5) Mechanics - Components
+### <a name="mech"></a>6) Mechanics - Components
 
 | Qt.          | Description                                                                  |
 |--------------|------------------------------------------------------------------------------|
@@ -141,10 +149,38 @@ Please see in the [STL folder](../cad/stl)
 
 (**) There are some kinds of tires that can be 3D-Printed using TPU. If your 3D printer can handle TPU, try
      first to print them yourself: see in [STL folder](../cad/stl) for the Tires.
+	 
+### <a name="boards"></a>7) Adviced Arduino UNO R3 compatible boards
 
-### <a name="ita"></a>6) All Parts - Links to products only for Italian Users
+Since the Arlok shield is designed using an Arduino UNO shape as reference, microcontroller boards having "tall" parts (the USB type B connector, like on the original Arduino UNO R3), cannot be used since USB connector metallic part can touch the solder side of the shield causing short circuits and then damages.  
+Only way to use a genuine Arduino UNO R3 board is to assemble the shield using not-so-common long male headers (15mm at least).  
+Here is a list of suitable boards don't using the USB type B connector:  
+- [Cytron Maker UNO](https://www.cytron.io/p-maker-uno-simplifying-arduino-for-education)
+- [Arduino Make Your UNO](https://store.arduino.cc/pages/make-your-uno-kit) 
+- [Keyestudio 328 Plus](https://www.keyestudio.com/products/2020-new-keyestudio-plus-development-board-with-type-c-interface-usb-cable-compatible-with-arduino-uno-r3)
+- [Seeeduino 4.2](https://www.seeedstudio.com/Seeeduino-V4-2-p-2517.html)
+- [Grove Beginner Kit](https://www.seeedstudio.com/Grove-Beginner-Kit-for-Arduino-p-4549.html)
+
+Some of those boards have a full-size barrel jack connector: this can touch the shield so is adviced to desolder it 
+
+### <a name="diffrev1"></a>8) Differencies between REV1 and first rev PCB
+
+- Added C7 for having a little more energy buffer for devices
+- Added a via (not connected) next GND of the power header if you want to connect to the Arduino VIN pin 
+- Changed silkscreen of the JSW connector from "POWER" to "LOGICS POWER" since is used only for 5V
+- Added a via (not connected) next to the JSW connector if you want to use a three pins switch
+- Changed VR1 from PT10LV10 (10x10mm) type to a smallest and more common 6x6mm (there is an additional via for the center pin for using a 10x10mm anyway)
+- Added "A0" next VR1 silkscreen to remember where trimmer is connected 
+- Enlarged the prototyping area adding further 21 vias
+- Changed silkscreen for the screw terminals connector: removed the minus sign allowing writings to be more readable
+- Removed the OR logo and added the "Pizza Robotics - In pizza we crust" one 
+
+
+### <a name="ita"></a>9) All Parts - Links to products only for Italian Users
 
 Solo per gli utenti italiani: ho preparato un Google Spreadsheet con l'elenco di tutte le parti e i link dove acquistarli, il link è indicato più in basso. nello spreadsheet c'è l'elenco completo dei materiali standard, tranne che per il PCB dello Shield, per il quale potete vedere al [punto 1](#pcb) di questo documento.
+
+Per quanto riguarda la board a microcontrollore, potete eventualmente utilizzare anche la [328plus di Keyestudio](https://amzn.to/3EVcUJO) che, come specificato sopra, utilizza un connettore USB piccolo (USB-C) e quindi può essere usata con lo shield e gli headers standard.
 
 I link verso FuturaShop e verso Amazon contengono un codice di affiliazione: per voi il prezzo rimane lo stesso sia con che senza codice (potete verificare facilmente), ma con l'affiliazione guadagno dei crediti (su Futura) o buoni regalo (su Amazon) che posso utilizzare per comprare altro materiale presso di loro. Ci tengo a precisare, quindi, che ho scelto che i codici non mi vengano convertiti in denaro proprio perchè utilizzo questi crediti per ottenere altri materiali con cui lavorare sui miei progetti, per cui acquistando da quei link contribuite a sostenere questo lavoro.  
 
