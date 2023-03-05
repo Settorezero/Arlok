@@ -1,6 +1,6 @@
 # Arlok
 ## Arduino Robot with Arduino UNO / Maker UNO- 3D-print it yourself!
-![Arlok Front View](./media/arlokka_and_arlok.jpg)
+![Arlok - Maker Faire 2022](./media/MFR2022/arlok_cover_for_mkfr2022.jpg)
 
 Arlok is a simple educational (STEM) Robot based on Arduino Uno with parts printed in 3D and all easy-available components. 3D-printed parts are big, easy to manipulate and printed even by cheap 3D-printers. Arlok is highly customizable: there are many types of wheels and tires (to be 3d-printed in TPU or commercial types), 2 types of ultrasonic sensor pillars, 3 types of pillars for various kinds of power buttons, various type of powering methods. Arlok is cheap, cute and easy to assemble and program. There are some programming examples that will make this robot moving around avoiding obstacles, following a line on the floor or let you control it using your cellphone with Android app (source code provided too).  
   
