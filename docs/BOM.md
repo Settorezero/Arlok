@@ -31,22 +31,22 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
 
 | Part         | Value                                          | Notes                            |
 |--------------|------------------------------------------------|----------------------------------|
-| C1           | 100nF multilayer                               | pitch 5mm                        |
-| C2           | 100nF multilayer                               | pitch 5mm                        |
-| C3           | 1000uF 16V electrolytic                        | pitch 3.5mm dia 8mm              |
-| C4           | 100nF multilayer                               | pitch 5mm                        |
-| C5           | 100nF multilayer                               | pitch 5mm                        |
-| C6           | 100nF multilayer                               | pitch 5mm                        |
-| C7           | 220uF 16V electrolytic                         | pitch 5mm                        |
-| D1           | 1N400x  (good 1N4001, 1N4007 ecc)              | pitch 2.5mm dia 6mm                                  |
-| R1           | 22KΩ ¼W                                        |                                  |
-| R2           | 15KΩ ¼W                                        |                                  |
-| R3           | 330Ω ¼W                                        |                                  |
+| C1           | 100nF multilayer                               | 5mm pitch                        |
+| C2           | 100nF multilayer                               | 5mm pitch                        |
+| C3           | 1000uF 16V electrolytic                        | 3.5mm pitch - 8mm dia.           |
+| C4           | 100nF multilayer                               | 5mm pitch                        |
+| C5           | 100nF multilayer                               | 5mm pitch                        |
+| C6           | 100nF multilayer                               | 5mm pitch                        |
+| C7           | 220uF 16V electrolytic                         | 2.5mm pitch - 6mm dia.           |
+| D1           | 1N4007                                         | good any 1N400x                  |
+| R1           | 22KΩ ¼W                                        | red - red - orange               |
+| R2           | 15KΩ ¼W                                        | brown - green - orange           |
+| R3           | 330Ω ¼W                                        | orange - orange - brown          |
 | R servo *    | 4x 22KΩ ¼W 1%                                  | ONLY for servo modification      |
-| P1           | tactile switch 6x6mm (long button)             |                                  |
-| P2           | tactile switch 6x6mm (long button)             |                                  |
-| RESET        | tactile switch 6x6mm                           |                                  |
-| VR1          | 5kΩ ÷ 20kΩ trimmer                             | Type 6x6mm                       |
+| P1           | tactile switch                                 | 6x6mm (adviced long button)      |
+| P2           | tactile switch                                 | 6x6mm (adviced long button)      |
+| RESET        | tactile switch                                 | 6x6mm                            |
+| VR1          | 5kΩ ÷ 20kΩ trimmer                             | 6x6mm                            |
 | L1           | led 3mm                                        |                                  |
 | H1 **        | male pinheader 10pin                           | Arduino header - solder on top   |
 | H2 **        | male pinheader 8pin                            | Arduino header - solder on top   |
@@ -57,16 +57,16 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
 | EXT3 (A2)    | male pinheader 3pin                            |                                  |
 | EXT4 (A3)    | male pinheader 3pin                            |                                  |
 | HC-SR04      | male pinheader 4pin                            |                                  |
-| I2C          | male pinheader 4pin (optional)                 |                                  |
+| I2C          | male pinheader 4pin                            | optional                         |
 | J1 (COMM)    | female pinheader 6pin                          |                                  |
 | JP1          | male pinheader 3pin + jumper                   |                                  |
-| JSW (POWER)  | male pinheader 2pin + jumper OR 2.54mm switch  |                                  |
+| JSW (POWER)  | male pinheader 2pin + jumper                   | or 2.54mm pitch leve switch      |
 | LEFT_SERVO   | male pinheader 3pin                            |                                  |
 | RIGHT_SERVO  | male pinheader 3pin                            |                                  |
 | OLED         | female pinheader 4pin                          |                                  |
-| X1           | Screw Terminal 2pin                            | Pitch 5mm                        |
-| X2           | Screw Terminal 2pin                            | Pitch 5mm                        |
-| GROVE        | GROVE male header (optional)                   |                                  |
+| X1           | Screw Terminal 2pin                            | 5mm pitch                        |
+| X2           | Screw Terminal 2pin                            | 5mm pitch                        |
+| GROVE        | GROVE male header                              | optional                         |
 
 (*) only needed if you have (bought) standard analog servos not capable of 360° turning  
 (**) standard headers are 11mm long: those are good if you use one of the Adviced Boards (see below). If you want to use a standard Arduino UNO, 11mm headers are not good, since the USB connector will touch under Arlok shield, so in this case 15mm headers are needed
