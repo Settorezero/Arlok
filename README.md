@@ -8,10 +8,9 @@ Arlok is a simple educational (STEM) Robot based on Arduino Uno with parts print
 
 ## Materials needed
 
-You need:
-- 3D-printed parts => [stl folder](./cad/stl).  
-- Shield and external parts => [Bill-Of-Materials](./docs/BOM.md).  
-
+- [Bill Of Materials](./docs/BOM.md). 
+- [3D-printed parts](./cad/stl).  
+ 
 ## Assembling
 There is a detailed step-by-step guide and a video on youtube. All infos are located in the [docs folder](./docs/assembly.md).  
   
