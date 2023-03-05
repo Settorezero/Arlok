@@ -60,7 +60,7 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
 | I2C          | male pinheader 4pin                            | optional                         |
 | J1 (COMM)    | female pinheader 6pin                          |                                  |
 | JP1          | male pinheader 3pin + jumper                   |                                  |
-| JSW (POWER)  | male pinheader 2pin + jumper                   | or 2.54mm pitch leve switch      |
+| JSW (POWER)  | male pinheader 2pin + jumper                   | or 2.54mm pitch lever switch     |
 | LEFT_SERVO   | male pinheader 3pin                            |                                  |
 | RIGHT_SERVO  | male pinheader 3pin                            |                                  |
 | OLED         | female pinheader 4pin                          |                                  |
