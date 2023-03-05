@@ -27,6 +27,8 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
 
 ### <a name="shield"></a>2) Electronics - Shield REV1 Components (detailed)
 
+> You can download the following [list in PDF format](./pdfs/arlok_shield_BOM.pdf)
+
 | Part         | Value                                          | Notes                            |
 |--------------|------------------------------------------------|----------------------------------|
 | C1           | 100nF multilayer                               | pitch 5mm                        |
