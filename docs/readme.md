@@ -7,7 +7,7 @@ In this folder are contained useful documents for working with ARLOK Arduino Rob
 - [Assembly instructions - ITA](assembly_ita.md)
 - [How to hack Servo for continuous rotation](servo_mod.md)
 - [Connection table](connections.md)
-- [Arlok shield schematic](arlok_schematic.png)
+- [Arlok shield schematic](arlok_schematic_rev1.png)
 - [Powering from a LiPo Battery](lipo_mod.md)
 
 Datasheets and manuals from product manufacturers (folder datasheet)
