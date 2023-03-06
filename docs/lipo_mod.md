@@ -8,7 +8,7 @@ Warning: LiPo batteries can be very dangerous! Handle them with care and make th
 - 18650 LiPo Battery with tabs
 - an SX1308 Step-Up Converter (PCB signature is HW668)
 - a TP4056 with protection for recharging the battery (or use the method you prefer for rechargingthe battery)
-- 3D-print the `arlok_18650_holder.stl`
+- 3D-print the [`arlok_18650_holder.stl`](../cad/stl/arlok_18650_holder.stl)
 - additional 2 M3 screws, Allen bolt socket cap, 12mm (length of threaded part - 15mm total) + nuts
 - some strong double-sided tape 
 
