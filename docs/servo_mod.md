@@ -1,6 +1,7 @@
 ## Servo hack
 
-This is a simple guide for hacking a standard analog servo for achieving continuous rotation. This procuder is **not needed** if you have 360° servo.
+This is a simple guide for hacking a standard analog servo for achieving continuous rotation. This procedudre is **not needed** if you have 360° servo.
+[Here is a video](https://www.youtube.com/watch?v=_Ubauj75d9E) Showing this procedure
 
 Tools needed:
 
