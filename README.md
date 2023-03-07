@@ -23,6 +23,7 @@ See in the [Arduino folder](./arduino) for code examples or write your own using
 
 ### Links
 - [Greta Galli review](https://www.youtube.com/watch?v=CbPGWd9I_mA)
+- [Aperitech about ARLO (first rev of ARLOK)](https://www.youtube.com/watch?v=JS_QYEIMfNo)
 - [All ARLOK videos on Youtube](https://tinyurl.com/arlokplaylist) 
 - ARLOK on no. 253 of Italian Magazine "Elettronica IN": [EXCERPT](https://www.elettronicain.it/wp-content/uploads/prog_copertina/arlook_il_robot_per_tutti.pdf) -   [MAGAZINE ISSUE](https://www.elettronicain.it/prodotto/n-253-aprile-2021/?tracking=5f004a6ba8be7)
 - ARLOK partecipated to the [2020 Maker Faire European Edition](https://makerfairerome.eu/it/espositori/?edition=2020&exhibit=3409) - Stand E57, Project P253
