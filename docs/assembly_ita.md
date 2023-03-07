@@ -9,7 +9,7 @@ E' anche presente un [video su youtube](https://youtu.be/yHwYimkA6Dw) che illust
 
 ### Fasi preliminari
 
-- Avete acquistato due servocomandi che ruotano a 360° oppure avete già modificato due normali servocomandi analogici per avere la rotazione continua (vedi [modifica dei servocomandi](servo_mod.md) oppure [vedi questo video su youtube](https://www.youtube.com/watch?v=_Ubauj75d9E) )
+- Avete acquistato due servocomandi che ruotano a 360° oppure avete già modificato due normali servocomandi analogici per avere la rotazione continua (vedi [modifica dei servocomandi](servo_mod_ita.md) oppure [vedi questo video su youtube](https://www.youtube.com/watch?v=_Ubauj75d9E) )
 - Avete già assemblato lo shield di Arlok
 - Procuratevi alcune piccole fascette: torneranno utili per l'organizzazione dei cavi e per avere un risultato più pulito.
 
