@@ -15,8 +15,8 @@ Follow the step-by-step guide: [ENG](./docs/assembly.md) - [ITA](./docs/assembly
 See in the [Arduino folder](./arduino) for code examples or write your own using one of the provided example as base!
 
 ## Mods and Upgrades
-Here are some modifications you can do:  
 - Powering Arlok from a LiPo Battery: [ENG](./docs/lipo_mod.md) - [ITA](./docs/lipo_mod_ita.md)
+- Hacking a servo for continuous rotation: [ENG](./docs/servo_mod.md) - [ITA](./docs/servo_mod_ita.md)
 
 ## Troubleshooting
 [Troubleshooting guide](./docs/troubleshooting.md)  
