@@ -1,8 +1,8 @@
 ## Elenco componenti ARLOK
 
-> Link rapido a questa pagina: [https://tinyurl.com/shieldarlok](https://tinyurl.com/shieldarlok)  
+> Link rapido a questa pagina: [https://tinyurl.com/bomarlokita](https://tinyurl.com/bomarlokita)  
 
-Un elenco componenti con il link dove acquistarli è presente qui: [https://tinyurl.com/bomarlok](https://tinyurl.com/bomarlokita)
+Un elenco componenti con il link dove acquistarli è presente qui: [https://tinyurl.com/bomarlok](https://tinyurl.com/bomarlok)
 
 ### Indice
 
