@@ -23,11 +23,11 @@ Step 1: Iscriviti a PCBWay utilizzando il mio link di invito:
 Step 2: Ordina lo Shield di Arlok, revisione 1, utilizzando questo link:
         [https://tinyurl.com/arlokshieldr1](https://tinyurl.com/arlokshieldr1)
         
-> Se non vuoi comprare il PCB di Arlok, potresti anche utilizzare un protoshield per Arduino UNO facendo tu i collegamenti seguendo lo [schema elettrico](arlok_schematic_rev1.png) e/o la [tabella delle connessioni](connections.md).
+> Se non vuoi comprare il PCB di Arlok, potresti anche utilizzare un protoshield per Arduino UNO facendo tu i collegamenti seguendo lo [schema elettrico](arlok_schematic_rev1.png) e/o la [tabella delle connessioni](connections.md)  
 
 ### <a name="shield"></a>2) Parte Elettronica - Componenti PCB rev.1, dettaglio
 
-> Puoi anche scaricare questo elenco dal seguente link: [Elenco componenti in formato PDF](./pdfs/arlok_shield_BOM.pdf)
+> Puoi anche scaricare questo elenco dal seguente link: [Elenco componenti in formato PDF](./pdfs/arlok_shield_BOM.pdf)  
 
 | Componente   | Valore                                         | Note                              |
 |--------------|------------------------------------------------|-----------------------------------|
@@ -68,6 +68,7 @@ Step 2: Ordina lo Shield di Arlok, revisione 1, utilizzando questo link:
 | GROVE        | Connettore GROVE maschio da PCB                | opzionale                         |
 
 > (*) Gli headers maschio standard sono lunghi 11mm : questi vanno bene soltanto se utilizzi una delle board Aduino UNO compatibili consigliate (vedi più in basso). Se vuoi utilizzare un Arduino UNO standard, gli headers da 11mm non vanno bene perchè il connettore USB tocca sulle saldature del PCB; in questo caso devi utilizzare degli header maschio da 15mm (più difficili da trovare) oppure gli header Arduino standard (passanti, femmina sopra e maschio sotto)  
+
 > Nota: se devi eseguire la modifica dei servocomandi per la rotazione continua, sono necessarie altre 4 resistenze 22KΩ ¼W, possibilmente all'1% di tolleranza
 
 ### <a name="shieldc"></a>3) Parte Elettronica - Componenti PCB rev.1, lista della spesa
@@ -111,13 +112,13 @@ Step 2: Ordina lo Shield di Arlok, revisione 1, utilizzando questo link:
 | 1x           | Cavo dupont femmina/femmina a 4 pin (~15cm) (***)                        |
 | 7x           | Batteria AA 1.5V (****)                                                  |
 
-(*) Vedi lista più in basso
+(*) Vedi lista più in basso  
 
-(**)  Ricordati di stampare in 3D il pezzo `arlok_pillar_hole_xx.stl` in base al diametro dell'interruttore che acquisti
+(**)  Ricordati di stampare in 3D il pezzo `arlok_pillar_hole_xx.stl` in base al diametro dell'interruttore che acquisti  
 
-(***) Questo è usato per collegare il modulo ultrasuoni al PCB: puoi anche usare 4 cavetti jumper F/F, oppure rimuovi gli header e saldi dei fili... fa come preferisci
+(***) Questo è usato per collegare il modulo ultrasuoni al PCB: puoi anche usare 4 cavetti jumper F/F, oppure rimuovi gli header e saldi dei fili... fa come preferisci  
   
-(****) Non è consigliato utilizzare batterie NiCd o NiMH batteries dato che la tensione di queste batterie è 1.2V, quindi troppo bassa e può causare malfunzionamenti. In alternativa potresti seguire la guida per fare la [modifica con le batterie LiPo](lipo_mod_ita.md)
+(****) Non è consigliato utilizzare batterie NiCd o NiMH batteries dato che la tensione di queste batterie è 1.2V, quindi troppo bassa e può causare malfunzionamenti. In alternativa potresti seguire la guida per fare la [modifica con le batterie LiPo](lipo_mod_ita.md)  
 
 ### <a name="3d"></a>5) Parte Meccanica - Pezzi da stampare in 3D
 
@@ -138,16 +139,16 @@ Guarda nella [cartella STL](../cad/stl)
 
 [Qui c'è una fotografia che illustra le viti necessarie](../media/arlok_screws_ita.jpg).
 
-(*) Quando acquisti il ballcaster Tamiya 70144, ci sono pezzi per costruire 2 ball caster: potresti costruire un altro Arlok o darlo ad un amico così che lo costruisca anche lui!
-    In alternativa puoi stampare in 3D il [Ball Caster V2 su Thingiverse](https://www.thingiverse.com/thing:1408935) con una'altezza di 30mm (Devi però saper usare [OpenScad](https://openscad.org/) per modificare il file .scad)
+(*) Quando acquisti il ballcaster Tamiya 70144, ci sono pezzi per costruire 2 ball caster: potresti costruire un altro Arlok o darlo ad un amico così che lo costruisca anche lui! In alternativa puoi stampare in 3D il [Ball Caster V2 su Thingiverse](https://www.thingiverse.com/thing:1408935) con una'altezza di 30mm (Devi però saper usare [OpenScad](https://openscad.org/) per modificare il file .scad)  
 
-(**) In alternativa, se la tua stampante è in grado di stampare il TPU potresti anche stampare un modello di pneumatico tra quelli messi a disposizione nella [cartella STL](../cad/stl).
+(**) In alternativa, se la tua stampante è in grado di stampare il TPU potresti anche stampare un modello di pneumatico tra quelli messi a disposizione nella [cartella STL](../cad/stl)  
 	 
 ### <a name="boards"></a>7) Schede compatibili Arduino UNO R3 consigliate
 
-Dal momento che lo shield di Arlok è stato disegnato utilizzando una normale board Arduino UNO come base, schede aventi componenti "alti" (come il connettore USB tipo B della Arduino UNO R3 originale), non possono essere utilizzate altrimenti "toccano" nella parte inferiore dello shield causando corto-circuiti e quindi notevoli danni.
-L'unico modo di utilizzare una scheda Arduino UNO R3 originale è quello di assemblare lo shield utilizzando degli header maschio da 15mm (non tanto comuni) oppure gli header passanti tipici di Arduino.
-Qui invece c'è un elenco di board "basse", compatibili, che non utilizzano il connettore USB-B
+Dal momento che lo shield di Arlok è stato disegnato utilizzando una normale board Arduino UNO come base, schede aventi componenti "alti" (come il connettore USB tipo B della Arduino UNO R3 originale), non possono essere utilizzate altrimenti "toccano" nella parte inferiore dello shield causando corto-circuiti e quindi notevoli danni. L'unico modo di utilizzare una scheda Arduino UNO R3 originale è quello di assemblare lo shield utilizzando degli header maschio da 15mm (non tanto comuni) oppure gli header passanti tipici di Arduino.  
+
+Qui invece c'è un elenco di board "basse", compatibili, che non utilizzano il connettore USB-B:  
+
 - [Keyestudio 328 Plus](https://amzn.to/3EVcUJO)
 - [Cytron Maker UNO](https://www.cytron.io/p-maker-uno-simplifying-arduino-for-education)
 - [Arduino Make Your UNO](https://store.arduino.cc/pages/make-your-uno-kit) 
