@@ -2,7 +2,7 @@
 
 > Link rapido a questa pagina: [https://tinyurl.com/shieldarlok](https://tinyurl.com/shieldarlok)  
 
-Un elenco componenti con il link dove acquistarli è presente qui: [https://tinyurl.com/bomarlok](https://tinyurl.com/bomarlok)
+Un elenco componenti con il link dove acquistarli è presente qui: [https://tinyurl.com/bomarlok](https://tinyurl.com/bomarlokita)
 
 ### Indice
 
