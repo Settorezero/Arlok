@@ -6,6 +6,8 @@
 
 > When you see the screw measure in millimeters: this is the length of the threaded part (without the head).
 
+> NOTICE: This step-by step tutorial was thought for powering the robot with AA Batteries since is the safest way, but there are [other ways to power the robot](powering.md). You can also [change from AA batteries to 18650 cell](lipo_mod.md).  
+
 There is a [video on youtube](https://youtu.be/yHwYimkA6Dw) showing the assemblying process. It's in italian language but video is very useful for understanding how certain parts must be placed correctly.
 
 ![Arlok Parts](../media/arlok_parts.jpg)  
@@ -81,7 +83,7 @@ Put the top plate on the bottom assembly, with the ARLOK writing in the same dir
 Put the MakerUNO on the spacers. Attach the board using the 4x M3 6mm screws.
 
 ### STEP 14
-- Attach the ARLOK shield on top of the MakerUNO
+- Attach the ARLOK shield on top of the Arduino board
 - Put the `JP1` jumper in the `VDD` position (logic powered from the 3AA battery)
 - Attach the wires from the ultrasonic sensor on the `HC-SR04` header respecting signals/colors.
 - Attach the 2 servo connectors on the Servo headers respecting the LEFT-RIGHT arrows and the wire colors (orange=`S`, red=`+`, brown=`-`)
