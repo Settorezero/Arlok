@@ -14,7 +14,7 @@ You need to install the following libraries:
 
 ## Arduino IDE Setup
   
-Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Arduino UNO_ from the board manager. Then select the correct COM port.
+Even if you're using the [MakerUNO](https://makeruno.com.my/) or other Arduino UNO compatible boards, simply select _Arduino UNO_ from the board manager. Then select the correct COM port.
 
 ## Code examples
 
@@ -24,4 +24,4 @@ Even if you're using the [MakerUNO](https://makeruno.com.my/) simply select _Ard
 - [Explorer with a LiPo](./explorer_lipo) : Same as Explorer with battery voltage indication from the Lipo. See [lipo_mod](../docs/lipo_mod.md) for further infos
 
 ## Work in progress
-- Artificial vision example[see video](https://www.youtube.com/watch?v=Ag7VS_6hT9I), [code on Bobboteck repo](https://github.com/bobboteck/ArloPixetto)
+- Artificial vision example using the DFRobot Husky Lens
