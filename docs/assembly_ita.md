@@ -1,7 +1,10 @@
 ## Istruzioni montaggio ARLOK in italiano
 
 > Link rapido a questa pagina: [https://tinyurl.com/arlokmontaggio](https://tinyurl.com/arlokmontaggio)  
+
 > Le misure delle viti sono espresse in millimetri e si riferiscono alla lunghezza della sola parte filettata, quindi testa esclusa
+
+> ATTENZIONE: Questa guida passo-passo è stata pensata per il funzionamento di Arlok con le batterie AA dal momento che è il sistema più sicuro, ma ci sono [altri modi per far funzionare il robot](powering.md). Puoi anche, in seguito, [passare dalle batterie AA ad una 18650(lipo_mod_ita.md).
 
 E' anche presente un [video su youtube](https://youtu.be/yHwYimkA6Dw) che illustra il montaggio passo-passo: si consiglia vivamente di vedere il video.
 
