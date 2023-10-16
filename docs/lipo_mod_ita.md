@@ -22,6 +22,11 @@ Attenzione: Le Batterie LiPo possono essere molto pericolose se non vengono mane
 #### Non userai più
 - L'interruttore/Il jumper "Power" (i pad devono essere chiusi permanentemente, userai il tasto sul retro per accendere tutto. Se hai utilizzato un jumper, puoi lasciare questo sempre chiuso)
 
+#### Schema
+
+![18650 powering](../media/instructions/powering/18650.png)
+
+
 ### Procedimento
 
 - Fissa la batteria 18650 sul fondo del robot utilizzando il pezzo [`arlok_18650_holder.stl`](../cad/stl/arlok_18650_holder.stl), le viti e i dadi
