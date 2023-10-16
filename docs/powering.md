@@ -24,7 +24,7 @@ You need:
 - 4 AA Batteries (not adviced NiMh rechargeable ones since are 1.2V)
 - a battery holder for 4 AA batteries
 
-![6V powering](../media/instructions/powering/AA_6V.png)  
+![6V powering](../media/instructions/powering/AA_6V_only.png)  
 
 The 4xAA Battery holder (6V) will be connected to the VSERVO screw terminal through the pushbutton. This holder will take place between the top and the bottom plate.  
 You must put the JP1 jumper in the VSERVO position and you can close the the "logics" pad
