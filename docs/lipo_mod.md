@@ -20,6 +20,11 @@ Warning: LiPo batteries can be very dangerous! Handle them with care and make th
 #### You'll not use anymore:
 - Power Jumper (you can close it with a bridge)
 
+#### Schematic
+
+![18650 powering](../media/instructions/powering/18650.png)
+
+
 ### How-to 
 
 - Fix the 18650 battery on the bottom of the robot using the `arlok_18650_holder.stl`, screws and bolts
