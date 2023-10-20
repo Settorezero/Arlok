@@ -46,7 +46,8 @@ Notice 2: don't recharge and power the robot at same moment!
 The 18650 LiPo cell will take place under the robot using the 3D-printed holder.  
 TP4056 and SX1308 PCBs will be attached in the central part of the robot using double-sided tape.  
 You must put the JP1 jumper in the VSERVO position and you can close the the "logics" pad.  
-Now all the robot parts (logics and servos) will be powered from the same battery: Logics will be powered at about 5V and servo at about 5.7V.
+Now all the robot parts (logics and servos) will be powered from the same battery: Logics will be powered at about 5V and servo at about 5.7V.  
+The [explorer](../arduino/explorer/) program contain some instructions for reading the battery and show it on display.
 
 For charging the battery you must:
 - Turn off the button/switch on the back

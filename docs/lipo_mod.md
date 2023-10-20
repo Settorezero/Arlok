@@ -24,7 +24,6 @@ Warning: LiPo batteries can be very dangerous! Handle them with care and make th
 
 ![18650 powering](../media/instructions/powering/18650.png)
 
-
 ### How-to 
 
 - Fix the 18650 battery on the bottom of the robot using the `arlok_18650_holder.stl`, screws and bolts
@@ -39,7 +38,8 @@ Warning: LiPo batteries can be very dangerous! Handle them with care and make th
 - (optional) Solder a cable, having a female dupont terminal, on the + Input terminal of the SX1308 module along with red cable already soldered: this can be used for checking the battery voltage reading from an Analog Input. The female dupont terminal can be connected to one free analog input terminal (A2 - you can use/take inspiration from the [explorer lipo](../arduino/explorer_lipo/) programming example)
 - Set the Jumper JP1 in the `VSERVO` position
 
-Now all the robot parts (logics and servos) will be powered from the same battery: Logics will be powered at about 5V and servo at about 5.6V.
+Now all the robot parts (logics and servos) will be powered from the same battery: Logics will be powered at about 5V and servo at about 5.6V.  
+The [explorer](../arduino/explorer/) program contain some instructions for reading the battery and show it on display.
 
 For charging the battery you must:
 - Turn off the button/switch on the back

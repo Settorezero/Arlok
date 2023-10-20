@@ -41,7 +41,8 @@ Attenzione: Le Batterie LiPo possono essere molto pericolose se non vengono mane
 - (opzionale) Salda un cavetto del colore che vuoi (ma non nero, nè rosso per non creare confusione), munito di connettore dupont femmina ad una estremità, all'ingresso + del modulo SX1308 insieme al cavetto che già hai saldato: questo cavetto sarà utilizzato per controllare la tensione della batteria tramite un ingresso Analogico. Il connettore dupont femmina andrà collegato ad un ingresso analogico libero (ad esempio A2 come illustrato nell'esempio [explorer lipo](../arduino/explorer_lipo/))
 - Imposta il jumper JP1 nella posizione `VSERVO`
 
-Da questo momento tutto il robot (sia la parte logica che i servocomandi) saranno alimentati dalla stessa batteria: la logica avrà una tensione di circa 5V (uscita SX1308 scalata dal diodo D1) mentre i servocomandi saranno alimentati a circa 5.6V
+Da questo momento tutto il robot (sia la parte logica che i servocomandi) saranno alimentati dalla stessa batteria: la logica avrà una tensione di circa 5V (uscita SX1308 scalata dal diodo D1) mentre i servocomandi saranno alimentati a circa 5.6V.
+L'esempio [explorer](../arduino/explorer/) contiene il codice per leggere la tensione della batteria LiPo e mostrarla sul display.
 
 Per caricare la batteria bisognerà:  
 

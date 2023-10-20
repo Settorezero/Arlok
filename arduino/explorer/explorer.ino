@@ -1,7 +1,7 @@
 /*
  * ARLOK
- * Educational Robot based on MakerUNO
- * (c)2020 Giovanni Bernardo (https://www.settorezero.com)
+ * Educational Robot based on Arduino UNO
+ * (c)2020-2023 Giovanni Bernardo (https://www.settorezero.com)
  * 
  * EXPLORER DEMO
  *
@@ -42,6 +42,9 @@
  *  
  * CREDITS
  * 
+ * Adafruit
+ * Because makes a lot of coll and useful libraries - please consider buying something from Adafruit
+ *
  * Steve Garrat
  * For the idea about using HC-SR04 sonar on interrupts:
  * (https://homediyelectronics.com/projects/arduino/arduinoprogramminghcsr04withinterrupts/)
@@ -50,55 +53,38 @@
  * For the library allows using servo on Timer 2
  * https://github.com/nabontra/ServoTimer2
  * 
- * Adafruit
- * Because makes a lot of useful libraries
- * 
- * LIBRARIES TO BE INSTALLED
- * 
+ * LIBRARIES TO INSTALL:
  * - Adafruit SSD1306 by Adafruit
  * - Adafruit GFX by Adafruit
  * - TimerOne by Jesse Tane, Jérôme Despatis, Michael Polli, Dan Clemens, Paul Stoffregen
- * 
- * This one requires manual installation (copy the folder in Documents\Arduino\Libraries)
- * https://github.com/nabontra/ServoTimer2
+ * - ServoTimer2 : This one requires manual installation (copy the folder in Documents\Arduino\Libraries) => https://github.com/nabontra/ServoTimer2
  * 
  */
 
-// Libraries for OLED display
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-// Library for Timer1 Interrupts
-#include <TimerOne.h>
-// Library for using servo on Timer 2
-#include <ServoTimer2.h>
-// Library for Arduino internal eeprom memory
-#include <EEPROM.h>
+#include <TimerOne.h> // Library for Timer1 Interrupts
+#include <ServoTimer2.h> // Library for using servo on Timer 2
+#include <EEPROM.h> // Library for Arduino internal eeprom memory
 
-#define ARLOK  // comment this if you're using the old AR.L.O. pcb
+// ****************** LIPO BATTERY STUFF
+//#define LIPO // uncomment if you're using the LiPo battery
+#define LIPO_PIN    A2  // analog pin where the 18650 is attached for checking voltage
+#define BAT_AVG     32  // averages on battery readings
+#define BAT_DIV     .005180840664F // .00488758553274F
 
-#ifdef ARLOK
- // ARLOK PCB defines
- #define MotorRPin 9   // signal for right servomotor
- #define MotorLPin 10  // signal for left servomotor
- #define P1 2          // pushbutton P1 on ARLOK PCB, 'button' on MakerUNO board
- #define P2 5          // pushbutton P2
- #define trigPin 4     // HC-SR04 - trigger
- #define echoPin 3     // HC-SR04 - echo
- #define buzzer 8      // buzzer on MakerUNO (you can de-activate it using the switch)
-#else
- // AR.L.O. PCB defines
- #define MotorRPin 9   // signal for right servomotor
- #define MotorLPin 10  // signal for left servomotor
- #define P1 6          // pushbutton P1 on AR.L.O.
- #define P2 7          // pushbutton P2
- #define trigPin 8     // HC-SR04 - trigger
- #define echoPin 2     // HC-SR04 - echo
- //#define buzzer      // no buzzer
-#endif
+// ****************** GPIO DEFINITIONS
+#define MotorRPin   9   // signal for right servomotor
+#define MotorLPin   10  // signal for left servomotor
+#define P1          2   // pushbutton P1 on ARLOK PCB ('button' on MakerUNO board)
+#define P2          5   // pushbutton P2
+#define trigPin     4   // HC-SR04 - trigger
+#define echoPin     3   // HC-SR04 - echo
+#define buzzer      8   // buzzer on MakerUNO
 
-// stuff used by servomotors
+// ****************** SERVO STUFF
 ServoTimer2 MotorL;               // left servomotor object
 ServoTimer2 MotorR;               // right servomotor object
 uint16_t servoL_center = 1500;    // default value for left servomotor center point
@@ -111,15 +97,15 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED 500                 // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
-#define SPEED_SLOW 125            // speed used for maneuvers, raise this if your robot cannot turn
-#define TURN_TIME 600             // amount of time used for turning, change this if turning angle is not 90 degrees
-#define BACK_TIME 500             // amount of time used for going backward after robot found an obstacle
+#define SPEED       500           // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
+#define SPEED_SLOW  125           // speed used for maneuvers, raise this if your robot cannot turn
+#define TURN_TIME   600           // amount of time used for turning, change this if turning angle is not 90 degrees
+#define BACK_TIME   500           // amount of time used for going backward after robot found an obstacle
 
 // stuff used by sonar
-#define TIMER_US 50               // Timer1 interrupt every 50uS
+#define TIMER_US    50            // Timer1 interrupt every 50uS
 #define TICK_COUNTS 4500          // 4500*50uS = 225mS, time space between two consecutive trigger pulses
-#define OBSTACLE 16               // ARLOK will stop if an obstacle is nearer than 16cm
+#define OBSTACLE    16            // ARLOK will stop if an obstacle is nearer than this
 
 // stuff used by oled display
 #define SCREEN_WIDTH  128
@@ -152,13 +138,16 @@ void setup(void)
  // sonar setup
  pinMode(trigPin, OUTPUT);
  pinMode(echoPin, INPUT);
+ 
  // servomotors setup
  MotorL.attach(MotorLPin);
  MotorR.attach(MotorRPin);
+ 
  // pushbuttons setup
  pinMode(P1, INPUT_PULLUP);
  pinMode(P2, INPUT_PULLUP);
- // buzzer setup
+ 
+ // buzzer setup (if present)
  #ifdef buzzer
   pinMode(buzzer, OUTPUT);
   digitalWrite(buzzer, LOW);
@@ -181,11 +170,10 @@ void setup(void)
   Serial.println(F("SSD1306 allocation failed"));
   while (1);  // Don't proceed, loop forever
   }
+  
  display.clearDisplay();
  display.setTextSize(2);
  display.setTextColor(SSD1306_WHITE, SSD1306_BLACK);
-
- Serial.println("ARLO(K) Startup");
 
  // center values used for servomotors, loaded from eeprom
  // if in the eeprom are saved values out of the range 500-2500, 1500 will be used
@@ -204,6 +192,9 @@ void setup(void)
  balance_servos();
  move_stop(100);
 
+ display.setTextSize(2);
+ display.setCursor(0, 0);
+ 
  // if P1 is pressed during the setup function, I'll start the setup mode
   if (digitalRead(P1) == 0) 
    {
@@ -216,20 +207,26 @@ void setup(void)
 void loop() 
  {
  static boolean juststarted=true;
- while (mode==configuration) config_menu();
+ #ifdef LIPO
+  static uint8_t bat_count=0;
+  static float bat_val=0;
+  static float bat_now=0;
+ #endif
 
- display.setTextSize(2);
- display.setCursor(0, 0);
+ while (mode==configuration) config_menu();
 
  if (juststarted) 
     {
     move_stop(100);
-    display.println("WAIT");
+    display.print("EXPLORER");
     display.display();
     move_stop(1000); // servomotors stopped giving time to sonar to get stable
     juststarted = false;
+    display.clearDisplay();
     }
- display.println("EXPLORER");
+ 
+ // print distance on display
+ display.setCursor(0, 0);
  if (distance > 3000) 
     {
     display.print("go ahead!");
@@ -239,6 +236,28 @@ void loop()
     display.print(distance);
     display.print("cm       ");
     }
+
+ // Print battery value on second row if enabled 
+ #ifdef LIPO
+  // read battery
+  bat_val+=analogRead(LIPO_PIN);
+  bat_count++;
+  if (bat_count==BAT_AVG)
+     {
+     bat_val/=BAT_AVG;
+     bat_now=bat_val*BAT_DIV;
+     bat_val=0;
+     bat_count=0;
+     }
+  display.setCursor(0,17);
+  display.print("Bat:");
+  display.print(bat_now);
+  display.print("V");
+ #else
+  display.setCursor(0,17);
+  display.print("Explorer");
+ #endif
+ 
  display.display();
 
  // distance is greater than obstacle
@@ -248,8 +267,8 @@ void loop()
     } 
  else 
     {
-	  // this function will generate a random number: 0 or 1
-    // syntax: min(inclusive), max(exclusive)	
+    // this function will generate a random number: 0 or 1
+    // syntax: min(inclusive), max(exclusive)   
     uint8_t randomNum=random(0, 2); 
     // deceleration
     move_forward(SPEED - 50);
@@ -263,20 +282,14 @@ void loop()
     Serial.println("stop");
     move_stop(100);
     move_backward(BACK_TIME);
-    move_stop(100);
-
-    if (randomNum) 
-	    {
-      move_right(TURN_TIME);
-      } 
-	  else 
-	    {
-      move_left(TURN_TIME);
-      }
+    move_stop(80);
+    randomNum?move_right(TURN_TIME):move_left(TURN_TIME);
     move_stop(100);
     }
  } // \loop
 
+
+// *********************** CONFIGURATION MENU
 void config_menu(void) 
  {
  static config_pages actual_page=left_motor;
@@ -369,10 +382,10 @@ void config_menu(void)
     {
     delay(50);
     if (digitalRead(P1)==0) 
-	      {
+          {
         while (digitalRead(P1) == 0) {continue;}
         switch (actual_page)
-		        {
+                {
             case left_motor:
               servoL_center = pos;
               // I must split the 16bit value in two bytes
@@ -425,7 +438,7 @@ void config_menu(void)
     {
     delay(50);
     if (digitalRead(P2) == 0) 
-	    {
+        {
         while (digitalRead(P2) == 0) {continue;}
         // the C++ deals with enums as an independent type
         // so we must convert it in an integer if we want to use the ++ operator
@@ -471,11 +484,6 @@ void balance_servos(void)
    servoL_balanced = servoL_center;
    servoR_balanced = servoR_center;
    }
-
-  Serial.print("ServoL_balanced:");
-  Serial.println(servoL_balanced);
-  Serial.print("ServoR_balanced:");
-  Serial.println(servoR_balanced);
  } // \balance_servos()
 
 // moves forward at 'sp' speed
