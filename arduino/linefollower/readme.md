@@ -3,6 +3,10 @@
 The _Line Follower_ is a Robot that must be able to follow a line, usually white on a black background or black on a white background, so that the difference between the two colors is clear and easier to identify by sensors. For this example a MakerLine sensor by Cytron is needed.
 Uncomment the row <kbd>#define LIPO</kbd> if you're using ARLOK powered from a LiPo Battery so you can read the battery voltage on the display. You can attach the positive lead of the battery to A2 pin for reading voltage, this pin is defined by <kbd>#define LIPO_PIN</kbd>.
 
+### Motors Setup
+
+See [motors setup procedure](../motors_setup.md)
+
 ### Line sensors
 
 In this example ARLOK use a sensor board called [Maker Line](https://docs.google.com/document/d/1wZwWl72CKkajTDIyiMxSQ3bwXbWbqW0eq7rdg2MUPeU/edit?usp=sharing), that simplify the Robot software and build. This board can be set to work with a light or dark line, with a button you can calibrate the 5 sensors and you have the possibility to use 5 digital output or only one analog output to check the sensors status.  
