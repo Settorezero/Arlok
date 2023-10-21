@@ -1,10 +1,10 @@
 /*
  * ARLOK
- * Educational Robot based on MakerUNO
- * (c)2020 Giovanni Bernardo (https://www.settorezero.com)
+ * Educational Robot based on Arduino UNO
+ * (c)2020-2023 Giovanni Bernardo (https://www.settorezero.com)
  * 
- * BLUETOOTH REMOTE
- * 
+ * BLUETOOTH DEMO
+ *
  * https://www.github.com/settorezero/arlok
  * 
  *
@@ -42,6 +42,9 @@
  *  
  * CREDITS
  * 
+ * Adafruit
+ * Because makes a lot of coll and useful libraries - please consider buying something from Adafruit
+ *
  * Steve Garrat
  * For the idea about using HC-SR04 sonar on interrupts:
  * (https://homediyelectronics.com/projects/arduino/arduinoprogramminghcsr04withinterrupts/)
@@ -50,53 +53,38 @@
  * For the library allows using servo on Timer 2
  * https://github.com/nabontra/ServoTimer2
  * 
- * Adafruit
- * Because makes a lot of useful libraries
- * 
- * LIBRARIES TO BE INSTALLED
- * 
+ * LIBRARIES TO INSTALL:
  * - Adafruit SSD1306 by Adafruit
  * - Adafruit GFX by Adafruit
  * - TimerOne by Jesse Tane, Jérôme Despatis, Michael Polli, Dan Clemens, Paul Stoffregen
- * 
- * This one requires manual installation (copy the folder in Documents\Arduino\Libraries)
- * https://github.com/nabontra/ServoTimer2
+ * - ServoTimer2 : This one requires manual installation (copy the folder in Documents\Arduino\Libraries) => https://github.com/nabontra/ServoTimer2
  * 
  */
 
-// Libraries for OLED display
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
-// Library for Timer1 Interrupts
-#include <TimerOne.h>
-// Library for using servo on Timer 2
-#include <ServoTimer2.h>
-// Library for Arduino internal eeprom memory
-#include <EEPROM.h>
+#include <TimerOne.h> // Library for Timer1 Interrupts
+#include <ServoTimer2.h> // Library for using servo on Timer 2
+#include <EEPROM.h> // Library for Arduino internal eeprom memory
 
-#define ARLOK // comment this if you're using the AR.L.O. pcb
+// ****************** LIPO BATTERY STUFF
+//#define LIPO // uncomment if you're using the LiPo battery
+#define LIPO_PIN    A2  // analog pin where the 18650 is attached for checking voltage
+#define BAT_AVG     32  // averages on battery readings
+#define BAT_DIV     .005180840664F // .00488758553274F
 
-#ifdef ARLOK
-  #define MotorRPin   9 // signal for right servomotor
-  #define MotorLPin   10  // signal for left servomotor
-  #define P1      2 // pushbutton P1 on ARLOK PCB, 'button' on MakerUNO board
-  #define P2      5 // pushbutton P2
-  #define trigPin   4 // HC-SR04 - trigger
-  #define echoPin   3 // HC-SR04 - echo
-  #define buzzer    8 // buzzer on MakerUNO (you can de-activate it using the switch)   
-#else
-  #define MotorRPin   9 // signal for right servomotor
-  #define MotorLPin   10  // signal for left servomotor
-  #define P1      6 // pushbutton P1 on AR.L.O.
-  #define P2      7 // pushbutton P2
-  #define trigPin   8 // HC-SR04 - trigger
-  #define echoPin   2 // HC-SR04 - echo
-  //#define buzzer      // no buzzer  
-#endif
+// ****************** GPIO DEFINITIONS
+#define MotorRPin   9   // signal for right servomotor
+#define MotorLPin   10  // signal for left servomotor
+#define P1          2   // pushbutton P1 on ARLOK PCB ('button' on MakerUNO board)
+#define P2          5   // pushbutton P2
+#define trigPin     4   // HC-SR04 - trigger
+#define echoPin     3   // HC-SR04 - echo
+#define buzzer      8   // buzzer on MakerUNO
 
-// stuff used by servomotors
+// ****************** SERVO STUFF
 ServoTimer2 MotorL;               // left servomotor object
 ServoTimer2 MotorR;               // right servomotor object
 uint16_t servoL_center = 1500;    // default value for left servomotor center point
@@ -109,24 +97,24 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED 500                 // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
-#define SPEED_SLOW 125            // speed used for maneuvers, raise this if your robot cannot turn
-#define TURN_TIME 600             // amount of time used for turning, change this if turning angle is not 90 degrees
-#define BACK_TIME 500             // amount of time used for going backward after robot found an obstacle
+#define SPEED       500           // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
+#define SPEED_SLOW  125           // speed used for maneuvers, raise this if your robot cannot turn
+#define TURN_TIME   600           // amount of time used for turning, change this if turning angle is not 90 degrees
+#define BACK_TIME   500           // amount of time used for going backward after robot found an obstacle
 
 // stuff used by sonar
-#define TIMER_US 50               // Timer1 interrupt every 50uS
+#define TIMER_US    50            // Timer1 interrupt every 50uS
 #define TICK_COUNTS 4500          // 4500*50uS = 225mS, time space between two consecutive trigger pulses
-#define OBSTACLE 16               // ARLOK will stop if an obstacle is nearer than 16cm
+#define OBSTACLE    16            // ARLOK will stop if an obstacle is nearer than this
 
 // stuff used by oled display
-#define SCREEN_WIDTH 128
-#define SCREEN_HEIGHT 32
-#define OLED_RESET -1
+#define SCREEN_WIDTH  128
+#define SCREEN_HEIGHT  32
+#define OLED_RESET     -1
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // Global variables
-volatile long distance=0; // distance measured by sonar, cm
+volatile long distance = 0;       // distance measured by sonar, cm
 
 // enum used for ARLOK working mode
 enum arlok_mode
@@ -209,6 +197,9 @@ void setup()
  balance_servos();
  move_stop(100);
 
+ display.setTextSize(2);
+ display.setCursor(0, 0);
+ 
  // if P1 is pressed during the setup function, I'll start the setup mode
   if (digitalRead(P1) == 0) 
    {
@@ -222,21 +213,22 @@ void loop()
   static boolean juststarted=true;
   static movement m=alt;
   static long lastdistance=0;
+  #ifdef LIPO
+   static uint8_t bat_count=0;
+   static float bat_val=0;
+   static float bat_now=0;
+  #endif
+  
   while (mode==configuration) config_menu();
 
   if (juststarted)
     {
     move_stop(100);
-    display.setTextSize(2);
-    display.setCursor(0,0);
-    display.println("WAIT");
-    display.display(); 
-    delay(1000); // stopped while sonar goes stable
-    juststarted=false;  
-    display.clearDisplay();
-    display.setCursor(0,0);
-    display.print("Bluetooth");
+    display.print("BLUETOOTH");
     display.display();
+    move_stop(1000); // servomotors stopped giving time to sonar to get stable
+    juststarted = false;
+    display.clearDisplay();
     }
   
   if (Serial.available()) 
@@ -287,14 +279,36 @@ void loop()
     // print received command if isn't 'c' (disconnection)
     if (rec!='c')
       {
-      display.setCursor(0,16);
+      display.setCursor(0,0);
       display.print("RX: ");
       display.print(rec);
-      display.display();
       }
       rec=0; // reset received char
-    }
-   
+    } // \serial available
+  
+// Print battery value on second row if enabled 
+ #ifdef LIPO
+  // read battery
+  bat_val+=analogRead(LIPO_PIN);
+  bat_count++;
+  if (bat_count==BAT_AVG)
+     {
+     bat_val/=BAT_AVG;
+     bat_now=bat_val*BAT_DIV;
+     bat_val=0;
+     bat_count=0;
+     }
+  display.setCursor(0,17);
+  display.print("Bat:");
+  display.print(bat_now);
+  display.print("V");
+ #else
+  display.setCursor(0,17);
+  display.print("Bluetooth");
+ #endif
+ 
+ display.display();
+ 
   switch (m)
     {
     case forward:
@@ -327,7 +341,6 @@ void loop()
     break;
     }
     
-
   m=none; // reset movement
   
   // send *d[distance] over bluetooth
@@ -339,6 +352,14 @@ void loop()
     Serial.print("cm");
     lastdistance=distance;
     }
+  
+  // send *b[battery voltage] over bluetooth
+  #ifdef LIPO
+   Serial.print("*b");
+   Serial.print(bat_now);
+   Serial.print("V");
+  #endif
+  
   } // \loop
 
 void config_menu(void) 
@@ -529,6 +550,8 @@ void onConnection(void)
     delayMicroseconds(1000);
     #endif
     }
+  delay(500);
+  display.clearDisplay();
   }
 
 void onDisconnection(void)
@@ -549,6 +572,8 @@ void onDisconnection(void)
     delayMicroseconds(1500);
     #endif
     }
+  delay(500);
+  display.clearDisplay();
   }
 
 void balance_servos(void) 

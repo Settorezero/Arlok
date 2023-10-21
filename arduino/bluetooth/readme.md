@@ -1,6 +1,6 @@
 ## Bluetooth Remote
 
-Arlok is moved using an app on an Android device that sends serial commands over Bluetooth. For this example is needed an **HC-05** or an **HC-06** Bluetooth module. Android app + source code are provided here.
+Arlok is moved using an app on an Android device that sends serial commands over Bluetooth. For this example is needed an **HC-05** or an **HC-06** Bluetooth module. Android app + source code are provided here. Uncomment the #define LIPO if you're using Arlok powered from LiPo Battery and attach the +V battery on A2 so you can read the battery voltage on display and android app too.
 
 ![Arlok Bluetooth Remote App](../../media/bt/arlok_bluetooth_app.jpg)
 
