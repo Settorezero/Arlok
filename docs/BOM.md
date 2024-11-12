@@ -67,7 +67,7 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
 
 > (*) Standard headers are 11mm long: those are good if you use one of the Adviced Boards (see below). If you want to use a standard Arduino UNO, 11mm headers are not good, since the USB connector will touch under Arlok shield, so in this case 15mm headers are needed or you can use special Arduino Headers
 
-> Note: if you must mod the servos for the continuous rotation, you need further 4 22KΩ ¼W resistors, adviced at 1% tolerance
+> Note: if you must mod the servos for the continuous rotation, you need further 4 2.2KΩ ¼W resistors, adviced at 1% tolerance
 
 ### <a name="shieldc"></a>3) Electronics - Shield REV1 Components (shopping list)
 

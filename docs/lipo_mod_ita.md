@@ -13,6 +13,12 @@ Attenzione: Le Batterie LiPo possono essere molto pericolose se non vengono mane
 - Nastro biadesivo
 - Cavetti nero e rosso
 
+OPZIONALE 
+- Display con led disposti a forma di batteria ([Battery Display 1S](https://amzn.to/4ermYJs)) che indica il livello di carica di una cella Litio 1S 
+- Pezzo alternativo del Plate Top [`arlok_plate_top_1sdisplay.stl`](../cad/stl/arlok_plate_top_1sdisplay.stl) che contiene sia l'incavo per incastrare il TP4056 sia la finestra laterale per incastrare il Battery Display
+
+![Boards](../media/instructions/powering/boards.jpg)
+
 #### Dovrai rimuovere/dissaldare:
 - Il portabatterie 4xAA
 - Il portabatterie 3xAA
@@ -22,9 +28,13 @@ Attenzione: Le Batterie LiPo possono essere molto pericolose se non vengono mane
 #### Non userai più
 - L'interruttore/Il jumper "Power" (i pad devono essere chiusi permanentemente, userai il tasto sul retro per accendere tutto. Se hai utilizzato un jumper, puoi lasciare questo sempre chiuso)
 
-#### Schema
+#### Schema (senza display)
 
 ![18650 powering](../media/instructions/powering/18650.png)
+
+#### Schema (con display)
+
+![18650 powering+display](../media/instructions/powering/18650+Battery_Display.png)
 
 
 ### Procedimento

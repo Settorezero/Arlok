@@ -5,7 +5,7 @@ This is a simple guide for hacking a standard analog servo for achieving continu
 
 Tools needed:
 
-- 4 22K ¼W 1% resistors
+- 4 2.2K ¼W 1% resistors
 - a lancet (for plastic gears servo) or a small wrench (for metallic gears servo)
 - a small phillips screwdriver
 - soldering iron
@@ -55,7 +55,7 @@ Desolder the cables from the potentiomer:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_011.jpg)
 
-Arrange the 2 22KΩ 1% resistor in this way:
+Arrange the 2 2.2KΩ 1% resistor in this way:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_012.jpg)
 

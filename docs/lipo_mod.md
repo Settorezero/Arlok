@@ -7,10 +7,17 @@ Warning: LiPo batteries can be very dangerous! Handle them with care and make th
 #### You'll need:
 - 18650 LiPo Battery with tabs
 - an SX1308 Step-Up Converter (PCB signature is HW668)
-- a TP4056 with protection for recharging the battery (or use the method you prefer for rechargingthe battery)
+- a TP4056 with protection for recharging the battery (or use the method you prefer for re-charge the battery)
 - 3D-print the [`arlok_18650_holder.stl`](../cad/stl/arlok_18650_holder.stl)
 - additional 2 M3 screws, Allen bolt socket cap, 12mm (length of threaded part - 15mm total) + nuts
 - some strong double-sided tape 
+
+OPTIONAL 
+- Display having leds in shape of a battery ("Battery display"), indicating charge level of 1S Lipo Battery (PCB signature is XW228DKFR4)
+- Alternate "Plate Top" STL [`arlok_plate_top_1sdisplay.stl`](../cad/stl/arlok_plate_top_1sdisplay.stl) having a slot for the TP4056 with protection and the square hole for the above mentioned display 
+
+
+![Boards](../media/instructions/powering/boards.jpg)
 
 #### You'll remove:
 - Battery Holder for 4AA batteries
@@ -20,9 +27,13 @@ Warning: LiPo batteries can be very dangerous! Handle them with care and make th
 #### You'll not use anymore:
 - Power Jumper (you can close it with a bridge)
 
-#### Schematic
+#### Schematic (basic)
 
 ![18650 powering](../media/instructions/powering/18650.png)
+
+#### Schematic (with 1S battery display)
+
+![18650 powering + display](../media/instructions/powering/18650+Battery_Display.png)
 
 ### How-to 
 
@@ -37,6 +48,9 @@ Warning: LiPo batteries can be very dangerous! Handle them with care and make th
 - Solder a black cable from the SX1308 - output to the - of Vservo X1 screw terminal 
 - (optional) Solder a cable, having a female dupont terminal, on the + Input terminal of the SX1308 module along with red cable already soldered: this can be used for checking the battery voltage reading from an Analog Input. The female dupont terminal can be connected to one free analog input terminal (A2 - you can use/take inspiration from the [explorer lipo](../arduino/explorer_lipo/) programming example)
 - Set the Jumper JP1 in the `VSERVO` position
+
+OPTIONAL 
+- Solder red and black cables on the "Battery Display" and connect them to VIN and GND of the SX1308 PCB
 
 Now all the robot parts (logics and servos) will be powered from the same battery: Logics will be powered at about 5V and servo at about 5.6V.  
 The [explorer](../arduino/explorer/) program contain some instructions for reading the battery and show it on display.

@@ -30,26 +30,4 @@ The 4xAA Battery holder (6V) will be connected to the VSERVO screw terminal thro
 You must put the JP1 jumper in the VSERVO position and you can close the the "logics" pad
 
 ### Using a 18650 LiPo cell
-This method is the best but not adviced for kids since LiPo cells are dangerous and need to be handled with lot of care.
-You need:
-- 18650 LiPo Battery with tabs
-- an SX1308 Step-Up Converter (PCB signature is HW668)
-- a TP4056 with protection for recharging the battery (or use the method you prefer for rechargingthe battery)
-- 3D-print the [`arlok_18650_holder.stl`](../cad/stl/arlok_18650_holder.stl)
-- additional 2 M3 screws, Allen bolt socket cap, 12mm (length of threaded part - 15mm total) + nuts
-- some strong double-sided tape 
-Notice 1: you must adjust the SX1308 for giving an output of about 5.7V FIRST THAN assembly the circuit.
-Notice 2: don't recharge and power the robot at same moment!
-
-![18650 powering](../media/instructions/powering/18650.png)
-
-The 18650 LiPo cell will take place under the robot using the 3D-printed holder.  
-TP4056 and SX1308 PCBs will be attached in the central part of the robot using double-sided tape.  
-You must put the JP1 jumper in the VSERVO position and you can close the the "logics" pad.  
-Now all the robot parts (logics and servos) will be powered from the same battery: Logics will be powered at about 5V and servo at about 5.7V.  
-The [explorer](../arduino/explorer/) program contain some instructions for reading the battery and show it on display.
-
-For charging the battery you must:
-- Turn off the button/switch on the back
-- Attach outputs of the TP4056 module on the battery using alligator clips (or make and share your own design)
-- Battery will be fully charged when blue led on TP4056 module turns on 
+See the [lipo_mod.md document](lipo_mod.md)

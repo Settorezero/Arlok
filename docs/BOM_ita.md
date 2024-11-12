@@ -92,7 +92,7 @@ Step 2: Ordina lo Shield di Arlok, revisione 1, utilizzando questo link:
 |  1  | Blocchetto jumper passo 2.54mm                                |
 |  1  | Interruttore a levetta da PCB, passo 2.54mm (**)              |
  
-> (*) se devi eseguire la modifica dei servocomandi per la rotazione continua, sono necessarie altre 4 resistenze 22KΩ ¼W, possibilmente all'1% di tolleranza  
+> (*) se devi eseguire la modifica dei servocomandi per la rotazione continua, sono necessarie altre 4 resistenze 2.2KΩ ¼W, possibilmente all'1% di tolleranza  
 
 > (**) oppure un blocchetto jumper, e utilizzi due pinheader maschio + il blocchetto jumper come se fosse un interruttore
 

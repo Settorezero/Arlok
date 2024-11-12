@@ -5,7 +5,7 @@ Questa è una guida per eseguire la modifica di un normale servocomando RC in mo
 
 Materiale necessario:
 
-- 4 resistenze 22KΩ ¼W 1%
+- 4 resistenze 2.2KΩ ¼W 1%
 - un piccolo bisturi/taglierino (se hai un servo con ingranaggi di plastica) o una pinza (se hai un servo con ingranaggi metallici)
 - un piccolo cacciavite a croce
 - saldatore
@@ -56,7 +56,7 @@ Dissalda i cavetti (o i terminali) del potenziometro:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_011.jpg)
 
-Prendi le resistenze da 22KΩ 1% e arrangiale in questo modo:
+Prendi le resistenze da 2.2KΩ 1% e arrangiale in questo modo:
 
 ![servo mod](../media/instructions/servo_mod/servo_mod_012.jpg)
 

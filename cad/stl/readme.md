@@ -43,6 +43,7 @@ Time and weight is reported for total parts if more than one is needed.
 |-----|--------------------------------------------------------------------------|----------------------|---------------|-------|
 |  1  | [Plate Bottom](arlok_plate_bottom.stl)                                   | 199 | 26 |  |
 |  1  | [Plate Top](arlok_plate_top.stl)                                         | 216 | 30 |  |
+| (1) | [Plate Top for 1S Battery Display](arlok_plate_top_1sdisplay.stl)        |     |    | See descriptions |
 |  2  | [Servo Bracket](arlok_servo_bracket.stl)                                 | 106 | 12 |  |
 |  1  | [Sonar Pillar](arlok_pillar_sonar.stl)                                   |  48 |  6 |  |
 | (1) | [Sonar Pillar (round variant)](arlok_pillar_sonar_(variant_rounded).stl) |  48 |  6 |  |
@@ -50,15 +51,15 @@ Time and weight is reported for total parts if more than one is needed.
 |  1  | [10mm hole Rear Pillar](arlok_pillar_hole_(variant_10mm).stl)            |  40 |  5 |  |
 | (1) | [12mm hole Rear Pillar](arlok_pillar_hole_(variant_12mm).stl)            |  40 |  5 |  |
 |  2  | [Wheel - solid](./wheels/arlok_wheel_solid.stl)                          | 178 | 28 |  |
-| (2) | [Wheel - slotted holes](./wheels/arlok_wheel_slotted.stl)                         |     |    |  |
-| (2) | [Wheel - 5-star](./wheels/arlok_wheel_star5.stl)                                  |     |    |  |
-| (2) | [Wheel - 10-star](./wheels/arlok_wheel_star10.stl)                                |     |    |  |
-| (2) | [Wheel - honeycomb](./wheels/arlok_wheel_honeycomb.stl)                           |     |    |  |
-| (2) | [Wheel - circles](./wheels/arlok_wheel_circles.stl)                      |     |     |  |
-| (2) | [Wheel - snowflake](./wheels/arlok_wheel_snowflake.stl)                      |     |     |  |
-| (2) | [Tire - round profile](./tires/arlok_tire_round.stl)                             |     |    | See descriptions |
-| (2) | [Tire - flat profile](./tires/arlok_tire_flat.stl)                               |     |    |  |
-| (2) | [Tire - knurled](./tires/arlok_tire_knurled.stl)                                 |     |    |  |
+| (2) | [Wheel - slotted holes](./wheels/arlok_wheel_slotted.stl)                |     |    |  |
+| (2) | [Wheel - 5-star](./wheels/arlok_wheel_star5.stl)                         |     |    |  |
+| (2) | [Wheel - 10-star](./wheels/arlok_wheel_star10.stl)                       |     |    |  |
+| (2) | [Wheel - honeycomb](./wheels/arlok_wheel_honeycomb.stl)                  |     |    |  |
+| (2) | [Wheel - circles](./wheels/arlok_wheel_circles.stl)                      |     |    |  |
+| (2) | [Wheel - snowflake](./wheels/arlok_wheel_snowflake.stl)                  |     |    |  |
+| (2) | [Tire - round profile](./tires/arlok_tire_round.stl)                     |     |    | See descriptions |
+| (2) | [Tire - flat profile](./tires/arlok_tire_flat.stl)                       |     |    |  |
+| (2) | [Tire - knurled](./tires/arlok_tire_knurled.stl)                         |     |    |  |
 | (1) | [Via Pixetto Support](arlok_via_pixetto_support.stl)                     |  53 |  6 |  |
 | (1) | [18650 LiPo Holder](arlok_18650_holder.stl)                              |     |    |  |
 | ( ) | [Moods](./moods/)                                                        |     |    |  |
@@ -72,7 +73,9 @@ Estimated total filament needed for standard parts: 107g (about 36meters)
 Front side is the one with the arrow on top. On front side there are two slotted holes: they are used, eventually, for attaching the Cytron Makerline module used for the line follower example. Servos must be mounted on top placing them in the grooves and having the shaft towards the front.
 
 ### <a name="platetop"></a>Plate Top
-You'll mount the Maker UNO board on top using 4 8mm or 10mm spacers. The two lateral wings will hold the 4AA battery holder in place.
+You'll mount the Arduino board on top using 4 8mm or 10mm spacers. The two lateral wings will hold the 4AA battery holder in place.  
+The alternative part `Plate Top for 1S battery Display` has to be used in case you're powering Arlok using the LiPo battery and you want to include a fancy "Battery Display" for showing the 18650 charging level. See the document [lipo_mod.md](../../docs/lipo_mod.md) document for further details.
+
 
 ### <a name="servobrackets"></a>Servo Brackets
 Bracket to hold in place the 2 servos: there is no need to attach servo to the bracket with screws even there are holes (they're placed there only for reference).
@@ -114,7 +117,7 @@ You can use an O-ring having an internal diameter of 70mm and a section of about
 This support is used for attaching a [Via Pixetto Ai Camera](https://pixetto.ai/) on top-front of Arlok. The support is a hinge made of 2 pieces: you must use a long M3 screw and a nut. In the STL there are also 4 small spacers used for distancing the camera from the base: you must use M2 screws and nuts. Sorry but Via Pixetto example is still not ready.
 
 ### <a name="18650"></a> 18650 LiPo Holder
-This part is used for holding a 18650 cell battery on the bottom of the robot. The 18650 will be used alone, without the two AA battery holders. You can use a single 18650 attached to a DC/DC boost converter through the pushbutton switch mounted on the rear pillar. Use a 18650 having soldering tabs. 
+This part is used for holding a 18650 cell battery on the bottom of the robot. The 18650 will be used alone, without the two AA battery holders. You can use a single 18650 attached to a DC/DC boost converter through the pushbutton switch mounted on the rear pillar. Use a 18650 having soldering tabs. See the document [lipo_mod.md](../../docs/lipo_mod.md) document for further details.
 
 >**!!! WARNING !!!**  
 **LiPo batteries can be very dangerous so don't mount this kind of battery if Arlok will be used by a child!**
