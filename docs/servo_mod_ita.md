@@ -1,7 +1,9 @@
 ## Modifica servocomandi
 
-Questa è una guida per eseguire la modifica di un normale servocomando RC in modo da trasformarlo in un servo a rotazione continua. Questa procedura **not è necessaria** se hai già un servo a 360°.  
+Questa è una guida per eseguire la modifica di un normale servocomando RC **analogico** in modo da trasformarlo in un servo a rotazione continua. Questa procedura **non è necessaria** se hai già un servo a 360°.  
 [Qui c'è un video](https://www.youtube.com/watch?v=_Ubauj75d9E) che illustra questa procedura.
+
+> Nota: un servocomando **digitale** purtroppo non puó essere utilizzato per la modifica in quanto all'interno ha un microcontrollore che ferma il motore se rileva che il motore non arriva mai in posizione.
 
 Materiale necessario:
 
