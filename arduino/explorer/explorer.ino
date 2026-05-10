@@ -97,15 +97,16 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED       500           // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
-#define SPEED_SLOW  125           // speed used for maneuvers, raise this if your robot cannot turn
-#define TURN_TIME   600           // amount of time used for turning, change this if turning angle is not 90 degrees
-#define BACK_TIME   500           // amount of time used for going backward after robot found an obstacle
+#define SPEED       500           // normal speed for forward moving (center point+speed), rise this if your robot doesn't move
+#define ACCEL_STEP    5           // increment ramp
+#define SPEED_SLOW  250           // speed used for maneuvers, raise this if your robot cannot turn
+#define TURN_TIME   800           // amount of time used for turning, change this if turning angle is not 90 degrees
+#define BACK_TIME  2000           // amount of time used for going backward after robot found an obstacle
 
 // stuff used by sonar
-#define TIMER_US    50            // Timer1 interrupt every 50uS
+#define TIMER_US      50          // Timer1 interrupt every 50uS
 #define TICK_COUNTS 4500          // 4500*50uS = 225mS, time space between two consecutive trigger pulses
-#define OBSTACLE    16            // ARLOK will stop if an obstacle is nearer than this
+#define OBSTACLE      15          // ARLOK will stop if an obstacle is nearer than this
 
 // stuff used by oled display
 #define SCREEN_WIDTH  128
@@ -115,6 +116,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // Global variables
 volatile long distance = 0;       // distance measured by sonar, cm
+int currentSpeed = 0;
 
 // enum used for ARLOK/ARLO working mode
 enum arlok_mode 
@@ -220,7 +222,7 @@ void loop()
     move_stop(100);
     display.print("EXPLORER");
     display.display();
-    move_stop(1000); // servomotors stopped giving time to sonar to get stable
+    move_stop(2000); // servomotors stopped giving time to sonar to get stable
     juststarted = false;
     display.clearDisplay();
     }
@@ -263,28 +265,38 @@ void loop()
  // distance is greater than obstacle
  if (distance > OBSTACLE)
     {
-    move_forward(SPEED);
+    // ramp
+    if (currentSpeed < SPEED)
+       {
+       currentSpeed+=ACCEL_STEP;
+       if (currentSpeed > SPEED) currentSpeed = SPEED;
+       }
+    move_forward(currentSpeed);
     } 
  else 
     {
     // this function will generate a random number: 0 or 1
-    // syntax: min(inclusive), max(exclusive)   
+    // syntax: min(included), max(excluded)   
     uint8_t randomNum=random(0, 2); 
+    
     // deceleration
-    move_forward(SPEED - 50);
-    delay(40);
-    move_forward(SPEED - 100);
-    sound(); // about 120ms delay
-    //delay(80);
-    move_forward(SPEED - 150);
-    delay(80);
-    // stop
+    while (currentSpeed>0)
+      {
+      currentSpeed--;
+      move_forward(currentSpeed);
+      }
+
     Serial.println("stop");
-    move_stop(100);
+    sound(); // about 120ms delay
+    delay(500);
+
+    // move backward
     move_backward(BACK_TIME);
-    move_stop(80);
+    move_stop(500);
+    
+    // turn random
     randomNum?move_right(TURN_TIME):move_left(TURN_TIME);
-    move_stop(100);
+    move_stop(200);
     }
  } // \loop
 
@@ -499,22 +511,31 @@ void move_forward(uint16_t sp)
 void move_backward(long ms) 
  {
  long timenow = millis();
+ uint16_t csp=0;
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center - SPEED_SLOW);
-    MotorR.write(servoL_center + SPEED_SLOW);
+    csp++;
+    if (csp>SPEED_SLOW) csp=SPEED_SLOW;
+    MotorL.write(servoL_balanced - csp);
+    MotorR.write(servoR_balanced + csp);
+    delay(5);
     }
  return;
  } // \move_backward()
+
 
 // turns right at slow speed for ms milliseconds
 void move_right(long ms) 
  {
  long timenow = millis();
+ uint16_t csp=0;
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center + SPEED_SLOW);
-    MotorR.write(servoL_center + SPEED_SLOW);
+    csp++;
+    if (csp>SPEED_SLOW) csp=SPEED_SLOW;
+    MotorL.write(servoL_balanced + csp);
+    MotorR.write(servoR_balanced + csp);
+    delay(5);
     }
  return;
  } // \move_right()
@@ -523,10 +544,14 @@ void move_right(long ms)
 void move_left(long ms) 
  {
  long timenow = millis();
+ uint16_t csp=0;
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center - SPEED_SLOW);
-    MotorR.write(servoL_center - SPEED_SLOW);
+    csp++;
+    if (csp>SPEED_SLOW) csp=SPEED_SLOW;
+    MotorL.write(servoL_balanced - csp);
+    MotorR.write(servoR_balanced - csp);
+    delay(5);
     }
  return;
  } // \move_left()
