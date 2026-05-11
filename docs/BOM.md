@@ -121,9 +121,11 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
 
 ### <a name="3d"></a>5) Mechanics - 3D-printed parts
 
-Please see in the [STL folder](../cad/stl)
+Please see in the [cad folder](../cad)
 
-### <a name="mech"></a>6) Mechanics - Components
+### <a name="mech"></a>6) Mechanics (for v1 files) - Components
+
+Please note: following hardware parts are only used for v1 3d printed files. The V2 will use different components
 
 | Qt. | Description                                                                  |
 | --- | ---------------------------------------------------------------------------- |
@@ -138,12 +140,9 @@ Please see in the [STL folder](../cad/stl)
 
 [Here is a picture showing screws](../media/arlok_screws.jpg). Same picture is available [in italian too](../media/arlok_screws_ita.jpg).
 
-(*) when you buy the Tamiya 70144 ballcaster kit, there are parts for making 2 ballcasters.
-    Maybe you can share the extra ballcaster part with a friend so he can build an Arlok too.
-    Alternatively you can 3D-print the [Ball Caster V2 on Thingiverse](https://www.thingiverse.com/thing:1408935) in the height of 30mm (you need [OpenScad](https://openscad.org/) for editing the .scad file and change the height)
+(*) when you buy the Tamiya 70144 ballcaster kit, there are parts for making 2 ballcasters. Maybe you can share the extra ballcaster part with a friend so he can build an Arlok too. Alternatively you can 3D-print the [Ball Caster V2 on Thingiverse](https://www.thingiverse.com/thing:1408935) in the height of 30mm (you need [OpenScad](https://openscad.org/) for editing the .scad file and change the height)
 
-(**) There are some kinds of tires that can be 3D-Printed using TPU. If your 3D printer can handle TPU, try
-     first to print them yourself: see in [STL folder](../cad/stl) for the Tires.
+(**) There are some kinds of tires that can be 3D-Printed using TPU. If your 3D printer can handle TPU, try first to print them yourself: see in [STL folder](../cad/v1/stl) for the Tires.
 
 ### <a name="boards"></a>7) Adviced Arduino UNO R3 compatible boards
 

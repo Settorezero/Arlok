@@ -9,11 +9,11 @@ Arlok is a simple educational Robot based on Arduino Uno with parts printed in 3
 ## What you need for build an Arlok
 
 - Bill Of Materials: [[:uk: ENG](./docs/BOM.md)]   [[:it: ITA](./docs/BOM_ita.md)] 
-- [3D-printed parts](./cad/stl).  
+- [3D-printed parts (version 1)](./cad/v1).  
 
 ## Assembling
 
-Follow the step-by-step guide: [[:uk: ENG](./docs/assembly.md)] - [[:it: ITA](./docs/assembly_ita.md)]
+Follow the step-by-step guide: [[:uk: ENG](./docs/assembly_v1.md)] - [[:it: ITA](./docs/assembly_ita_v1.md)]
 
 ## Code examples
 
@@ -21,7 +21,7 @@ See in the [Arduino folder](./arduino) for code examples or write your own using
 
 ## Mods and Upgrades
 
-- Powering Arlok from a LiPo Battery: [[:uk: ENG](./docs/lipo_mod.md)]  [[:it: ITA](./docs/lipo_mod_ita.md)]
+- Powering Arlok V1 from a LiPo Battery: [[:uk: ENG](./docs/lipo_mod.md)]  [[:it: ITA](./docs/lipo_mod_ita.md)]
 - Hacking an analog servo for continuous rotation: [[:uk: ENG](./docs/servo_mod.md)]  [[:it: ITA](./docs/servo_mod_ita.md)]
 
 ## Troubleshooting

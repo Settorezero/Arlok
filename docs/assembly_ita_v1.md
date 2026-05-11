@@ -1,4 +1,4 @@
-## Istruzioni montaggio ARLOK in italiano
+## Istruzioni montaggio ARLOK V1 in italiano
 
 > Link rapido a questa pagina: [https://tinyurl.com/arlokmontaggio](https://tinyurl.com/arlokmontaggio)  
 

@@ -122,9 +122,11 @@ Step 2: Ordina lo Shield di Arlok, revisione 1, utilizzando questo link:
 
 ### <a name="3d"></a>5) Parte Meccanica - Pezzi da stampare in 3D
 
-Guarda nella [cartella STL](../cad/stl)
+Guarda nella [cartella cad](../cad)
 
-### <a name="mech"></a>6) Parte Meccanica - Altro
+### <a name="mech"></a>6) Parte Meccanica (per file V1) - Altro
+
+Il materiale qui riportato vale per la versione 1 di Arlok. La versione 2 utilizzerá materiali diversi.
 
 | Qt. | Descrizione                                                     |
 | --- | --------------------------------------------------------------- |
@@ -134,14 +136,14 @@ Guarda nella [cartella STL](../cad/stl)
 | 12x | Dado M3                                                         |
 | 2x  | Vite M3, testa svasata, 8mm (lunghezza filetto,~10mm in totale) |
 | 4x  | Distanziale esagonale F/F 8 o 10mm                              |
-| 1x  | Ballcaster Tamiya modello 70144 (*)                             |
+| 1x  | Ballcaster Tamiya 70144 (*)                                     |
 | 2x  | O-Ring, 70mm diametro interno, spessore 2-3mm (**)              |
 
 [Qui c'è una fotografia che illustra le viti necessarie](../media/arlok_screws_ita.jpg).
 
-(*) Quando acquisti il ballcaster Tamiya 70144, ci sono pezzi per costruire 2 ball caster: potresti costruire un altro Arlok o darlo ad un amico così che lo costruisca anche lui! In alternativa puoi stampare in 3D il [Ball Caster V2 su Thingiverse](https://www.thingiverse.com/thing:1408935) con una'altezza di 30mm (Devi però saper usare [OpenScad](https://openscad.org/) per modificare il file .scad)  
+(*) Quando acquisti il ballcaster Tamiya 70144, ci sono pezzi per costruire 2 ball caster: potresti costruire un altro Arlok o darlo ad un amico così che lo costruisca anche lui! In alternativa puoi stampare in 3D il [Ball Caster V2 su Thingiverse](https://www.thingiverse.com/thing:1408935) con una'altezza di 30mm (Devi però saper usare [OpenScad](https://openscad.org/) per modificare il file .scad).
 
-(**) In alternativa, se la tua stampante è in grado di stampare il TPU potresti anche stampare un modello di pneumatico tra quelli messi a disposizione nella [cartella STL](../cad/stl)  
+(**) Solo per i file 3D versione 1. Se stai la tua stampante è in grado di stampare il TPU, e stai usando la versione 1, potresti anche stampare un modello di pneumatico tra quelli messi a disposizione nella [cartella STL](../cad/v1/stl)  
 
 ### <a name="boards"></a>7) Schede compatibili Arduino UNO R3 consigliate
 
