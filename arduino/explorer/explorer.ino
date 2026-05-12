@@ -1,7 +1,7 @@
 /*
  * ARLOK
  * Educational Robot based on Arduino UNO
- * (c)2020-2023 Giovanni Bernardo (https://www.settorezero.com)
+ * (c)2020-2026 Giovanni Bernardo (https://www.settorezero.com)
  * 
  * EXPLORER DEMO
  *
@@ -69,9 +69,13 @@
 #include <ServoTimer2.h> // Library for using servo on Timer 2
 #include <EEPROM.h> // Library for Arduino internal eeprom memory
 
-// ****************** LIPO BATTERY STUFF
+// message showed on display at startup
+const char* splash_row1 = "  ARLOK";
+const char* splash_row2 = " EXPLORER";
+
+// ****************** LIPO BATTERY STUFF (if you want to read LiPo Voltage on display)
 //#define LIPO // uncomment if you're using the LiPo battery
-#define LIPO_PIN    A2  // analog pin where the 18650 is attached for checking voltage
+#define LIPO_PIN    A2  // analog pin where the 18650 is directly attached for checking voltage
 #define BAT_AVG     32  // averages on battery readings
 #define BAT_DIV     .005180840664F // .00488758553274F
 
@@ -82,7 +86,7 @@
 #define P2          5   // pushbutton P2
 #define trigPin     4   // HC-SR04 - trigger
 #define echoPin     3   // HC-SR04 - echo
-#define buzzer      8   // buzzer on MakerUNO
+#define buzzer      8   // buzzer (on MakerUNO)
 
 // ****************** SERVO STUFF
 ServoTimer2 MotorL;               // left servomotor object
@@ -97,11 +101,11 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED       500           // normal speed for forward moving (center point+speed), rise this if your robot doesn't move
+#define SPEED       700           // normal speed for forward moving (center point+this value), rise this if your robot doesn't move or it's too slow
 #define ACCEL_STEP    5           // increment ramp
-#define SPEED_SLOW  250           // speed used for maneuvers, raise this if your robot cannot turn
+#define SPEED_SLOW  250           // slow speed used for maneuvers, raise this if your robot cannot turn
 #define TURN_TIME   800           // amount of time used for turning, change this if turning angle is not 90 degrees
-#define BACK_TIME  2000           // amount of time used for going backward after robot found an obstacle
+#define BACK_TIME  1500           // amount of time used for going backward after robot found an obstacle
 
 // stuff used by sonar
 #define TIMER_US      50          // Timer1 interrupt every 50uS
@@ -115,8 +119,8 @@ uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the bala
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // Global variables
-volatile long distance = 0;       // distance measured by sonar, cm
-int currentSpeed = 0;
+volatile long distance = 0;        // distance measured by sonar, cm
+int currentSpeed = 0;              // actual speed, variable used for creating an acceleration ramp
 
 // enum used for ARLOK/ARLO working mode
 enum arlok_mode 
@@ -169,7 +173,6 @@ void setup(void)
  // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) 
   {  // Address 0x3C for 128x32
-  Serial.println(F("SSD1306 allocation failed"));
   while (1);  // Don't proceed, loop forever
   }
   
@@ -201,8 +204,7 @@ void setup(void)
   if (digitalRead(P1) == 0) 
    {
    mode = configuration;
-   Serial.println("Setup mode");
-   while (digitalRead(P1) == 0) {continue;}
+   while (digitalRead(P1) == 0) {continue;} // stay here until button is released
    }
  } // \setup()
 
@@ -220,7 +222,9 @@ void loop()
  if (juststarted) 
     {
     move_stop(100);
-    display.print("EXPLORER");
+    display.print(splash_row1);
+    display.setCursor(0,17);
+    display.print(splash_row2);
     display.display();
     move_stop(2000); // servomotors stopped giving time to sonar to get stable
     juststarted = false;
@@ -229,14 +233,15 @@ void loop()
  
  // print distance on display
  display.setCursor(0, 0);
- if (distance > 3000) 
+ if (distance > 1500) 
     {
-    display.print("go ahead!");
+    display.print("yuppiee!");
     } 
  else 
     {
+    display.print("Dist:");
     display.print(distance);
-    display.print("cm       ");
+    display.print("cm    ");
     }
 
  // Print battery value on second row if enabled 
@@ -254,10 +259,7 @@ void loop()
   display.setCursor(0,17);
   display.print("Bat:");
   display.print(bat_now);
-  display.print("V");
- #else
-  display.setCursor(0,17);
-  display.print("Explorer");
+  display.print("V ");
  #endif
  
  display.display();
@@ -286,7 +288,6 @@ void loop()
       move_forward(currentSpeed);
       }
 
-    Serial.println("stop");
     sound(); // about 120ms delay
     delay(500);
 
@@ -406,8 +407,6 @@ void config_menu(void)
               delay(4);  // an eeprom.write takes 3.3mS
               EEPROM.update(servoL_eeprom + 1, (uint8_t)(pos & 0x00FF));
               delay(4);
-              Serial.print("Left zero: ");
-              Serial.println(pos);
               break;
 
             case right_motor:
@@ -418,8 +417,6 @@ void config_menu(void)
               delay(4);  // an eeprom.write takes 3.3mS
               EEPROM.update(servoR_eeprom + 1, (uint8_t)(pos & 0x00FF));
               delay(4);
-              Serial.print("Right zero: ");
-              Serial.println(pos);
               break;
 
             case balance:
@@ -428,8 +425,6 @@ void config_menu(void)
               delay(4);  // an eeprom.write takes 3.3mS
               EEPROM.update(servo_balance_eeprom + 1, (balance_pos & 0x00FF));
               delay(4);  // an eeprom.write takes 3.3mS
-              Serial.print("Balance pos: ");
-              Serial.println(balance_pos);
               balance_servos();
               break;
 
@@ -438,7 +433,6 @@ void config_menu(void)
               mode = normal;
               display.clearDisplay();
               display.display();
-              Serial.println("Config exit");
               return;
             break;
             } // \switch actual_page
@@ -624,14 +618,4 @@ void sonarEcho_ISR()
 
 /******************************************************************************************************************
 * END Of the file
-* 
-* if you reached this part, you're a smart person and I want you as follower of my social networks:
-* 
-* Facebook: https://www.facebook.com/settorezero (Italian language)
-* Twitter: https://www.twitter.com/settorezero (English language)
-* Instagram - my private profile: https://www.instagram.com/cyb3rn0id (english language)
-* Instagram - profile of my blog: https://www.instagram.com/settorezero (italian language)
-* Youtube: https://www.youtube.com/settorezero (mainly italian language, but sometimes also English language)
-* 
-* PLEASE SUBSCRIBE
 ******************************************************************************************************************/
