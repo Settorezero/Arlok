@@ -21,7 +21,12 @@ Step 1: Subscribe to PCBWay using my invite link:
 Step 2: Order the ARLOK shield REV1 PCB from the following link:
         [https://tinyurl.com/arlokshieldr1](https://tinyurl.com/arlokshieldr1)
 
-> If you don't want to buy the Arlok PCB, you can use an Arduino Uno protoshield and make your own shield connecting external components (servo, ultrasonic sensor, display ecc) to the Arduino pins following the [schematic](arlok_schematic_rev1.png) and/or the [connection table](connections.md).
+> If you don't want to buy the PCB you can consider to use one of that [protoshields](https://amzn.to/4d3CUo2) keeping in mind the [schematic](./arlok_schematic_rev1.png) and/or the [connection table](./connections.md)  
+Maybe the following simplified schematic can be useful too:
+
+![Arlok Simplified Schematic](./arlok_simplified_schematic.png)
+
+Please note: Arlok V2 will not use AA Batteries
 
 ### <a name="shield"></a>2) Electronics - Shield REV1 Components (detailed)
 
@@ -92,6 +97,7 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
 
 > (*) If you must mod the servos for the continuous rotation, you need further 4 22KΩ ¼W resistors, adviced at 1% tolerance
 > (**) Or 2 pin-male header + jumper block
+> The Arduino Shield is good for both V1 and V2 Arlok variants
 
 ### <a name="ext"></a>4) Electronics - External components
 
@@ -105,9 +111,9 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
 | 1x  | OLED display module I2C (4pin) 0.96"                                                             |
 | 1x  | Battery Holder for 4AA batteries                                                                 |
 | 1x  | Battery Holder for 3AA batteries                                                                 |
-| 1x  | Round pushbutton with retain or lever switch (**)                                                |
+| 1x  | Round pushbutton with retain or lever switch or round rocker switch (**)                         |
 | 1x  | 4pin Female/Female Dupont cable (~15cm) (***)                                                    |
-| 7x  | AA 1.5V Batteries (****)                                                                         |
+| 7x  | AA 1.5V Batteries (****)  NOT for Arlok V2                                                       |
 
 (*) See list below
 
@@ -117,13 +123,13 @@ Step 2: Order the ARLOK shield REV1 PCB from the following link:
      cables or make your own cable using connector you prefer.
 
 (****) Not adviced to use NiCd or NiMH batteries, since voltage of those batteries is 1.2V. There is also a mod for using one LiPo Battery but it's at your own risk
-     read more here: [LiPo Mod](lipo_mod.md)
+     read more here: [LiPo Mod](lipo_mod.md). If you printed the Arlok V2 variant, you cannot use AA batteries since there is no room for them: Arlok V2 uses a single 18650
 
 ### <a name="3d"></a>5) Mechanics - 3D-printed parts
 
 Please see in the [cad folder](../cad)
 
-### <a name="mech"></a>6) Mechanics (for v1 files) - Components
+### <a name="mech"></a>6) Mechanics (Only for v1 files) - Components
 
 Please note: following hardware parts are only used for v1 3d printed files. The V2 will use different components
 
