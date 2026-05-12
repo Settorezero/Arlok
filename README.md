@@ -16,36 +16,37 @@ Please note: version 1 and version 2 parts are not compatible each other!
 
 ## Version 1 vs Version 2  
 
-First Arlok version is from 2020: it was designed during Covid-19 pandemy (the very first version was called ARLO). At time I used tinkercad that allowed me to teach something new to my sons during lock-down. In 2024 I started to designed a new revision using OnShape, mantaining the same concept design and adding some features such like a battery display but the 3D printer I had at time didn't allowed me to make some things I had in my mind. In 2025 I bought a new 3D-printer so I started to design the new version more seriously. Version 2 is still preliminary: I added the final STEP and STL files but actually I hadn't much time for writing an assemblying tutorial like I done for the first one.  
+First Arlok version is from 2020: it was designed during Covid-19 pandemy (the very first version was called ARLO). At ther time I used Tinkercad that allowed me to teach something new to my sons during the lock-down. In 2024 I started to design a new version using OnShape, mantaining the same concept design and adding some features such like a battery display and a new kind of ball-caster, but the 3D printer I had at time didn't allowed me to make some things I had in my mind. In 2025 I bought a new 3D-printer so I started to design the new version more seriously. Version 2 is here but is still a preliminary version: I added the final STEP and STL files but actually I hadn't much time for writing an assemblying tutorial like I done for the first ARLOK revision.  
   
-Differencies between version 1 and version 2 are the following:
+Differencies between version 1 and version 2:
   
-- The Tamiya 70144 ball-caster is no more needed: I designed a foot for using a classic 2.5x4.5 furniture ball-caster you can find on Amazon: [sponsored link](https://amzn.to/42y9IiS). Anyway it can be used if you have it
-- Wheels are slightly bigger and larger and are made for using only TPU printed tires: so no more o-rings but you had to know how to print TPU
-- Different design for all parts: sonar and switch pillars now are bigger and they cover the empty spaces giving a cleaner appearance
-- Redesigned the whole chassis with the usage of a single 18650 power supply in mind (so, in the V2 there is no room for AA-size battery holders!)
+- The Tamiya 70144 ball-caster is no more needed: I designed a foot for using a classic 2.5x4.5 furniture ball-caster you can find on Amazon: [sponsored link](https://amzn.to/42y9IiS). Anyway the Tamiya Ball-Caster can be used if you already have it
+- Wheels are slightly bigger and larger and are made for using only TPU printed tires: so no o-rings are needed more but you need to know how to properly print TPU on your 3D-printer
+- Different design for all parts: sonar and switch pillars now are larger and they cover the empty spaces giving a cleaner appearance
+- Redesigned the whole chassis with the usage of a single 18650 LiPo cell in mind so, in the V2 there is no room for AA-size battery holders
 - Added an 1S battery display on a side
-- Added a proper placement for TP4056 battery charger
+- Added a proper placement for the TP4056+protection battery charger
 - Added a proper placement for the SX1308 buck-boost converter
-- Added placement for an XL6009 buck-boost converter (also for the XL6019 but this one cannot be used since require an higher input voltage)
-- Possibility to use 2 18650 in parallel
+- Added placement for an XL6009 buck-boost converter (also for the XL6019 but this one cannot be used since it requires an higher input voltage, 5V)
+- Possibility to use 2 18650 in parallel using the bracket for dual batteries
 - Changed dimensions for allowing to use screws that will not pop-up from panels
 - Changed placement of some parts for giving Arlok more stability
 - Added groves for embedding nuts in some points
-- Added holes in certain points for passing cables in a cleaner way
+- Added holes and slots in certain points for passing cables in a cleaner way
 - Added vent-holes for servos and buck-boost converters
 - Now you can add handles on top for carrying Arlok more safely
-- Now you can add a further plate on top of the handles for having more expansion possibilities: plates allowing the positioning of a 400-points breadboard (82x55 like this: [sponsored link](https://amzn.to/4uJOeeZ))
+- Now you can add a further plate on top of the handles for having more expansion possibilities: plates allows the positioning of a 400-points breadboard (82x55 like this: [sponsored link](https://amzn.to/4uJOeeZ))
 - Designed a pedestal: you can leave Arlok on top of this pedestal for making maintenance/tuning/upgrade or simpy for showing it or allowing it to rest...
 
 
 ## Assembling
 
-The Version 1 has a step-by-step guide: [[:uk: ENG](./docs/assembly_v1.md)] - [[:it: ITA](./docs/assembly_ita_v1.md)]
+The Version 1 has a step-by-step guide assembly guide: [[:uk: ENG](./docs/assembly_v1.md)] - [[:it: ITA](./docs/assembly_ita_v1.md)]  
+The Version 2 still doesn't have an assembly guide
 
 ## Code examples
 
-See in the [Arduino folder](./arduino) for code examples or write your own using one of the provided example as base!
+See in the [Arduino folder](./arduino) for code examples or write your own code using one of the provided example as base!
 
 ## Mods and Upgrades
 
