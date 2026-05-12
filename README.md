@@ -9,11 +9,39 @@ Arlok is a simple educational Robot based on Arduino Uno with parts printed in 3
 ## What you need for build an Arlok
 
 - Bill Of Materials: [[:uk: ENG](./docs/BOM.md)]   [[:it: ITA](./docs/BOM_ita.md)] 
-- [3D-printed parts (version 1)](./cad/v1).  
+- [3D-printed parts (version 1)](./cad/v1)
+- [3D-printed parts (version 2 - still preliminary)](./cad/v2)
+  
+Please note: version 1 and version 2 parts are not compatible each other!  
+
+## Version 1 vs Version 2  
+
+First Arlok version is from 2020: it was designed during Covid-19 pandemy (the very first version was called ARLO). At time I used tinkercad that allowed me to teach something new to my sons during lock-down. In 2024 I started to designed a new revision using OnShape, mantaining the same concept design and adding some features such like a battery display but the 3D printer I had at time didn't allowed me to make some things I had in my mind. In 2025 I bought a new 3D-printer so I started to design the new version more seriously. Version 2 is still preliminary: I added the final STEP and STL files but actually I hadn't much time for writing an assemblying tutorial like I done for the first one.  
+  
+Differencies between version 1 and version 2 are the following:
+  
+- The Tamiya 70144 ball-caster is no more needed: I designed a foot for using a classic 2.5x4.5 furniture ball-caster you can find on Amazon: [sponsored link](https://amzn.to/42y9IiS). Anyway it can be used if you have it
+- Wheels are slightly bigger and larger and are made for using only TPU printed tires: so no more o-rings but you had to know how to print TPU
+- Different design for all parts: sonar and switch pillars now are bigger and they cover the empty spaces giving a cleaner appearance
+- Redesigned the whole chassis with the usage of a single 18650 power supply in mind (so, in the V2 there is no room for AA-size battery holders!)
+- Added an 1S battery display on a side
+- Added a proper placement for TP4056 battery charger
+- Added a proper placement for the SX1308 buck-boost converter
+- Added placement for an XL6009 buck-boost converter (also for the XL6019 but this one cannot be used since require an higher input voltage)
+- Possibility to use 2 18650 in parallel
+- Changed dimensions for allowing to use screws that will not pop-up from panels
+- Changed placement of some parts for giving Arlok more stability
+- Added groves for embedding nuts in some points
+- Added holes in certain points for passing cables in a cleaner way
+- Added vent-holes for servos and buck-boost converters
+- Now you can add handles on top for carrying Arlok more safely
+- Now you can add a further plate on top of the handles for having more expansion possibilities: plates allowing the positioning of a 400-points breadboard (82x55 like this: [sponsored link](https://amzn.to/4uJOeeZ))
+- Designed a pedestal: you can leave Arlok on top of this pedestal for making maintenance/tuning/upgrade or simpy for showing it or allowing it to rest...
+
 
 ## Assembling
 
-Follow the step-by-step guide: [[:uk: ENG](./docs/assembly_v1.md)] - [[:it: ITA](./docs/assembly_ita_v1.md)]
+The Version 1 has a step-by-step guide: [[:uk: ENG](./docs/assembly_v1.md)] - [[:it: ITA](./docs/assembly_ita_v1.md)]
 
 ## Code examples
 
@@ -21,7 +49,7 @@ See in the [Arduino folder](./arduino) for code examples or write your own using
 
 ## Mods and Upgrades
 
-- Powering Arlok V1 from a LiPo Battery: [[:uk: ENG](./docs/lipo_mod.md)]  [[:it: ITA](./docs/lipo_mod_ita.md)]
+- Powering Arlok V1 from a LiPo Battery: [[:uk: ENG](./docs/lipo_mod.md)]  [[:it: ITA](./docs/lipo_mod_ita.md)] (Arlok V2 can be only powered from a LiPo)
 - Hacking an analog servo for continuous rotation: [[:uk: ENG](./docs/servo_mod.md)]  [[:it: ITA](./docs/servo_mod_ita.md)]
 
 ## Troubleshooting
@@ -37,4 +65,4 @@ See in the [Arduino folder](./arduino) for code examples or write your own using
 - ARLOK partecipated to the [2020 Maker Faire European Edition](https://makerfairerome.eu/it/espositori/?edition=2020&exhibit=3409) - Stand E57, Project P253
 - ARLOK partecipated to the [2022 Maker Faire European Edition](https://makerfairerome.eu/it/espositori/?edition=2022&exhibit=2220093) - Pavillon D.19
 - Maker Faire 2022 [Interview by "uno scemo qualunque"](https://www.youtube.com/watch?v=RNEsY1jSlT4&t=576s)
-- ARLOK will partecipate to the [2026 Maker Faire Caserta](https://caserta.makerfaire.com/maker/entry/12/)
+- ARLOK (v2) will partecipate to the [2026 Maker Faire Caserta](https://caserta.makerfaire.com/maker/entry/12/)
