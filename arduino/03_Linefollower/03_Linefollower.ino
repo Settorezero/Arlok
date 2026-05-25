@@ -98,7 +98,8 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED       500           // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
+#define SPEED       130           // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
+#define ACCEL_STEP    1           // increment ramp
 #define SPEED_SLOW  125           // speed used for maneuvers, raise this if your robot cannot turn
 #define TURN_TIME   600           // amount of time used for turning, change this if turning angle is not 90 degrees
 #define BACK_TIME   500           // amount of time used for going backward after robot found an obstacle
@@ -119,6 +120,8 @@ volatile long distance = 0;       // distance measured by sonar, cm
 const int16_t lineCenter = 500;	// Sensor value for line positioned at center
 const int16_t deltaCenter = 100;
 const uint8_t speedDiv = 6;
+uint8_t maneuver=0; // 
+uint8_t maneuverp=0; // previous maneuver
 
 // enum used for ARLOK working mode
 enum arlok_mode 
@@ -226,20 +229,20 @@ void loop()
  display.setCursor(0, 0);
   
  if (juststarted) 
-    {
-    move_stop(100);
-    display.println("Press P1");
-	  display.print("to start");
-    display.display();
-    while(digitalRead(P1));
-	  display.clearDisplay();
-    display.print("starting");
-    display.display();
-	  delay(1000);
-    juststarted = false;
-	  display.clearDisplay();
-    display.display();
-    }
+   {
+   move_stop(100);
+   display.println("Press P1");
+	display.print("to start");
+   display.display();
+   while(digitalRead(P1));
+	display.clearDisplay();
+   display.print("starting");
+   display.display();
+	delay(1000);
+   juststarted = false;
+	display.clearDisplay();
+   display.display();
+   }
  
  int16_t linePosition = analogRead(linemodule);
  display.setCursor(0, 0);
@@ -277,7 +280,8 @@ void loop()
  else if(linePosition < 50) // line not detected from any sensor
     {
     display.print(".....");
-    move_forward(lastLval,lastRval);
+    move_forward(lastLval-1,lastRval-1);
+    //move_stop(1000);
     }
  else    // not all sensors ar seeing the line but one or more
     {
@@ -287,7 +291,7 @@ void loop()
     if(abs(centerOffSet) <= deltaCenter)
         {
         display.print("..|..");
-        move_forward(SPEED/(speedDiv/2));
+        move_forward(SPEED/(speedDiv/2),SPEED/(speedDiv/2));
         }
     else
         {
@@ -305,8 +309,8 @@ void loop()
             {
             display.print("...||"); // right sensor active, must give more power to left motor
             //motorRightSpeed = abs((centerOffSet - 100) - 200);
-            motorRightSpeed = SPEED - ds;
             motorLeftSpeed = SPEED + ds;
+            motorRightSpeed = SPEED - ds;
             }
         move_forward(motorLeftSpeed / speedDiv, motorRightSpeed / speedDiv);
         lastLval=motorLeftSpeed/speedDiv;
@@ -530,30 +534,113 @@ void balance_servos(void)
 // moves forward at 'sp' speed
 void move_forward(uint16_t sp) 
  {
+ maneuver=1;
+ static int currentSpeed=0;
+ if (maneuver!=maneuverp)
+   {
+   maneuverp=maneuver;
+   currentSpeed=0;   
+   }
  if (sp > SPEED) sp = SPEED;
- MotorL.write(servoL_balanced + sp);
- MotorR.write(servoR_balanced - sp);
+ // ramp
+ if (currentSpeed < sp)
+    {
+    currentSpeed+=ACCEL_STEP;
+    if (currentSpeed > sp) currentSpeed = sp;
+    }
+ MotorL.write(servoL_balanced + currentSpeed);
+ MotorR.write(servoR_balanced - currentSpeed);
+ delay(1);
  return;
  } // \move_forward()
 
 // moves forward giving different speed for left and right motors
 void move_forward(uint16_t speedL, uint16_t speedR)
  {
+ maneuver=1;
+ static uint16_t currentSpeedL=0;
+ static uint16_t currentSpeedR=0;
+ static uint16_t speedLP=0;
+ static uint16_t speedRP=0;
  if (speedL>SPEED) speedL=SPEED;
  if (speedR>SPEED) speedR=SPEED;
- MotorL.write(servoL_balanced + speedL);
- MotorR.write(servoR_balanced - speedR);
+ 
+ if (maneuver!=maneuverp)
+   {
+   maneuverp=maneuver;
+   speedLP=speedL;
+   speedRP=speedR;
+   currentSpeedL=0;
+   currentSpeedR=0;   
+   }
+ else 
+   {
+   if (speedL!=speedLP)
+      {
+      if (speedL<speedLP)
+         {
+         currentSpeedL=speedL;
+         }
+      else
+         {
+         currentSpeedL=speedLP; 
+         }
+      speedLP=speedL;
+      }
+ 
+   if (speedR!=speedRP)
+      {
+      if (speedR<speedRP)
+         {
+         currentSpeedR=speedR;
+         }
+      else
+         {
+         currentSpeedR=speedRP;   
+         }
+      speedRP=speedR;
+      }
+   }
+
+ // ramp L
+ if (currentSpeedL < speedL)
+    {
+    currentSpeedL+=ACCEL_STEP;
+    if (currentSpeedL > speedL) currentSpeedL = speedL;
+    }
+ // ramp R
+ if (currentSpeedR < speedR)
+    {
+    currentSpeedR+=ACCEL_STEP;
+    if (currentSpeedR > speedR) currentSpeedR = speedR;
+    }
+ MotorL.write(servoL_balanced + currentSpeedL);
+ MotorR.write(servoR_balanced - currentSpeedR);
+ delay(1);
  return;
  }
  
 // moves backward at slow speed for ms milliseconds
 void move_backward(long ms) 
  {
+ maneuver=2;
+ static int currentSpeed=0;
  long timenow = millis();
+ if (maneuver!=maneuverp)
+   {
+   maneuverp=maneuver;
+   currentSpeed=0;   
+   }
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center - SPEED_SLOW);
-    MotorR.write(servoL_center + SPEED_SLOW);
+   // ramp
+   if (currentSpeed < SPEED_SLOW)
+      {
+      currentSpeed+=ACCEL_STEP;
+      if (currentSpeed > SPEED_SLOW) currentSpeed = SPEED_SLOW;
+      }
+      MotorL.write(servoL_center - currentSpeed);
+      MotorR.write(servoL_center + currentSpeed);
     }
  return;
  } // \move_backward()
@@ -561,11 +648,24 @@ void move_backward(long ms)
 // turns right at slow speed for ms milliseconds
 void move_right(long ms) 
  {
+ maneuver=3;
+ static int currentSpeed=0;
  long timenow = millis();
+ if (maneuver!=maneuverp)
+   {
+   maneuverp=maneuver;
+   currentSpeed=0;   
+   }
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center + SPEED_SLOW);
-    MotorR.write(servoL_center + SPEED_SLOW);
+   // ramp
+   if (currentSpeed < SPEED_SLOW)
+      {
+      currentSpeed+=ACCEL_STEP;
+      if (currentSpeed > SPEED_SLOW) currentSpeed = SPEED_SLOW;
+      }
+    MotorL.write(servoL_center + currentSpeed);
+    MotorR.write(servoL_center + currentSpeed);
     }
  return;
  } // \move_right()
@@ -573,24 +673,46 @@ void move_right(long ms)
 // turns left at slow speed for ms milliseconds
 void move_left(long ms) 
  {
+ maneuver=4;
+ static int currentSpeed=0;
  long timenow = millis();
+ if (maneuver!=maneuverp)
+   {
+   maneuverp=maneuver;
+   currentSpeed=0;   
+   }
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center - SPEED_SLOW);
-    MotorR.write(servoL_center - SPEED_SLOW);
+   // ramp
+   if (currentSpeed < SPEED_SLOW)
+      {
+      currentSpeed+=ACCEL_STEP;
+      if (currentSpeed > SPEED_SLOW) currentSpeed = SPEED_SLOW;
+      }
+    MotorL.write(servoL_center - currentSpeed);
+    MotorR.write(servoL_center - currentSpeed);
     }
+delay(1);
  return;
  } // \move_left()
 
 // Servomotors stopped
 void move_stop(long ms) 
  {
+ maneuver=0;
+ static int currentSpeed=0;
  long timenow = millis();
+ if (maneuver!=maneuverp)
+   {
+   maneuverp=maneuver;
+   currentSpeed=0;   
+   }
  while ((millis() - timenow) < ms) 
    {
    MotorL.write(servoL_center);
    MotorR.write(servoR_center);
    }
+delay(1);
  return;
  } // \move_stop()
 
