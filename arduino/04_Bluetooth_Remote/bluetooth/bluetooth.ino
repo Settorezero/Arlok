@@ -97,10 +97,11 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED       500           // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
-#define SPEED_SLOW  125           // speed used for maneuvers, raise this if your robot cannot turn
-#define TURN_TIME   600           // amount of time used for turning, change this if turning angle is not 90 degrees
-#define BACK_TIME   500           // amount of time used for going backward after robot found an obstacle
+#define SPEED       800           // normal speed for forward moving (center point+this value), rise this if your robot doesn't move or it's too slow
+#define ACCEL_STEP    7           // increment ramp
+#define SPEED_SLOW  250           // slow speed used for maneuvers, raise this if your robot cannot turn
+#define TURN_TIME   800           // amount of time used for turning, change this if turning angle is not 90 degrees
+#define BACK_TIME  1500           // amount of time used for going backward after robot found an obstacle
 
 // stuff used by sonar
 #define TIMER_US    50            // Timer1 interrupt every 50uS
@@ -115,6 +116,8 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 // Global variables
 volatile long distance = 0;       // distance measured by sonar, cm
+int maneuver=-1;
+int premaneuver=-1;
 
 // enum used for ARLOK working mode
 enum arlok_mode
@@ -136,12 +139,12 @@ enum config_pages
 // enum used for commands from bluetooth
 enum movement
   {
-  forward=0,
-  alt=1,
-  backward=2,
-  right=3,
-  left=4,
-  none=-1  
+  none=-1,
+  alt=0,
+  forward=1,
+  right=2,
+  backward=3,
+  left=4
   };
 
 void setup() 
@@ -237,20 +240,20 @@ void loop()
     Serial.flush();
     switch (rec)
       {
-      case '1': // forward
-        m=forward;
-      break;
-
       case '0': // stop
         m=alt;
       break;
 
-      case '3': // backward
-        m=backward;
+      case '1': // forward
+        m=forward;
       break;
 
       case '2': // right
         m=right;
+      break;
+
+      case '3': // backward
+        m=backward;
       break;
 
       case '4': // left
@@ -311,40 +314,28 @@ void loop()
  
   switch (m)
     {
-    case forward:
-    // go forward only if there are no obstacles
-      if (distance>OBSTACLE)
-        {
-        move_forward(SPEED);
-        }
-      else
-        {
-        move_stop(500);
-        sound();  
-        }
-    break;
-
-    case alt:
+    case alt: //0
       move_stop(500);
     break;
 
-    case right:
+    case forward: //1
+      move_forward(SPEED);
+    break;
+
+    case right: //2
       move_right(100);
     break;
 
-    case left:
-      move_left(100);
+    case backward: //3
+      move_backward(100);
     break;
 
-    case backward:
-      move_backward(100);
+    case left: //4
+      move_left(100);
     break;
     }
     
-  m=none; // reset movement
-  
-  // send *d[distance] over bluetooth
-  // only if changed
+  // send *d[distance] over bluetooth only if changed
   if (distance!=lastdistance)
     {
     Serial.print("*d");
@@ -359,7 +350,6 @@ void loop()
    Serial.print(bat_now);
    Serial.print("V");
   #endif
-  
   } // \loop
 
 void config_menu(void) 
@@ -534,7 +524,6 @@ void sound(void)
 
 void onConnection(void)
   {
-    
   display.clearDisplay();
   display.setCursor(0,0);
   display.println("Connected");
@@ -597,21 +586,46 @@ void balance_servos(void)
  
 // moves forward at 'sp' speed
 void move_forward(uint16_t sp) 
- {
- if (sp > SPEED) sp = SPEED;
- MotorL.write(servoL_balanced + sp);
- MotorR.write(servoR_balanced - sp);
+  {
+  static uint16_t currentSpeed=0;
+  maneuver=forward;
+  if (maneuver!=premaneuver)
+    {
+    premaneuver=maneuver;
+    currentSpeed=0;
+    }
+  if (sp > SPEED) sp = SPEED;
+  // ramp
+  if (currentSpeed < sp)
+     {
+     currentSpeed+=ACCEL_STEP;
+     if (currentSpeed > SPEED) currentSpeed = sp;
+     }
+ MotorR.write(servoR_balanced - currentSpeed);
+ MotorL.write(servoL_balanced + currentSpeed);
  return;
  } // \move_forward()
 
 // moves backward at slow speed for ms milliseconds
 void move_backward(long ms) 
  {
+  static uint16_t currentSpeed=0;
+  maneuver=backward;
+  if (maneuver!=premaneuver)
+    {
+    premaneuver=maneuver;
+    currentSpeed=0;
+    }
  long timenow = millis();
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center - SPEED_SLOW);
-    MotorR.write(servoL_center + SPEED_SLOW);
+    if (currentSpeed < SPEED_SLOW)
+     {
+     currentSpeed+=ACCEL_STEP;
+     if (currentSpeed > SPEED_SLOW) currentSpeed = SPEED_SLOW;
+     }
+    MotorL.write(servoL_center - currentSpeed);
+    MotorR.write(servoL_center + currentSpeed);
     }
  return;
  } // \move_backward()
@@ -619,11 +633,23 @@ void move_backward(long ms)
 // turns right at slow speed for ms milliseconds
 void move_right(long ms) 
  {
+  static uint16_t currentSpeed=0;
+  maneuver=right;
+  if (maneuver!=premaneuver)
+    {
+    premaneuver=maneuver;
+    currentSpeed=0;
+    }
  long timenow = millis();
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center + SPEED_SLOW);
-    MotorR.write(servoL_center + SPEED_SLOW);
+    if (currentSpeed < SPEED_SLOW)
+     {
+     currentSpeed+=ACCEL_STEP;
+     if (currentSpeed > SPEED_SLOW) currentSpeed = SPEED_SLOW;
+     }
+    MotorL.write(servoL_center + currentSpeed);
+    MotorR.write(servoL_center + currentSpeed);
     }
  return;
  } // \move_right()
@@ -631,11 +657,23 @@ void move_right(long ms)
 // turns left at slow speed for ms milliseconds
 void move_left(long ms) 
  {
+  static uint16_t currentSpeed=0;
+  maneuver=left;
+  if (maneuver!=premaneuver)
+    {
+    premaneuver=maneuver;
+    currentSpeed=0;
+    }
  long timenow = millis();
  while ((millis() - timenow) < ms) 
     {
-    MotorL.write(servoL_center - SPEED_SLOW);
-    MotorR.write(servoL_center - SPEED_SLOW);
+    if (currentSpeed < SPEED_SLOW)
+     {
+     currentSpeed+=ACCEL_STEP;
+     if (currentSpeed > SPEED_SLOW) currentSpeed = SPEED_SLOW;
+     }
+    MotorL.write(servoL_center - currentSpeed);
+    MotorR.write(servoL_center - currentSpeed);
     }
  return;
  } // \move_left()
@@ -643,6 +681,11 @@ void move_left(long ms)
 // Servomotors stopped
 void move_stop(long ms) 
  {
+  maneuver=alt;
+  if (maneuver!=premaneuver)
+    {
+    premaneuver=maneuver;
+    }
  long timenow = millis();
  while ((millis() - timenow) < ms) 
    {
