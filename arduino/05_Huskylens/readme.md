@@ -75,3 +75,9 @@ A white square will appear around the face with the `face` writing. Click the ri
 The name to a face ID can be assigned over serial: the example program does this.
 
 Every face/object recognized from the camera will produce, over communication line a string having X,Y value as the center of the square, and W,H as Width and Height of the square. 
+
+## Powering
+
+Huskylens draws about 900mA and it's necessary to have two separate power supply for function properly. I used two separate 18650 LiPo, each one having his own TP4056 (protected) for charging and a boost module. This is the schematic I made:
+
+![](images/dual_separate_power.png)
