@@ -1,7 +1,7 @@
 /*
  * ARLOK
  * Educational Robot based on Arduino UNO
- * (c)2020-2023 Giovanni Bernardo (https://www.settorezero.com)
+ * (c)2020-2026 Giovanni Bernardo (https://www.settorezero.com)
  * 
  * LINE FOLLOWER DEMO
  *

@@ -44,10 +44,6 @@
  * 
  * Adafruit
  * Because makes a lot of coll and useful libraries - please consider buying something from Adafruit
- *
- * Steve Garrat
- * For the idea about using HC-SR04 sonar on interrupts:
- * (https://homediyelectronics.com/projects/arduino/arduinoprogramminghcsr04withinterrupts/)
  * 
  * Nick Bontranger
  * For the library allows using servo on Timer 2
@@ -58,7 +54,8 @@
  * - Adafruit GFX by Adafruit
  * - TimerOne by Jesse Tane, Jérôme Despatis, Michael Polli, Dan Clemens, Paul Stoffregen
  * - ServoTimer2 : This one requires manual installation (copy the folder in Documents\Arduino\Libraries) => https://github.com/nabontra/ServoTimer2
- * 
+ * - VL53L0X by Pololu
+ *
  */
 
 #include <SPI.h>
