@@ -609,12 +609,12 @@ void move_forward(uint16_t sp)
 // moves backward at slow speed for ms milliseconds
 void move_backward(long ms) 
  {
-  static uint16_t currentSpeed=0;
+  static uint16_t currentSpeed=ACCEL_STEP;
   maneuver=backward;
   if (maneuver!=premaneuver)
     {
     premaneuver=maneuver;
-    currentSpeed=0;
+    currentSpeed=ACCEL_STEP;
     }
  long timenow = millis();
  while ((millis() - timenow) < ms) 
@@ -633,12 +633,12 @@ void move_backward(long ms)
 // turns right at slow speed for ms milliseconds
 void move_right(long ms) 
  {
-  static uint16_t currentSpeed=0;
+  static uint16_t currentSpeed=ACCEL_STEP;
   maneuver=right;
   if (maneuver!=premaneuver)
     {
     premaneuver=maneuver;
-    currentSpeed=0;
+    currentSpeed=ACCEL_STEP;
     }
  long timenow = millis();
  while ((millis() - timenow) < ms) 
@@ -657,12 +657,12 @@ void move_right(long ms)
 // turns left at slow speed for ms milliseconds
 void move_left(long ms) 
  {
-  static uint16_t currentSpeed=0;
+  static uint16_t currentSpeed=ACCEL_STEP;
   maneuver=left;
   if (maneuver!=premaneuver)
     {
     premaneuver=maneuver;
-    currentSpeed=0;
+    currentSpeed=ACCEL_STEP;
     }
  long timenow = millis();
  while ((millis() - timenow) < ms) 
