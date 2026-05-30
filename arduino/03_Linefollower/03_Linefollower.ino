@@ -98,8 +98,8 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED       130           // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
-#define ACCEL_STEP    1           // increment ramp
+#define SPEED       160           // 130 normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
+#define ACCEL_STEP   10           // increment ramp
 #define SPEED_SLOW  125           // speed used for maneuvers, raise this if your robot cannot turn
 #define TURN_TIME   600           // amount of time used for turning, change this if turning angle is not 90 degrees
 #define BACK_TIME   500           // amount of time used for going backward after robot found an obstacle
@@ -535,11 +535,11 @@ void balance_servos(void)
 void move_forward(uint16_t sp) 
  {
  maneuver=1;
- static int currentSpeed=0;
+ static int currentSpeed=ACCEL_STEP;
  if (maneuver!=maneuverp)
    {
    maneuverp=maneuver;
-   currentSpeed=0;   
+   currentSpeed=ACCEL_STEP;   
    }
  if (sp > SPEED) sp = SPEED;
  // ramp
@@ -558,10 +558,10 @@ void move_forward(uint16_t sp)
 void move_forward(uint16_t speedL, uint16_t speedR)
  {
  maneuver=1;
- static uint16_t currentSpeedL=0;
- static uint16_t currentSpeedR=0;
- static uint16_t speedLP=0;
- static uint16_t speedRP=0;
+ static uint16_t currentSpeedL=ACCEL_STEP;
+ static uint16_t currentSpeedR=ACCEL_STEP;
+ static uint16_t speedLP=ACCEL_STEP;
+ static uint16_t speedRP=ACCEL_STEP;
  if (speedL>SPEED) speedL=SPEED;
  if (speedR>SPEED) speedR=SPEED;
  
@@ -624,12 +624,12 @@ void move_forward(uint16_t speedL, uint16_t speedR)
 void move_backward(long ms) 
  {
  maneuver=2;
- static int currentSpeed=0;
+ static int currentSpeed=ACCEL_STEP;
  long timenow = millis();
  if (maneuver!=maneuverp)
    {
    maneuverp=maneuver;
-   currentSpeed=0;   
+   currentSpeed=ACCEL_STEP;   
    }
  while ((millis() - timenow) < ms) 
     {
