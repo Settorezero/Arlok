@@ -98,7 +98,7 @@ uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the bala
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
 #define SPEED       800           // normal speed for forward moving (center point+this value), rise this if your robot doesn't move or it's too slow
-#define ACCEL_STEP    7           // increment ramp
+#define ACCEL_STEP   20           // increment ramp
 #define SPEED_SLOW  250           // slow speed used for maneuvers, raise this if your robot cannot turn
 #define TURN_TIME   800           // amount of time used for turning, change this if turning angle is not 90 degrees
 #define BACK_TIME  1500           // amount of time used for going backward after robot found an obstacle
@@ -587,12 +587,12 @@ void balance_servos(void)
 // moves forward at 'sp' speed
 void move_forward(uint16_t sp) 
   {
-  static uint16_t currentSpeed=0;
+  static uint16_t currentSpeed=ACCEL_STEP;
   maneuver=forward;
   if (maneuver!=premaneuver)
     {
     premaneuver=maneuver;
-    currentSpeed=0;
+    currentSpeed=ACCEL_STEP;
     }
   if (sp > SPEED) sp = SPEED;
   // ramp
