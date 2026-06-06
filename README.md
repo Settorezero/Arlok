@@ -64,7 +64,9 @@ See in the [Arduino folder](./arduino) for code examples or write your own code 
 - [Aperitech about ARLO (first ARLOK rev)](https://www.youtube.com/watch?v=JS_QYEIMfNo)
 - [All ARLOK videos on Youtube](https://tinyurl.com/arlokplaylist) 
 - ARLOK on no. 253 (2021) of Italian Magazine "Elettronica IN": [EXCERPT](https://www.elettronicain.it/wp-content/uploads/prog_copertina/arlook_il_robot_per_tutti.pdf) -   [MAGAZINE ISSUE](https://www.elettronicain.it/prodotto/n-253-aprile-2021/?tracking=5f004a6ba8be7)
-- ARLOK partecipated to the [2020 Maker Faire European Edition](https://makerfairerome.eu/it/espositori/?edition=2020&exhibit=3409) - Project P253, Stand E57
-- ARLOK partecipated to the [2022 Maker Faire European Edition](https://makerfairerome.eu/it/espositori/?edition=2022&exhibit=2220093) - Project 93, Pavillon D19
 - Maker Faire 2022 [Interview by "uno scemo qualunque"](https://www.youtube.com/watch?v=RNEsY1jSlT4&t=576s)
-- ARLOK (v2) partecipated to the [2026 Maker Faire Caserta](https://caserta.makerfaire.com/maker/entry/12/) - Project 12, Stand D7
+  
+- ARLOK partecipated to the 2020 Maker Faire European Edition (Project 253, Stand E57) - with Officine Robotiche
+- ARLOK partecipated to the 2022 Maker Faire European Edition (Project 93, Pavillon D19) - with Pizza Robotics
+- ARLOK partecipated to the 2023 Maker Faire European Edition (Project E62, Pavillon 5, Booth D6) - with Pizza Robotics
+- ARLOK v2 partecipated to the [2026 Maker Faire Caserta](https://caserta.makerfaire.com/maker/entry/12/) (Project 12, Stand D7)
