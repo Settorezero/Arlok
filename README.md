@@ -11,15 +11,15 @@ Arlok is a simple educational Robot based on Arduino Uno with parts printed in 3
 - Bill Of Materials: [[:uk: ENG](./docs/BOM.md)]   [[:it: ITA](./docs/BOM_ita.md)] 
 - [3D-printed parts (version 1)](./cad/v1)
 - [3D-printed parts (version 2 - still preliminary)](./cad/v2)
-  
+
 Please note: version 1 and version 2 parts are not compatible each other!  
 
-## Version 1 vs Version 2  
+## Version 1 vs Version 2
 
 First Arlok version is from 2020: it was designed during Covid-19 pandemy (the very first version of the robot was called AR.L.O.). At ther time I used Tinkercad that allowed me to teach something new to my sons during the lockdown. In 2024 I started to design a new version using OnShape by PTC, mantaining the same concept design and adding some features such like a battery display and a new kind of ball-caster, but the 3D printer I had at time didn't allowed me to make some things I had in my mind. In 2025 I bought a new 3D-printer so I started to design the new version more seriously. Version 2 is here but is still a preliminary version: I added the final STEP and STL files but actually I hadn't much time for writing an assemblying tutorial like I done for the first ARLOK revision.  
-  
+
 Differencies between version 1 and version 2:
-  
+
 - The Tamiya 70144 ball-caster is no longer needed: I designed a foot for using a classic 2.5x4.5 furniture ball-caster you can find on Amazon: [sponsored link](https://amzn.to/42y9IiS). Anyway the Tamiya Ball-Caster can be used if you already have it but you must print a simple adapter you can find in both stl and step folders
 - Wheels are slightly bigger and larger and are made for using only TPU printed tires: so no o-rings are needed but you need to know how to properly print TPU on your 3D-printer
 - Different design for all parts: sonar and switch pillars now are larger and they cover the empty spaces giving a cleaner appearance
@@ -38,7 +38,6 @@ Differencies between version 1 and version 2:
 - Added handles on top for carrying Arlok more safely
 - Added a further plate on top of the handles for having more expansion possibilities: plates allows the positioning of a 400-points breadboard (82x55 like this: [sponsored link](https://amzn.to/4uJOeeZ))
 - Added a pedestal: you can leave Arlok on top of this pedestal for making maintenance/tuning/upgrade or simpy for showing it or allowing it to rest...
-
 
 ## Assembling
 
@@ -61,12 +60,21 @@ See in the [Arduino folder](./arduino) for code examples or write your own code 
 ## Links
 
 - [Greta Galli review](https://www.youtube.com/watch?v=CbPGWd9I_mA)
+
+- [Dario Ciceri review](https://youtu.be/yjnFxoAIeAM?list=LL&t=208)
+
 - [Aperitech about ARLO (first ARLOK rev)](https://www.youtube.com/watch?v=JS_QYEIMfNo)
+
 - [All ARLOK videos on Youtube](https://tinyurl.com/arlokplaylist) 
+
 - ARLOK on no. 253 (2021) of Italian Magazine "Elettronica IN": [EXCERPT](https://www.elettronicain.it/wp-content/uploads/prog_copertina/arlook_il_robot_per_tutti.pdf) -   [MAGAZINE ISSUE](https://www.elettronicain.it/prodotto/n-253-aprile-2021/?tracking=5f004a6ba8be7)
+
 - Maker Faire 2022 [Interview by "uno scemo qualunque"](https://www.youtube.com/watch?v=RNEsY1jSlT4&t=576s)
-  
+
 - ARLOK partecipated to the 2020 Maker Faire European Edition (Project 253, Stand E57) - with Officine Robotiche
+
 - ARLOK partecipated to the 2022 Maker Faire European Edition (Project 93, Pavillon D19) - with Pizza Robotics
+
 - ARLOK partecipated to the 2023 Maker Faire European Edition (Project E62, Pavillon 5, Booth D6) - with Pizza Robotics
+
 - ARLOK v2 partecipated to the [2026 Maker Faire Caserta](https://caserta.makerfaire.com/maker/entry/12/) (Project 12, Stand D7)
