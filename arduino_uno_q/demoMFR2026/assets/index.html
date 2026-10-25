@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ARLOQ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+     <div class="main-content">
+        <div class="container" id="video-container">
+            <div id="videoFeedContainer">
+                <div id="videoPlaceholder" class="camera-status">
+                    <p>Connecting to Video Stream...</p>
+                </div>
+                <iframe id="dynamicIframe" title="Video stream" frameBorder="0" style="display: none;"></iframe>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="container control-card">
+                <h2 class="section-title">ARLOQ CONTROLLER</h2>
+                <div class="debug-monitor">
+                    LEFT: <span id="val-l">90</span> | RIGHT: <span id="val-r">90</span>
+                </div>
+                <div id="joystick-zone"></div>
+
+              <div class="switch-row">
+                <span class="switch-label">LIGHTS</span>
+                  <label class="switch">
+                    <input type="checkbox" id="led-toggle">
+                    <span class="slider"></span>
+                  </label>
+                <span class="switch-state" id="led-state">(OFF)</span>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+	
+	<div></div>
+	
+	<div class="main-content">
+		<div class="container">
+			<span class="arduino-text">Time: </span><span id="elapsed" class="arduino-text-highlight">---</span>
+		</div>
+
+      <div class="container">
+			<span class="arduino-text">Temp: </span><span id="temperature" class="arduino-text-highlight">---</span>
+		</div>
+
+      <div class="container">
+			<span class="arduino-text">Hum: </span><span id="humidity" class="arduino-text-highlight">---</span>
+		</div>
+		
+		<div class="container">
+			<span class="arduino-text">Heartbeat: </span><span id="heartbeat-value" class="arduino-text-highlight">---</span>
+		</div>
+	</div>
+	
+
+    <script src="libs/socket.io.min.js"></script>
+    <script src="libs/nipplejs.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        const iframe = document.getElementById('dynamicIframe');
+        const placeholder = document.getElementById('videoPlaceholder');
+        const streamUrl = `http://${window.location.hostname}:4912/embed`;
+        
+        let intervalId = setInterval(() => { 
+            iframe.src = streamUrl; 
+        }, 1000);
+
+        iframe.onload = () => { 
+            clearInterval(intervalId); 
+            placeholder.style.display = 'none'; 
+            iframe.style.display = 'block';
+            window.dispatchEvent(new Event('resize'));
+        };
+
+      screen.orientation.addEventListener('change', function() {
+        setTimeout(function() {
+          window.dispatchEvent(new Event('resize'));
+          }, 300);
+        });
+    </script>
+</body>
+</html>

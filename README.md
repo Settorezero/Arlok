@@ -53,6 +53,10 @@ See in the [Arduino folder](./arduino) for code examples or write your own code 
 - Powering Arlok V1 from a LiPo Battery: [[:uk: ENG](./docs/lipo_mod.md)]  [[:it: ITA](./docs/lipo_mod_ita.md)] (Arlok V2 can be only powered from a LiPo)
 - Hacking an analog servo for continuous rotation: [[:uk: ENG](./docs/servo_mod.md)]  [[:it: ITA](./docs/servo_mod_ita.md)]
 
+## ARLOQ
+
+ArloQ is a version of Arlok V2 using Arduino UNO Q. ArloQ has been presented at Maker Faire Rome European edition 2026. Code examples in the [arduino_uno_q folder](./arduino_uno_q)
+
 ## Troubleshooting
 
 [Troubleshooting guide](./docs/troubleshooting.md)  
@@ -78,3 +82,5 @@ See in the [Arduino folder](./arduino) for code examples or write your own code 
 - ARLOK partecipated to the 2023 Maker Faire European Edition (Project E62, Pavillon 5, Booth D6) - with Pizza Robotics
 
 - ARLOK v2 partecipated to the [2026 Maker Faire Caserta](https://caserta.makerfaire.com/maker/entry/12/) (Project 12, Stand D7)
+
+- ARLOK v2 and ARLOQ partecipated to the 2026 Maker Faire European Edition (Project 188, Stand F17)

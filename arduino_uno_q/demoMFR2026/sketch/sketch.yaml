@@ -1,0 +1,10 @@
+profiles:
+  default:
+    fqbn: 
+    platforms:
+      - platform: arduino:zephyr
+    libraries:
+      - Arduino_HardwareServo (0.0.1)
+      - U8g2 (2.36.19)
+
+default_profile: default

@@ -1,0 +1,8 @@
+name: "ArloQ - AI Vision and Joystick Controlled Robot"
+description: This project combines manual remote control with real-time Computer Vision. It features a web joystick for proportional driving and an AI-powered video feed with live object detection on a single dashboard.
+ports: []
+bricks:
+- arduino:web_ui: {}
+- arduino:video_object_detection:
+    model: yolox-object-detection
+icon: 🤖
