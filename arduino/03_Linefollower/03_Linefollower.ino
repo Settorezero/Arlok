@@ -98,7 +98,7 @@ uint8_t servoR_eeprom = 2;        // eeprom memory location for storing point ze
 uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the balacing of servomotors
 
 // CHECK/CHANGE THOSE VALUES IF YOU'VE PROBLEMS with Robot movements!
-#define SPEED       140           // normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
+#define SPEED       200           // 140 normal speed for forward moving (center point+speed microseconds), rise this if your robot doesn't move
 #define ACCEL_STEP    6           // increment ramp
 #define SPEED_DIV     7           // speed divisor (computed speed will be divided by this value)
 #define LINECENTER   500	      // Sensor value for line positioned at center
@@ -107,7 +107,7 @@ uint8_t servo_balance_eeprom = 4; // eeprom memory location for storing the bala
 // stuff used by sonar
 #define TIMER_US      50         // Timer1 interrupt every 50uS
 #define TICK_COUNTS 4500         // 4500*50uS = 225mS, time space between two consecutive trigger pulses
-#define OBSTACLE       4         // ARLOK will stop if an obstacle is nearer than this
+#define OBSTACLE       7         // ARLOK will stop if an obstacle is nearer than this
 
 // stuff used by oled display
 #define SCREEN_WIDTH  128
