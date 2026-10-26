@@ -61,26 +61,30 @@ ArloQ is a version of Arlok V2 using Arduino UNO Q. ArloQ has been presented at 
 
 [Troubleshooting guide](./docs/troubleshooting.md)  
 
-## Links
+## Timeline and links
 
-- [Greta Galli review](https://www.youtube.com/watch?v=CbPGWd9I_mA)
+### 2020
+- May : first piece [was 3D-printed](https://www.instagram.com/p/CAVFT4iKuTE/)
+- June : published an article about [AR.L.O.](https://www.settorezero.com/wordpress/ar_l_o/) - this was the first ARLOK prototype
+- July: ["Aperitech" about AR.L.O. (first ARLOK rev)](https://www.youtube.com/watch?v=JS_QYEIMfNo)
+- December: ARLOK partecipated to the _Virtual_ [Maker Faire European Edition VIII](https://www.instagram.com/p/CIqT9yarSQj/) (Project 253, _Virtual Stand_ E57) with _Bobboteck_ / _Officine Robotiche_
 
-- [Dario Ciceri review](https://youtu.be/yjnFxoAIeAM?list=LL&t=208)
+### 2021
+- April : ARLOK was featured on no. 253 (2021) of Italian Magazine "Elettronica IN": [Excerpt](https://www.elettronicain.it/wp-content/uploads/prog_copertina/arlook_il_robot_per_tutti.pdf) -   [MAGAZINE ISSUE](https://www.elettronicain.it/prodotto/n-253-aprile-2021/?tracking=5f004a6ba8be7)
+- May : [Greta Galli review](https://www.youtube.com/watch?v=CbPGWd9I_mA)
+- October : ARLOK was NOT selected for the "Physical" part of the [Maker Faire European Edition IX](https://makerfairerome.eu/edizioni/edizione-2021/espositori/?bbexhibit=102) with _Pizza Robotics_ : that edition was part Physical and part Virtual (due COVID still in course) and ARLOK was proposed to participate to the virtual event and I declined
 
-- [Aperitech about ARLO (first ARLOK rev)](https://www.youtube.com/watch?v=JS_QYEIMfNo)
+### 2022
+- September : [Dario Ciceri review](https://youtu.be/yjnFxoAIeAM?list=LL&t=208)
+- October : ARLOK partecipated to the [Maker Faire European Edition X](https://makerfairerome.eu/edizioni/edizione-2022/espositori/?bb=93)(Project 93, Pavillon D19) - with _Pizza Robotics_
+- October : [Interview by "uno scemo qualunque"](https://www.youtube.com/watch?v=RNEsY1jSlT4&t=576s) in Maker Faire 2022
 
-- [All ARLOK videos on Youtube](https://tinyurl.com/arlokplaylist) 
+### 2023
+- October : ARLOK partecipated to the [Maker Faire European Edition XI](https://makerfairerome.eu/edizioni/edizione-2023/espositori/?bb=280)(Project E62, Pavillon 5, Booth D6) - with _Pizza Robotics_
 
-- ARLOK on no. 253 (2021) of Italian Magazine "Elettronica IN": [EXCERPT](https://www.elettronicain.it/wp-content/uploads/prog_copertina/arlook_il_robot_per_tutti.pdf) -   [MAGAZINE ISSUE](https://www.elettronicain.it/prodotto/n-253-aprile-2021/?tracking=5f004a6ba8be7)
+### 2026
+- May : ARLOK v2 partecipated to the [Maker Faire Caserta 2026](https://caserta.makerfaire.com/maker/entry/12/) (Project 12, Stand D7)
+- October : ARLOK v2 and ARLOQ partecipated to the [Maker Faire European Edition XIV](https://makerfairerome.eu/espositori/?bb=188) (Project 188, Stand F17)   
 
-- Maker Faire 2022 [Interview by "uno scemo qualunque"](https://www.youtube.com/watch?v=RNEsY1jSlT4&t=576s)
-
-- ARLOK partecipated to the 2020 Maker Faire European Edition (Project 253, Stand E57) - with Officine Robotiche
-
-- ARLOK partecipated to the 2022 Maker Faire European Edition (Project 93, Pavillon D19) - with Pizza Robotics
-
-- ARLOK partecipated to the 2023 Maker Faire European Edition (Project E62, Pavillon 5, Booth D6) - with Pizza Robotics
-
-- ARLOK v2 partecipated to the [2026 Maker Faire Caserta](https://caserta.makerfaire.com/maker/entry/12/) (Project 12, Stand D7)
-
-- ARLOK v2 and ARLOQ partecipated to the 2026 Maker Faire European Edition (Project 188, Stand F17)
+### Others
+- [All ARLOK videos on Youtube](https://tinyurl.com/arlokplaylist)
