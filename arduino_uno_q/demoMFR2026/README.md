@@ -37,4 +37,4 @@ The bricks used are:
 ## Authors
 
 - Giovanni Bernardo
-- Based on an example of [Giovanni Bruno and Leonardo Cavagnis]([workshop_robotics_unoq/robotbrag26-joystick-vision-app at main · arduino/workshop_robotics_unoq · GitHub](https://github.com/arduino/workshop_robotics_unoq/tree/main/robotbrag26-joystick-vision-app))
+- Based on an example of [Giovanni Bruno and Leonardo Cavagnis](https://github.com/arduino/workshop_robotics_unoq/tree/main/robotbrag26-joystick-vision-app)
