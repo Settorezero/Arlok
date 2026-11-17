@@ -1,9 +1,9 @@
-# 🟢 ARLOQ - AI Vision & Joystick Controlled Robot with Arduino UNO Q
+## ARLOQ - AI Vision & Joystick Controlled Robot with Arduino UNO Q
 
 This project combines manual remote control with real-time Computer Vision.
 The robot can be driven via a virtual joystick on a web dashboard while an AI model (Object Detection) identifies objects in the camera stream and displays bounding boxes in real-time.
 
-![](..\..\media\ArloQ\ArloQ_1.jpg)
+![](../../media/ArloQ/ArloQ_1.jpg)
 
 ## HW Setup
 
