@@ -3,14 +3,17 @@
 This project combines manual remote control with real-time Computer Vision.
 The robot can be driven via a virtual joystick on a web dashboard while an AI model (Object Detection) identifies objects in the camera stream and displays bounding boxes in real-time.
 
+![](..\..\media\ArloQ\ArloQ_1.jpg)
+
 ## HW Setup
 
-- Arduino UNO Q
+- Arduino UNO Q (another Arduino UNO Q was used as computer for connecting to ArloQ but a normal computer can be used!)
 - 2x Continuous Rotation Servos (Connected to Pin 9 and Pin 10)
 - USB Webcam through USB adapter (used also for powering)
 - HTU21 on SDA/SCL
 - OLED display  on SDA/SCL
 - LED through mosfet on pin 7
+- Configuration using two separate 18650 LiPos with separate step-up converters is needed
 
 ## How It Works
 
