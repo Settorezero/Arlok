@@ -12,4 +12,4 @@ Here are the parts used for attaching the Arduino Uno Q and the Official Arduino
 
 This is how I arranged parts beside the screen:
 
-![](..\..\..\media\ArloQ\ArloQ_2.jpg)
+![](../../../media/ArloQ/ArloQ_2.jpg)
